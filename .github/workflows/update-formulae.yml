@@ -1,0 +1,43 @@
+name: Update formulae
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types:
+      - update-formulae
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update omni version file
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout current commit
+        uses: actions/checkout@v3
+
+      - name: Run update script
+        run: |
+          OMNI_FILE=Formula/resources/omni.json
+          .github/workflows/scripts/generate_last_version_json.rb | tee "$OMNI_FILE"
+          OMNI_VERSION="$(cat "$OMNI_FILE" | jq --raw-output .version)"
+          if [[ -z "$OMNI_VERSION" ]]; then
+            echo "Unable to find omni version from the JSON"
+            exit 1
+          fi
+          echo "OMNI_VERSION=v${OMNI_VERSION}" | tee -a "$GITHUB_ENV"
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "Formula/resources/*.json"
+          commit_message: 📦 Updating omni formula to ${{ env.OMNI_VERSION }}
+
