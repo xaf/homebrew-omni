@@ -60,7 +60,7 @@ version = tag
 version = version[1..-1] if version.start_with?('v')
 
 # Parse name that should give us `omni-{version}-{target_arch}-{target_os}.(sha256|tar.gz)`
-bin_regex = Regexp.compile(/(?<asset>omni-#{version}-(?<arch>[^-]*)-(?<os>[^-]*))\.(?<type>sha256|tar.gz)/)
+bin_regex = Regexp.compile(/(?<asset>omni-(?<version>.*)-(?<arch>[^-]*)-(?<os>[^-]*))\.(?<type>sha256|tar.gz)/)
 
 # Get the release files
 binaries = {}
