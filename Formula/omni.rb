@@ -85,6 +85,18 @@ class Omni < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      \x1B[1momni\x1B[0m depends on a shell integration to be fully functional. To enable it, you can add the following to your shell's configuration file:
+
+        \x1B[96m eval "$(omni hook init bash)"   \x1B[90m# for bash\x1B[39m
+        \x1B[96m eval "$(omni hook init zsh)"    \x1B[90m# for zsh\x1B[39m
+        \x1B[96m omni hook init fish | source    \x1B[90m# for fish\x1B[39m
+
+      Don't forget to restart your shell or run \x1B[96msource <path_to_rc_file>\x1B[39m for the changes to take effect.
+    EOS
+  end
+
   test do
     assert_match "omni version #{version}", shell_output("#{bin}/omni --version").strip
   end
