@@ -1,33 +1,33 @@
 {
-  "version": "0.0.11",
+  "version": "0.0.12",
   "build": {
-    "tag": "v0.0.11",
-    "revision": "b20450dd3325f0916c85891664dc03f4f8e739f9"
+    "tag": "v0.0.12",
+    "revision": "3a4a89063bf180faf82395f53c816abb0dcd7e18"
   },
   "binaries": [
     {
       "os": "darwin",
       "arch": "arm64",
-      "sha256": "b5f9a90532d42feba8d947d9e4e2105f082f3713b49c4baa49c5438c8168f5f9",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.11/omni-0.0.11-arm64-darwin.tar.gz"
+      "sha256": "8148c1ea38373e8cb448c51297c3804dc85ca8c631edf816e56a8816f09d308c",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.12/omni-0.0.12-arm64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "arm64",
-      "sha256": "eb5b217a9107c48d3840f4e99a3496375f8df2f3d0a7efcf74be3286ae25dc72",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.11/omni-0.0.11-arm64-linux.tar.gz"
+      "sha256": "0ce5b9c1a9c69152797e5290de47e0c7af03049eb9f5cc7afef92a3b95e6db25",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.12/omni-0.0.12-arm64-linux.tar.gz"
     },
     {
       "os": "darwin",
       "arch": "x86_64",
-      "sha256": "c44e489e40540fad359a5e2eff831dc321c0670f2823d139356ebbfa8caf2229",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.11/omni-0.0.11-x86_64-darwin.tar.gz"
+      "sha256": "1d062d8378945bd428f5e18cf70748da1ef0f4bfc6cb2910679f1f53c5fdeeb9",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.12/omni-0.0.12-x86_64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "x86_64",
-      "sha256": "724dc5d1e19d13081406c1f50092fd6c894d545ae7a113b21db9d92aed97faeb",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.11/omni-0.0.11-x86_64-linux.tar.gz"
+      "sha256": "ec0601edac3555200a25b852fb956c83a6090ee12e679772e5dcdfc6adb7e7f5",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.12/omni-0.0.12-x86_64-linux.tar.gz"
     }
   ]
 }
