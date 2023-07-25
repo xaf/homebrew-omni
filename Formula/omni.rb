@@ -59,7 +59,7 @@ class Omni < Formula
 
     head "https://github.com/#{OWNER}/#{REPO}.git",
       :using => :git,
-      :branch => "rust"
+      :branch => "main"
 
     depends_on "rust" => :build
   end
