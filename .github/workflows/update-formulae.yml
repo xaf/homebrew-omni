@@ -34,7 +34,7 @@ jobs:
             echo "Unable to find omni version from the JSON"
             exit 1
           fi
-          if ! echo "$OMNI_VERSION" | grep -qiE "^v[0-9]+\.[0-9]+\.[0-9]+(\-[a-z1-9][a-z0-9_-]*)?$"; then
+          if ! echo "$OMNI_VERSION" | grep -qiE "^[0-9]+\.[0-9]+\.[0-9]+(\-[a-z1-9][a-z0-9_-]*)?$"; then
             echo "Invalid release version: $OMNI_VERSION"
             exit 1
           fi
