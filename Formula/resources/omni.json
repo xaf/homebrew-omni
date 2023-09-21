@@ -1,33 +1,33 @@
 {
-  "version": "0.0.14",
+  "version": "0.0.15",
   "build": {
-    "tag": "v0.0.14",
-    "revision": "ec566149dec8035f72cf3dcadaefd45e96f42fb7"
+    "tag": "v0.0.15",
+    "revision": "6238a19cee93a808b0d4908a30a8dab2c808c347"
   },
   "binaries": [
     {
       "os": "darwin",
       "arch": "arm64",
-      "sha256": "69e916b39bd7cf7591ca40b575c406b2f04b5e58d6ba79ba4caf9954c764cdc9",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.14/omni-0.0.14-arm64-darwin.tar.gz"
+      "sha256": "79ad5b169d7003de7ece278f6f8c132f51ddbcdf6b0786bdae700e947afaa57a",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.15/omni-0.0.15-arm64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "arm64",
-      "sha256": "0151cd6641725fa88fa23ef0f75d461af2571ddf63d2b9ebd26ff0fe5f1986ca",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.14/omni-0.0.14-arm64-linux.tar.gz"
+      "sha256": "ec5ff9cc3a19b6fba05f7e86a42d20e2eb5c5d592e2693c4fe4b67320575169a",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.15/omni-0.0.15-arm64-linux.tar.gz"
     },
     {
       "os": "darwin",
       "arch": "x86_64",
-      "sha256": "6ac484c3399b788ede6149b3073085e4f816b9bf37b9e91da6dc50d555fe3fac",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.14/omni-0.0.14-x86_64-darwin.tar.gz"
+      "sha256": "fba6ce661a40f31d9b37bb9a264328e207c43d4035afaa32c71e1defe6322e9d",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.15/omni-0.0.15-x86_64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "x86_64",
-      "sha256": "9aa3006abffc0819c7f1c93cd0d2974298d2aa6e2d546fdb80057265a3b52118",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.14/omni-0.0.14-x86_64-linux.tar.gz"
+      "sha256": "904d59c998af5f16f738c30c7c5d47ea04c109682b5a952ccba548001a46089a",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.15/omni-0.0.15-x86_64-linux.tar.gz"
     }
   ]
 }
