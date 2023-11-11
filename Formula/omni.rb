@@ -75,9 +75,20 @@ class Omni < Formula
     end
 
     if @@requires_build
+      # Try and get the version from git
+      build_version = if build.head?
+        dev_version = `git describe --tags --broken --dirty --match v* 2>/dev/null`.strip
+        dev_version = "0.0.0-g{}".format(
+          `git describe --tags --always --broken --dirty --match v*`.strip) if dev_version.blank?
+        raise "Could not determine version" if dev_version.blank?
+        dev_version.gsub(/^v/, "")
+      else
+        version
+      end
+
       # Update Cargo.toml and Cargo.lock with the actual version
-      inreplace "Cargo.toml", "0.0.0-git", version
-      inreplace "Cargo.lock", "0.0.0-git", version
+      inreplace "Cargo.toml", "0.0.0-git", build_version
+      inreplace "Cargo.lock", "0.0.0-git", build_version
 
       system "cargo", "install", *std_cargo_args
     else
