@@ -1,16 +1,22 @@
 name: Update formulae
 
+
 on:
   push:
     branches:
       - main
+
   repository_dispatch:
     types:
       - update-formulae
 
+  workflow_dispatch:
+
+
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
+
 
 jobs:
   update:
