@@ -1,33 +1,33 @@
 {
-  "version": "0.0.26",
+  "version": "0.0.27",
   "build": {
-    "tag": "v0.0.26",
-    "revision": "01f3e750269083438fca2bd7e7509738e48fe3d9"
+    "tag": "v0.0.27",
+    "revision": "9c053444418cdc5c5ff3bd93a2ddd792b3d21ea8"
   },
   "binaries": [
     {
       "os": "darwin",
       "arch": "arm64",
-      "sha256": "c9123f782acdba3612ae4685dd8a1c01efca2320a46bf68b748283ffaf0595f2",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.26/omni-0.0.26-arm64-darwin.tar.gz"
+      "sha256": "0724141fd808e8a48f8590627f68cf4693e60ea46a8f9c7343bd1693ecc17461",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.27/omni-0.0.27-arm64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "arm64",
-      "sha256": "ee570696ca7da28e6977164bb51afd21cd0e2f949ca50affb0fa4a794d731ac4",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.26/omni-0.0.26-arm64-linux.tar.gz"
+      "sha256": "a924b4a7880a8e67f3a78702e8830078977fc103ddf3142c252605560d0df1eb",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.27/omni-0.0.27-arm64-linux.tar.gz"
     },
     {
       "os": "darwin",
       "arch": "x86_64",
-      "sha256": "b55a5df76a10a63d43af99d1f18d7f5073b8aacf47a6d4668f42c3741d802860",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.26/omni-0.0.26-x86_64-darwin.tar.gz"
+      "sha256": "5b0d8fc6e333cd58a178595bf97b177bed197d63da63d66ce21af02ceadc8213",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.27/omni-0.0.27-x86_64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "x86_64",
-      "sha256": "bdfa5aa74144d9eea3e178c94b2c75e0dd938e5c56f1a331670eab49c217be03",
-      "url": "https://github.com/XaF/omni/releases/download/v0.0.26/omni-0.0.26-x86_64-linux.tar.gz"
+      "sha256": "28b49d72f5900a5eb4ec7f8c47a8684031d7e3a03545fdf35cdfeb66f3c07b53",
+      "url": "https://github.com/XaF/omni/releases/download/v0.0.27/omni-0.0.27-x86_64-linux.tar.gz"
     }
   ]
 }
