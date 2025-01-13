@@ -1,33 +1,33 @@
 {
-  "version": "2025.1.1",
+  "version": "2025.1.2",
   "build": {
-    "tag": "v2025.1.1",
-    "revision": "1b0d68893aeb86003fd25d15ce0741f4795c2ec8"
+    "tag": "v2025.1.2",
+    "revision": "2e9ff551b8397d3eb2c982abd60e02e2886b5de9"
   },
   "binaries": [
     {
       "os": "darwin",
       "arch": "arm64",
-      "sha256": "d0db89c8ffa83150251be9a2309516c6abbd5249f2173d7791dc12e4b4dca5a0",
-      "url": "https://github.com/XaF/omni/releases/download/v2025.1.1/omni-2025.1.1-arm64-darwin.tar.gz"
+      "sha256": "e94272166259d6b3b84ff76a132eb02553333fbde5dedfd791abe9b53c1989ce",
+      "url": "https://github.com/XaF/omni/releases/download/v2025.1.2/omni-2025.1.2-arm64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "arm64",
-      "sha256": "897b23b1b4ef41499014cf3fa52024777a4991492564757b801a9bc18c5222bb",
-      "url": "https://github.com/XaF/omni/releases/download/v2025.1.1/omni-2025.1.1-arm64-linux.tar.gz"
+      "sha256": "ced655a5381d616e773c18cb32f0f224af23f3e6800ad3244572b07e5faedee3",
+      "url": "https://github.com/XaF/omni/releases/download/v2025.1.2/omni-2025.1.2-arm64-linux.tar.gz"
     },
     {
       "os": "darwin",
       "arch": "x86_64",
-      "sha256": "71952837c5f2d98679b98d2b83200d958576a9c302fd060abfff8056b6224de1",
-      "url": "https://github.com/XaF/omni/releases/download/v2025.1.1/omni-2025.1.1-x86_64-darwin.tar.gz"
+      "sha256": "0082fc5345f2999c6b8871a26c610f36342f41b1f8fc05eb905f77552295a151",
+      "url": "https://github.com/XaF/omni/releases/download/v2025.1.2/omni-2025.1.2-x86_64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "x86_64",
-      "sha256": "abb9e987065d13c6f5249440dc74f033f3cc18870cd34f348ebbcc9f98adc0b4",
-      "url": "https://github.com/XaF/omni/releases/download/v2025.1.1/omni-2025.1.1-x86_64-linux.tar.gz"
+      "sha256": "ed82284a970362ae11f54856cb42d7375bb6aabc97833314fb8d292443a678c3",
+      "url": "https://github.com/XaF/omni/releases/download/v2025.1.2/omni-2025.1.2-x86_64-linux.tar.gz"
     }
   ]
 }
