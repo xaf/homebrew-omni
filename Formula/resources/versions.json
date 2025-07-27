@@ -1,7 +1,6 @@
 {
   "versions": [
     "2025.6.1",
-    "2025.6.1",
     "2025.6.0",
     "2025.4.0",
     "2025.2.1",
@@ -48,16 +47,11 @@
     "0.0.5",
     "0.0.4",
     "0.0.3",
-    "0.0.2",
-    "0.0.1-rc6",
-    "0.0.1-rc5",
-    "0.0.1-rc4",
-    "0.0.1-rc3",
-    "0.0.1-rc2",
-    "0.0.1-rc1"
+    "0.0.2"
   ],
   "data": {
     "2025.6.1": {
+      "published_at": "2025-06-04T21:11:52Z",
       "build": {
         "tag": "v2025.6.1",
         "revision": "4af6d000bdffaadddfd94d344a690ef9560b612a"
@@ -88,9 +82,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`c26811c`](https://github.com/xaf/omni/commit/c26811c7cba7d69781ca031cd63725a0125514f0) - **go/cargo-install**: 🐛 path for go-installed tools missed 'bin' *(commit by @xaf)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "c26811c",
+            "link": "https://github.com/xaf/omni/commit/c26811c7cba7d69781ca031cd63725a0125514f0",
+            "scope": "go/cargo-install",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "path for go-installed tools missed 'bin'"
+          }
+        ]
+      }
     },
     "2025.6.0": {
+      "published_at": "2025-06-04T18:34:52Z",
       "build": {
         "tag": "v2025.6.0",
         "revision": "bee0ee7d2011a3c07f24ff82cd3eda6bf62b8db5"
@@ -121,9 +128,83 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.6.0/omni-2025.6.0-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`ca1f7e1`](https://github.com/xaf/omni/commit/ca1f7e1d1d359ab090b574a538c002bdd1c70dad) - **help**: ✨ add global options *(PR #1031 by @xaf)*\n- [`ffa82ff`](https://github.com/xaf/omni/commit/ffa82ff5295cc91531f51ee866ffa628d95fed46) - **`python`**: ✨ set `UV_PROJECT_ENVIRONMENT` in dynamic environment *(PR #1032 by @xaf)*\n- [`c052424`](https://github.com/xaf/omni/commit/c052424a6fabfd18d21f91f5fce8fdcc23976e33) - ✨ extend `dir` support *(PR #1033 by @xaf)*\n  - :arrow_lower_right: *addresses issue #882 opened by @xaf*\n- [`524bf37`](https://github.com/xaf/omni/commit/524bf37c159bd60c8236f6278b76b2c0bf3faf79) - **security key**: ✨ improve askpass handling for security keys *(PR #1042 by @xaf)*\n- [`f38094e`](https://github.com/xaf/omni/commit/f38094e34083f150f59f11194476be6bec4704de) - **github-release**: ✨ prioritize `gh` cli and reload env between releases *(PR #1053 by @xaf)*\n  - :arrow_lower_right: *addresses issue #1051 opened by @swgillespie*\n\n### :bug: Bug Fixes\n- [`eebc2b5`](https://github.com/xaf/omni/commit/eebc2b548153802aadfbff63ea0ceec7452185cc) - **autocomplete**: 🐛 multi-word commands now autocomplete cleanly *(commit by @xaf)*\n- [`568f04b`](https://github.com/xaf/omni/commit/568f04b2495be78ec555e8bcdf5095ba905f817d) - **pre-auth**: 🐛 do not pre-auth when update is disabled *(PR #1038 by @xaf)*\n  - :arrow_lower_right: *fixes issue #1037 opened by @xaf*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "ca1f7e1",
+            "link": "https://github.com/xaf/omni/commit/ca1f7e1d1d359ab090b574a538c002bdd1c70dad",
+            "scope": "help",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1031,
+            "summary": "add global options"
+          },
+          {
+            "commit": "ffa82ff",
+            "link": "https://github.com/xaf/omni/commit/ffa82ff5295cc91531f51ee866ffa628d95fed46",
+            "scope": "`python`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1032,
+            "summary": "set `UV_PROJECT_ENVIRONMENT` in dynamic environment"
+          },
+          {
+            "commit": "c052424",
+            "link": "https://github.com/xaf/omni/commit/c052424a6fabfd18d21f91f5fce8fdcc23976e33",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1033,
+            "summary": "extend `dir` support",
+            "issues": [
+              882
+            ]
+          },
+          {
+            "commit": "524bf37",
+            "link": "https://github.com/xaf/omni/commit/524bf37c159bd60c8236f6278b76b2c0bf3faf79",
+            "scope": "security key",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1042,
+            "summary": "improve askpass handling for security keys"
+          },
+          {
+            "commit": "f38094e",
+            "link": "https://github.com/xaf/omni/commit/f38094e34083f150f59f11194476be6bec4704de",
+            "scope": "github-release",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1053,
+            "summary": "prioritize `gh` cli and reload env between releases",
+            "issues": [
+              1051
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "eebc2b5",
+            "link": "https://github.com/xaf/omni/commit/eebc2b548153802aadfbff63ea0ceec7452185cc",
+            "scope": "autocomplete",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "multi-word commands now autocomplete cleanly"
+          },
+          {
+            "commit": "568f04b",
+            "link": "https://github.com/xaf/omni/commit/568f04b2495be78ec555e8bcdf5095ba905f817d",
+            "scope": "pre-auth",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 1038,
+            "summary": "do not pre-auth when update is disabled"
+          }
+        ]
+      }
     },
     "2025.4.0": {
+      "published_at": "2025-04-06T20:25:45Z",
       "build": {
         "tag": "v2025.4.0",
         "revision": "9a8177a3c06c63017d19ba4938f1a0289aff259e"
@@ -154,9 +235,26 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.4.0/omni-2025.4.0-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`403cf7f`](https://github.com/xaf/omni/commit/403cf7fcef8c7e9e248fa17febe8420a0c1e4c67) - **`python`**: ✨ use `uv` for venv and deps management *(PR #1008 by @xaf)*\n  - :arrow_lower_right: *addresses issue #295 opened by @xaf*\n  - :arrow_lower_right: *addresses issue #841 opened by @xaf*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "403cf7f",
+            "link": "https://github.com/xaf/omni/commit/403cf7fcef8c7e9e248fa17febe8420a0c1e4c67",
+            "scope": "`python`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 1008,
+            "summary": "use `uv` for venv and deps management",
+            "issues": [
+              295,
+              841
+            ]
+          }
+        ]
+      }
     },
     "2025.2.1": {
+      "published_at": "2025-02-24T22:12:50Z",
       "build": {
         "tag": "v2025.2.1",
         "revision": "ca29e21ef1d2921dcfb5eddd5a7ce05b095585aa"
@@ -187,9 +285,65 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.2.1/omni-2025.2.1-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`16a7259`](https://github.com/xaf/omni/commit/16a72592a1148c69ac789d419d624cae15fa833b) - **`ruby` and `rust`**: ✨ add install isolation *(PR #950 by @xaf)*\n  - :arrow_lower_right: *addresses issue #289 opened by @xaf*\n- [`a6389e9`](https://github.com/xaf/omni/commit/a6389e92dc63b5d859e00e750ef2a5bb330d9299) - **`help`**: ✨ show `-h`/`--help` flags for argparser-enabled commands *(PR #955 by @xaf)*\n  - :arrow_lower_right: *addresses issue #937 opened by @xaf*\n\n### :bug: Bug Fixes\n- [`c5da9d7`](https://github.com/xaf/omni/commit/c5da9d799f730d353c4862dc584e70265819730e) - 🐛 handle renames safely when not on same device *(PR #948 by @Sushisource)*\n- [`ced1788`](https://github.com/xaf/omni/commit/ced17883abb23d567981729f75c015d934a6afbb) - **`node`**: 🐛 dynamic environment was not loaded properly *(PR #949 by @xaf)*\n  - :arrow_lower_right: *fixes issue #938 opened by @xaf*\n- [`21c052c`](https://github.com/xaf/omni/commit/21c052cf43fd2a9ec68e540b45ea787221023250) - **`ruby`**: 🐛 remove `rubygems_plugin.rb` file after mise install *(PR #954 by @xaf)*\n  - :arrow_lower_right: *fixes issue #951 opened by @xaf*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "16a7259",
+            "link": "https://github.com/xaf/omni/commit/16a72592a1148c69ac789d419d624cae15fa833b",
+            "scope": "`ruby` and `rust`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 950,
+            "summary": "add install isolation",
+            "issues": [
+              289
+            ]
+          },
+          {
+            "commit": "a6389e9",
+            "link": "https://github.com/xaf/omni/commit/a6389e92dc63b5d859e00e750ef2a5bb330d9299",
+            "scope": "`help`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 955,
+            "summary": "show `-h`/`--help` flags for argparser-enabled commands",
+            "issues": [
+              937
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "c5da9d7",
+            "link": "https://github.com/xaf/omni/commit/c5da9d799f730d353c4862dc584e70265819730e",
+            "author": "Sushisource",
+            "emoji": "🐛",
+            "pr": 948,
+            "summary": "handle renames safely when not on same device"
+          },
+          {
+            "commit": "ced1788",
+            "link": "https://github.com/xaf/omni/commit/ced17883abb23d567981729f75c015d934a6afbb",
+            "scope": "`node`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 949,
+            "summary": "dynamic environment was not loaded properly"
+          },
+          {
+            "commit": "21c052c",
+            "link": "https://github.com/xaf/omni/commit/21c052cf43fd2a9ec68e540b45ea787221023250",
+            "scope": "`ruby`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 954,
+            "summary": "remove `rubygems_plugin.rb` file after mise install"
+          }
+        ]
+      }
     },
     "2025.2.0": {
+      "published_at": "2025-02-06T18:48:25Z",
       "build": {
         "tag": "v2025.2.0",
         "revision": "ca81b2887e1d7e0278356a82504ca477833e2261"
@@ -220,9 +374,49 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.2.0/omni-2025.2.0-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`4aa562e`](https://github.com/xaf/omni/commit/4aa562e6ec26f2c812dca4bb78d4d74f4b847c7e) - **`config`**: configuration commands can be exported in omnipath *(PR #926 by @xaf)*\n  - :arrow_lower_right: *addresses issue #925 opened by @xaf*\n- [`cda514a`](https://github.com/xaf/omni/commit/cda514af29f581370f6b312e37eeca61ba027296) - **void command**: support `-h` and `--help` for auto-generated commands *(PR #929 by @xaf)*\n  - :arrow_lower_right: *addresses issue #920 opened by @xaf*\n- [`296629f`](https://github.com/xaf/omni/commit/296629fd689f8241d62022a8b2a36f8100930ca0) - **`package`**: ✨ use `git rev-list` to check if packages are up to date *(PR #930 by @xaf)*\n  - :arrow_lower_right: *addresses issue #918 opened by @xaf*\n- [`fbff613`](https://github.com/xaf/omni/commit/fbff613ec8c04cff94b5b1efbd25d2d922464d10) - **`github release`**: ✨ support for per-os/per-arch asset matching *(PR #931 by @xaf)*\n  - :arrow_lower_right: *addresses issue #780 opened by @xaf*\n- [`d037dcc`](https://github.com/xaf/omni/commit/d037dcc3607324bc26320c9900651e8ba864db70) - **`github release`**: ✨ distinguish install configurations *(PR #940 by @xaf)*\n  - :arrow_lower_right: *addresses issue #934 opened by @xaf*\n\n### :bug: Bug Fixes\n- [`17211dc`](https://github.com/xaf/omni/commit/17211dcbab1076c5d49c448eb194529490b0b2fe) - **did you mean**: `OMNI_SUBCOMMAND` set to selected command *(PR #924 by @xaf)*\n  - :arrow_lower_right: *fixes issue #919 opened by @xaf*\n- [`bdb42db`](https://github.com/xaf/omni/commit/bdb42dbd6f4b81174cab389b663b88f8522021a2) - **`self-update`**: use `brew --repository` instead of `--prefix` *(PR #936 by @xaf)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "296629f",
+            "link": "https://github.com/xaf/omni/commit/296629fd689f8241d62022a8b2a36f8100930ca0",
+            "scope": "`package`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 930,
+            "summary": "use `git rev-list` to check if packages are up to date",
+            "issues": [
+              918
+            ]
+          },
+          {
+            "commit": "fbff613",
+            "link": "https://github.com/xaf/omni/commit/fbff613ec8c04cff94b5b1efbd25d2d922464d10",
+            "scope": "`github release`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 931,
+            "summary": "support for per-os/per-arch asset matching",
+            "issues": [
+              780
+            ]
+          },
+          {
+            "commit": "d037dcc",
+            "link": "https://github.com/xaf/omni/commit/d037dcc3607324bc26320c9900651e8ba864db70",
+            "scope": "`github release`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 940,
+            "summary": "distinguish install configurations",
+            "issues": [
+              934
+            ]
+          }
+        ]
+      }
     },
     "2025.1.8": {
+      "published_at": "2025-01-27T22:41:46Z",
       "build": {
         "tag": "v2025.1.8",
         "revision": "c175e88a8a805511574d5b0c6d694c8d14be2946"
@@ -253,9 +447,84 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.8/omni-2025.1.8-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`0b53608`](https://github.com/xaf/omni/commit/0b53608cdabe05b6da9d64b6355fbe1de599a972) - **`argparser`**: ✨ add auto-completion support *(PR #911 by @xaf)*\n  - :arrow_lower_right: *addresses issue #854 opened by @xaf*\n- [`564e790`](https://github.com/xaf/omni/commit/564e790487c0c01daa26667a114c4efde9bd095a) - **`up`**: ✨ show when the environment is already up to date *(PR #912 by @xaf)*\n- [`0140a82`](https://github.com/xaf/omni/commit/0140a82f246fc738622ae0d909a637911195d1d5) - **`packages`**: ✨ make git updates more aggressive *(PR #913 by @xaf)*\n  - :arrow_lower_right: *addresses issue #908 opened by @xaf*\n- [`36d08d4`](https://github.com/xaf/omni/commit/36d08d4a45cfced818e5d9da7483e31094ecdb4b) - **`argparser`**: use `partial` auto-completion for internal commands *(PR #915 by @xaf)*\n\n### :bug: Bug Fixes\n- [`7257d28`](https://github.com/xaf/omni/commit/7257d28a38c4a382bea4d7ec0e55c7383ab32815) - **`mise`**: 🐛 replace `mise where` by `mise ls --installed` *(PR #910 by @xaf)*\n- [`7cf2e25`](https://github.com/xaf/omni/commit/7cf2e257486de4ddc95c26374a07e04c0a0d7427) - **`shell integration`**: 🐛 fix the bash shell integration *(PR #914 by @xaf)*\n- [`551b532`](https://github.com/xaf/omni/commit/551b5321c6e888ba729653885bc59777db777eea) - **`colors`**: 🌈 enable colors will check that env vars have a value *(commit by @xaf)*\n- [`207df0c`](https://github.com/xaf/omni/commit/207df0c9089cfe9cffc22040c71dab0d1b814806) - **`musl`**: 🐛 do the glibc file check before musl *(commit by @xaf)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "0b53608",
+            "link": "https://github.com/xaf/omni/commit/0b53608cdabe05b6da9d64b6355fbe1de599a972",
+            "scope": "`argparser`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 911,
+            "summary": "add auto-completion support",
+            "issues": [
+              854
+            ]
+          },
+          {
+            "commit": "564e790",
+            "link": "https://github.com/xaf/omni/commit/564e790487c0c01daa26667a114c4efde9bd095a",
+            "scope": "`up`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 912,
+            "summary": "show when the environment is already up to date"
+          },
+          {
+            "commit": "0140a82",
+            "link": "https://github.com/xaf/omni/commit/0140a82f246fc738622ae0d909a637911195d1d5",
+            "scope": "`packages`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 913,
+            "summary": "make git updates more aggressive",
+            "issues": [
+              908
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "7257d28",
+            "link": "https://github.com/xaf/omni/commit/7257d28a38c4a382bea4d7ec0e55c7383ab32815",
+            "scope": "`mise`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 910,
+            "summary": "replace `mise where` by `mise ls --installed`"
+          },
+          {
+            "commit": "7cf2e25",
+            "link": "https://github.com/xaf/omni/commit/7cf2e257486de4ddc95c26374a07e04c0a0d7427",
+            "scope": "`shell integration`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 914,
+            "summary": "fix the bash shell integration"
+          },
+          {
+            "commit": "551b532",
+            "link": "https://github.com/xaf/omni/commit/551b5321c6e888ba729653885bc59777db777eea",
+            "scope": "`colors`",
+            "author": "xaf",
+            "emoji": "🌈",
+            "pr": 0,
+            "summary": "enable colors will check that env vars have a value"
+          },
+          {
+            "commit": "207df0c",
+            "link": "https://github.com/xaf/omni/commit/207df0c9089cfe9cffc22040c71dab0d1b814806",
+            "scope": "`musl`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "do the glibc file check before musl"
+          }
+        ]
+      }
     },
     "2025.1.7": {
+      "published_at": "2025-01-21T17:58:51Z",
       "build": {
         "tag": "v2025.1.7",
         "revision": "21cc9cbc4674fd985b45ba4a82b43341aa71dcc8"
@@ -286,9 +555,42 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.7/omni-2025.1.7-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`d82c345`](https://github.com/xaf/omni/commit/d82c345c5a606de1d2ea1be7af258c7c28a3d1ca) - **`github-release`**: ✨ support extracting `.tar.xz` archives *(PR #900 by @xaf)*\n\n### :bug: Bug Fixes\n- [`96f0c38`](https://github.com/xaf/omni/commit/96f0c3837676965f8600803571c29c40d0de8028) - **`go-install`**: 🐛 add `GOROOT` and `GOVERSION` env vars for bin *(PR #903 by @xaf)*\n- [`981b41e`](https://github.com/xaf/omni/commit/981b41e89fb92898dcc1eb6ba92b1b79de46e475) - **`github-release`**: 🐛 allow for downloads from private repos *(PR #907 by @xaf)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "d82c345",
+            "link": "https://github.com/xaf/omni/commit/d82c345c5a606de1d2ea1be7af258c7c28a3d1ca",
+            "scope": "`github-release`",
+            "author": "xaf",
+            "emoji": "✨",
+            "pr": 900,
+            "summary": "support extracting `.tar.xz` archives"
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "96f0c38",
+            "link": "https://github.com/xaf/omni/commit/96f0c3837676965f8600803571c29c40d0de8028",
+            "scope": "`go-install`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 903,
+            "summary": "add `GOROOT` and `GOVERSION` env vars for bin"
+          },
+          {
+            "commit": "981b41e",
+            "link": "https://github.com/xaf/omni/commit/981b41e89fb92898dcc1eb6ba92b1b79de46e475",
+            "scope": "`github-release`",
+            "author": "xaf",
+            "emoji": "🐛",
+            "pr": 907,
+            "summary": "allow for downloads from private repos"
+          }
+        ]
+      }
     },
     "2025.1.6": {
+      "published_at": "2025-01-17T00:05:17Z",
       "build": {
         "tag": "v2025.1.6",
         "revision": "b495cd082352dfd2ac29cf98fb1a57b1b692bd74"
@@ -319,9 +621,31 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.6/omni-2025.1.6-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`12f5d81`](https://github.com/XaF/omni/commit/12f5d81b4b8d229c0278e25c3468d2ffb5ccda4e) - **`self-update`**: add `omni --self-update` support *(PR #898 by @XaF)*\n  - :arrow_lower_right: *addresses issue #897 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`e14b995`](https://github.com/XaF/omni/commit/e14b995d8a58caa117b3471b9b31a66c9913b10c) - **`github-release`**: 🐛 revert malus for `dist` and `musl` *(commit by @XaF)*\n- [`cacf98b`](https://github.com/XaF/omni/commit/cacf98b686724d975cfef89234e851dbee752a63) - **`github-release`**: 🐛 detect the lib version needed (musl/libc) *(PR #899 by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "e14b995",
+            "link": "https://github.com/XaF/omni/commit/e14b995d8a58caa117b3471b9b31a66c9913b10c",
+            "scope": "`github-release`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "revert malus for `dist` and `musl`"
+          },
+          {
+            "commit": "cacf98b",
+            "link": "https://github.com/XaF/omni/commit/cacf98b686724d975cfef89234e851dbee752a63",
+            "scope": "`github-release`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 899,
+            "summary": "detect the lib version needed (musl/libc)"
+          }
+        ]
+      }
     },
     "2025.1.5": {
+      "published_at": "2025-01-16T19:43:48Z",
       "build": {
         "tag": "v2025.1.5",
         "revision": "bef13b40b316cd83097b6e11c7390fddd724f89f"
@@ -352,9 +676,45 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.5/omni-2025.1.5-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`dd0bd94`](https://github.com/XaF/omni/commit/dd0bd9429c743105fe1cecf42656358ff279f5a1) - **`github-release`**: ✨ prioritize non-dist releases *(PR #894 by @XaF)*\n  - :arrow_lower_right: *addresses issue #892 opened by @XaF*\n- [`24faed9`](https://github.com/XaF/omni/commit/24faed98d19a529196915b70ac51731c0eca8802) - **`github-release`**: ✨ Add flags to prefer-or-not `dist`/prefer-or-not `musl` *(PR #895 by @XaF)*\n\n### :bug: Bug Fixes\n- [`9707ddf`](https://github.com/XaF/omni/commit/9707ddfd05da90151131d04c0181727dcad668ba) - **`shims`**: 🐛 handle case insensitive file systems *(PR #893 by @XaF)*\n  - :arrow_lower_right: *fixes issue #891 opened by @XaF*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "dd0bd94",
+            "link": "https://github.com/XaF/omni/commit/dd0bd9429c743105fe1cecf42656358ff279f5a1",
+            "scope": "`github-release`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 894,
+            "summary": "prioritize non-dist releases",
+            "issues": [
+              892
+            ]
+          },
+          {
+            "commit": "24faed9",
+            "link": "https://github.com/XaF/omni/commit/24faed98d19a529196915b70ac51731c0eca8802",
+            "scope": "`github-release`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 895,
+            "summary": "Add flags to prefer-or-not `dist`/prefer-or-not `musl`"
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "9707ddf",
+            "link": "https://github.com/XaF/omni/commit/9707ddfd05da90151131d04c0181727dcad668ba",
+            "scope": "`shims`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 893,
+            "summary": "handle case insensitive file systems"
+          }
+        ]
+      }
     },
     "2025.1.4": {
+      "published_at": "2025-01-16T00:05:38Z",
       "build": {
         "tag": "v2025.1.4",
         "revision": "19e78499f3cb1ab0b2087c1758ab1c9cff06607d"
@@ -385,9 +745,31 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.4/omni-2025.1.4-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`196d6b4`](https://github.com/XaF/omni/commit/196d6b4762d87684ce6e39ab8bb4bb3be4d381b9) - **`config check`**: 🐛 config-specified negative pattern *(commit by @XaF)*\n- [`368f16a`](https://github.com/XaF/omni/commit/368f16a6c6987c44dc024250c89a4b6c17557e1d) - **`config check`**: 🐛 pattern locality  *(PR #890 by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "196d6b4",
+            "link": "https://github.com/XaF/omni/commit/196d6b4762d87684ce6e39ab8bb4bb3be4d381b9",
+            "scope": "`config check`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "config-specified negative pattern"
+          },
+          {
+            "commit": "368f16a",
+            "link": "https://github.com/XaF/omni/commit/368f16a6c6987c44dc024250c89a4b6c17557e1d",
+            "scope": "`config check`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 890,
+            "summary": "pattern locality"
+          }
+        ]
+      }
     },
     "2025.1.3": {
+      "published_at": "2025-01-14T00:40:34Z",
       "build": {
         "tag": "v2025.1.3",
         "revision": "5c198863c6fe8ff89c6a509abe9c92ed1513d569"
@@ -418,9 +800,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.3/omni-2025.1.3-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`bca63a2`](https://github.com/XaF/omni/commit/bca63a27b11623bb5f865024ef4c247745b26d3d) - **`mise`**: 🐛 install mise before resolving the fully qualified tool *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "bca63a2",
+            "link": "https://github.com/XaF/omni/commit/bca63a27b11623bb5f865024ef4c247745b26d3d",
+            "scope": "`mise`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "install mise before resolving the fully qualified tool"
+          }
+        ]
+      }
     },
     "2025.1.2": {
+      "published_at": "2025-01-13T23:17:14Z",
       "build": {
         "tag": "v2025.1.2",
         "revision": "2e9ff551b8397d3eb2c982abd60e02e2886b5de9"
@@ -451,9 +846,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.2/omni-2025.1.2-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`9b7749b`](https://github.com/XaF/omni/commit/9b7749be1797631fa636c908bc1e9a18bdc10b8e) - **`node`**: 🐛 remove `mise reshim` call from `npm` *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "9b7749b",
+            "link": "https://github.com/XaF/omni/commit/9b7749be1797631fa636c908bc1e9a18bdc10b8e",
+            "scope": "`node`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "remove `mise reshim` call from `npm`"
+          }
+        ]
+      }
     },
     "2025.1.1": {
+      "published_at": "2025-01-13T22:23:56Z",
       "build": {
         "tag": "v2025.1.1",
         "revision": "1b0d68893aeb86003fd25d15ce0741f4795c2ec8"
@@ -483,10 +891,10 @@
           "sha256": "abb9e987065d13c6f5249440dc74f033f3cc18870cd34f348ebbcc9f98adc0b4",
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.1/omni-2025.1.1-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "### :bug: Bug Fixes\n- [`369e2f8`](https://github.com/XaF/omni/commit/369e2f855846eff98322d7f9fd4f13d3abef0651) - **`node`**: fix backend name for `mise` *(commit by @XaF)*\n"
+      ]
     },
     "2025.1.0": {
+      "published_at": "2025-01-13T22:02:36Z",
       "build": {
         "tag": "v2025.1.0",
         "revision": "3a9531f3c91af07ec73e546bb62ffa6e7b23567d"
@@ -517,9 +925,154 @@
           "url": "https://github.com/xaf/omni/releases/download/v2025.1.0/omni-2025.1.0-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :boom: BREAKING CHANGES\n- due to [`27e6c76`](https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037) - 💥 replace `asdf` backend by `mise` *(PR #832 by @XaF)*:\n\n  Even with a number of automations to handle the  \n  migration from `asdf` to `mise`, it is possible that at least one  \n  instance of `omni up` in any repository is required, and maybe even  \n  running `omni up` again in any repository where issues are encountered.  \n  Also, it is possible that some plugins were working right of the bat  \n  with `asdf` but might require specifying an `url:` when using with  \n  `mise`; urls for base plugins can be found in  \n  https://github.com/asdf-vm/asdf-plugins.  \n  Closes https://github.com/XaF/omni/issues/830  \n  Closes https://github.com/XaF/omni/issues/695\n\n\n### :sparkles: New Features\n- [`27e6c76`](https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037) - **`up`**: 💥 replace `asdf` backend by `mise` *(PR #832 by @XaF)*\n  - :arrow_lower_right: *addresses issue #695 opened by @XaF*\n  - :arrow_lower_right: *addresses issue #830 opened by @XaF*\n- [`2a9f4c7`](https://github.com/XaF/omni/commit/2a9f4c7533cb471fb68f156bded3d824f897db16) - **`up`**: ✨ handle the different `mise` backends *(PR #840 by @XaF)*\n- [`2bf9b73`](https://github.com/XaF/omni/commit/2bf9b73cdfe05404cbd5d2aa0beb55777cbd2a96) - **`up`**: allow to configure `mise` version *(PR #842 by @XaF)*\n- [`14b00f7`](https://github.com/XaF/omni/commit/14b00f7f2844e4c3cc4ec7f773ec12c79f795238) - **`up`**: ✨ add supply-chain checks *(PR #848 by @XaF)*\n  - :arrow_lower_right: *addresses issue #600 opened by @XaF*\n- [`1dd0963`](https://github.com/XaF/omni/commit/1dd096362e6a058e38339f654e59b9bb13752780) - **`config check`**: ✨ add new command to check the configuration and command metadata *(PR #860 by @XaF)*\n  - :arrow_lower_right: *addresses issue #812 opened by @XaF*\n- [`c44b88f`](https://github.com/XaF/omni/commit/c44b88fae096d30bec918534a4f1bf3c5a6fea58) - **`auto`**: ignore .gitignore'd directories when using `auto` *(PR #868 by @XaF)*\n  - :arrow_lower_right: *addresses issue #789 opened by @XaF*\n- [`01ca378`](https://github.com/XaF/omni/commit/01ca37806a5664596d70005796953b579d113a0a) - **`auto`**: move the .gitignore'd check to improve speed *(commit by @XaF)*\n- [`856052f`](https://github.com/XaF/omni/commit/856052fe96df38687d12120ba46d570fb53fcb1e) - **`github-releases`**: ✨ optimize version fetching *(PR #870 by @XaF)*\n- [`f7c8811`](https://github.com/XaF/omni/commit/f7c8811820c393e29265563462ff9a57e0665742) - **`config check`**: ✨ add configuration *(PR #873 by @XaF)*\n  - :arrow_lower_right: *addresses issue #867 opened by @XaF*\n- [`7c961d2`](https://github.com/XaF/omni/commit/7c961d2f1c073ff4cae68575bbfaab363a3cd267) - **`tags`**: ✨ commands can now be tagged *(PR #878 by @XaF)*\n  - :arrow_lower_right: *addresses issue #858 opened by @XaF*\n- [`1a2b219`](https://github.com/XaF/omni/commit/1a2b2193c208643f5b701b54a56210d54e249902) - **`up`**: ✨ timeout and offer to kill running `up` if hanging *(PR #879 by @XaF)*\n  - :arrow_lower_right: *addresses issue #877 opened by @XaF*\n- [`784fc3b`](https://github.com/XaF/omni/commit/784fc3b89281d4577ebebf17c86ef43e04bda189) - **`helm`**: ✨ add support for local `helm` configuration *(commit by @XaF)*\n- [`0b15fab`](https://github.com/XaF/omni/commit/0b15fab0cf73364e2ddd3b1a658e69a6e32c8a93) - **`up`**: ✨ handle hanging process with mismatched init *(PR #886 by @XaF)*\n\n### :bug: Bug Fixes\n- [`a3e6349`](https://github.com/XaF/omni/commit/a3e63499226b524fe13abf7b8b98bd211fb01f3c) - **mise**: isolate the local state *(commit by @XaF)*\n- [`86f9043`](https://github.com/XaF/omni/commit/86f90433d9e753ba734cb456e790542fe8e733bf) - **`mise`**: 🐛 add the `mise` binary in the `PATH` for `mise` commands *(PR #851 by @XaF)*\n- [`78e4e7d`](https://github.com/XaF/omni/commit/78e4e7dc1233f802c2d941374f264a151780f1e9) - **`github-releases`**: add support for pagination when using the API *(PR #863 by @XaF)*\n  - :arrow_lower_right: *fixes issue #862 opened by @XaF*\n- [`bc5a519`](https://github.com/XaF/omni/commit/bc5a519d54a1248599eb1f74a3c9e2172a064796) - **`cargo-install` and `go-install`**: `--no-cache` now works *(PR #865 by @XaF)*\n- [`26f786c`](https://github.com/XaF/omni/commit/26f786c0328b840dedfbdf20ebbcb6a1186759c3) - **`up`**: initialize `omni_now()` *(commit by @XaF)*\n- [`35e55c6`](https://github.com/XaF/omni/commit/35e55c616604ac726a12f240f0316bbe363b91cd) - **`mise`**: listing versions now works using the short name *(commit by @XaF)*\n- [`035ebed`](https://github.com/XaF/omni/commit/035ebedf56ae69bb5f860a87ffb7908113b2ad10) - **`mise`**: handle URLs for registry plugins *(commit by @XaF)*\n- [`40cb3e6`](https://github.com/XaF/omni/commit/40cb3e6500332d0cf4014e2d3a54cbe250cdefa8) - **`argparser`**: `last` argument is now shown after `--` in the help *(PR #874 by @XaF)*\n  - :arrow_lower_right: *fixes issue #853 opened by @XaF*\n- [`49dfa9b`](https://github.com/XaF/omni/commit/49dfa9bcb5272a88ef9f5ad95a2b0cd94f6a6c3c) - **`up`**: `--bootstrap` restored to work *(commit by @XaF)*\n- [`ce3b272`](https://github.com/XaF/omni/commit/ce3b272e7c44793d2e3ac3c0295e957389075191) - **`auto`**: do not return an error if no version detected *(PR #881 by @XaF)*\n  - :arrow_lower_right: *fixes issue #852 opened by @XaF*\n- [`372a494`](https://github.com/XaF/omni/commit/372a4945ab98b7e9da03e5ec2ad8427e4ed09893) - **`data path`**: 🐛 use the normalized name to load the data path *(commit by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "27e6c76",
+            "link": "https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "💥",
+            "pr": 832,
+            "summary": "replace `asdf` backend by `mise`",
+            "issues": [
+              695,
+              830
+            ]
+          },
+          {
+            "commit": "2a9f4c7",
+            "link": "https://github.com/XaF/omni/commit/2a9f4c7533cb471fb68f156bded3d824f897db16",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 840,
+            "summary": "handle the different `mise` backends"
+          },
+          {
+            "commit": "14b00f7",
+            "link": "https://github.com/XaF/omni/commit/14b00f7f2844e4c3cc4ec7f773ec12c79f795238",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 848,
+            "summary": "add supply-chain checks",
+            "issues": [
+              600
+            ]
+          },
+          {
+            "commit": "1dd0963",
+            "link": "https://github.com/XaF/omni/commit/1dd096362e6a058e38339f654e59b9bb13752780",
+            "scope": "`config check`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 860,
+            "summary": "add new command to check the configuration and command metadata",
+            "issues": [
+              812,
+              789
+            ]
+          },
+          {
+            "commit": "856052f",
+            "link": "https://github.com/XaF/omni/commit/856052fe96df38687d12120ba46d570fb53fcb1e",
+            "scope": "`github-releases`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 870,
+            "summary": "optimize version fetching"
+          },
+          {
+            "commit": "f7c8811",
+            "link": "https://github.com/XaF/omni/commit/f7c8811820c393e29265563462ff9a57e0665742",
+            "scope": "`config check`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 873,
+            "summary": "add configuration",
+            "issues": [
+              867
+            ]
+          },
+          {
+            "commit": "7c961d2",
+            "link": "https://github.com/XaF/omni/commit/7c961d2f1c073ff4cae68575bbfaab363a3cd267",
+            "scope": "`tags`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 878,
+            "summary": "commands can now be tagged",
+            "issues": [
+              858
+            ]
+          },
+          {
+            "commit": "1a2b219",
+            "link": "https://github.com/XaF/omni/commit/1a2b2193c208643f5b701b54a56210d54e249902",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 879,
+            "summary": "timeout and offer to kill running `up` if hanging",
+            "issues": [
+              877
+            ]
+          },
+          {
+            "commit": "784fc3b",
+            "link": "https://github.com/XaF/omni/commit/784fc3b89281d4577ebebf17c86ef43e04bda189",
+            "scope": "`helm`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 0,
+            "summary": "add support for local `helm` configuration"
+          },
+          {
+            "commit": "0b15fab",
+            "link": "https://github.com/XaF/omni/commit/0b15fab0cf73364e2ddd3b1a658e69a6e32c8a93",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 886,
+            "summary": "handle hanging process with mismatched init"
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "86f9043",
+            "link": "https://github.com/XaF/omni/commit/86f90433d9e753ba734cb456e790542fe8e733bf",
+            "scope": "`mise`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 851,
+            "summary": "add the `mise` binary in the `PATH` for `mise` commands"
+          },
+          {
+            "commit": "372a494",
+            "link": "https://github.com/XaF/omni/commit/372a4945ab98b7e9da03e5ec2ad8427e4ed09893",
+            "scope": "`data path`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "use the normalized name to load the data path"
+          }
+        ],
+        "breaking": [
+          {
+            "commit": "27e6c76",
+            "link": "https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037",
+            "author": "XaF",
+            "emoji": "💥",
+            "pr": 832,
+            "summary": "replace `asdf` backend by `mise`",
+            "cause": "Even with a number of automations to handle the migration from `asdf` to `mise`, it is possible that at least one instance of `omni up` in any repository is required, and maybe even running `omni up` again in any repository where issues are encountered. Also, it is possible that some plugins were working right of the bat with `asdf` but might require specifying an `url:` when using with `mise`; urls for base plugins can be found in https://github.com/asdf-vm/asdf-plugins. Closes https://github.com/XaF/omni/issues/830 Closes https://github.com/XaF/omni/issues/695"
+          }
+        ]
+      }
     },
     "0.0.35": {
+      "published_at": "2025-01-08T20:46:56Z",
       "build": {
         "tag": "v0.0.35",
         "revision": "daeace2eb264d3f8ff1f6b7331a37d52ce5bd2de"
@@ -549,10 +1102,10 @@
           "sha256": "dee6a30bbaf9924e9c0c614cb82967134bed47d13c53f3bb5bddf5b427a0405a",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.35/omni-0.0.35-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "### :bug: Bug Fixes\n- [`8288495`](https://github.com/XaF/omni/commit/8288495398ceb1ba26682fe2fb341ea2b7c73b93) - **`up`**: `--bootstrap` restored to work *(commit by @XaF)*\n"
+      ]
     },
     "0.0.34": {
+      "published_at": "2025-01-06T20:31:49Z",
       "build": {
         "tag": "v0.0.34",
         "revision": "7ed1e50e3c5dc1c186f377d7c6bf3f6d03ca7535"
@@ -582,10 +1135,10 @@
           "sha256": "37ea5bae0d8b0244475465544b0e52ced4a667b38a23ed04442b67460e6da96d",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.34/omni-0.0.34-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "### :bug: Bug Fixes\n- [`c343283`](https://github.com/XaF/omni/commit/c343283dbc90d68f3a9d724af780d7f371bce460) - **`github-releases`**: add support for pagination when using the API *(PR #863 by @XaF)*\n  - :arrow_lower_right: *fixes issue #862 opened by @XaF*\n- [`da02ec2`](https://github.com/XaF/omni/commit/da02ec2b4a42e02d2e3f688819c7831deefb27a1) - **`up`**: initialize `omni_now()` *(commit by @XaF)*\n"
+      ]
     },
     "0.0.33": {
+      "published_at": "2024-12-19T20:32:45Z",
       "build": {
         "tag": "v0.0.33",
         "revision": "d855cbbc736006201b8a4302c3893eca6096c122"
@@ -616,9 +1169,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.33/omni-0.0.33-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`184ed55`](https://github.com/XaF/omni/commit/184ed55971e8f7b3a171d58d52fb4ce1eb963a6b) - **shims**: 🐛 add missing shims for `go-install` and `cargo-install` *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "184ed55",
+            "link": "https://github.com/XaF/omni/commit/184ed55971e8f7b3a171d58d52fb4ce1eb963a6b",
+            "scope": "shims",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "add missing shims for `go-install` and `cargo-install`"
+          }
+        ]
+      }
     },
     "0.0.32": {
+      "published_at": "2024-12-19T18:23:24Z",
       "build": {
         "tag": "v0.0.32",
         "revision": "a0865c4558f0d0e912f77014c692eff46ef1ae33"
@@ -649,9 +1215,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.32/omni-0.0.32-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`ed6898e`](https://github.com/XaF/omni/commit/ed6898ec1e79815a8341fdcabe414e615dd15d2a) - **`asdf`**: 🧨 disable calls to `asdf update` *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "ed6898e",
+            "link": "https://github.com/XaF/omni/commit/ed6898ec1e79815a8341fdcabe414e615dd15d2a",
+            "scope": "`asdf`",
+            "author": "XaF",
+            "emoji": "🧨",
+            "pr": 0,
+            "summary": "disable calls to `asdf update`"
+          }
+        ]
+      }
     },
     "0.0.31": {
+      "published_at": "2024-12-16T22:30:26Z",
       "build": {
         "tag": "v0.0.31",
         "revision": "498d0334fe8eeb351750ca29c574aa645b1a0b2a"
@@ -682,9 +1261,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.31/omni-0.0.31-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`9ff01f1`](https://github.com/XaF/omni/commit/9ff01f1105897bc5927542bdd64e58ce70b31c97) - **`go-install`**: 🐛 go binary path lacked a `/go` particle *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "9ff01f1",
+            "link": "https://github.com/XaF/omni/commit/9ff01f1105897bc5927542bdd64e58ce70b31c97",
+            "scope": "`go-install`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "go binary path lacked a `/go` particle"
+          }
+        ]
+      }
     },
     "0.0.30": {
+      "published_at": "2024-12-16T21:23:45Z",
       "build": {
         "tag": "v0.0.30",
         "revision": "ed920192a17287de9011678b3ebab00e5290976d"
@@ -715,9 +1307,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.30/omni-0.0.30-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`912d09f`](https://github.com/XaF/omni/commit/912d09fa404daabfe0d9680c39ffcc8d07e7451c) - **`asdf`**: 🐛 handle 'auto' versioning when committing dependencies *(commit by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "912d09f",
+            "link": "https://github.com/XaF/omni/commit/912d09fa404daabfe0d9680c39ffcc8d07e7451c",
+            "scope": "`asdf`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "handle 'auto' versioning when committing dependencies"
+          }
+        ]
+      }
     },
     "0.0.29": {
+      "published_at": "2024-12-16T20:04:18Z",
       "build": {
         "tag": "v0.0.29",
         "revision": "03b08af5e2b0e407420b944be195ea4544771397"
@@ -748,9 +1353,61 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.29/omni-0.0.29-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`b6fc1d1`](https://github.com/XaF/omni/commit/b6fc1d146be5002b0032a5d8a439434c251b38aa) - **`argparser`**: the `placeholders` can now allow multiple values *(PR #773 by @XaF)*\n- [`43a9b48`](https://github.com/XaF/omni/commit/43a9b48d721e41100c01ed14a2c3245e99d5eacb) - **`github-release`**: improvements to arch pattern matching *(PR #778 by @XaF)*\n  - :arrow_lower_right: *addresses issue #779 opened by @XaF*\n- [`cbc04e7`](https://github.com/XaF/omni/commit/cbc04e7d8fcbb7be1f39ffa7ae0282e879f99ba2) - **`custom`**: add support for adding environment variables *(PR #785 by @XaF)*\n  - :arrow_lower_right: *addresses issue #700 opened by @XaF*\n- [`3b27dc0`](https://github.com/XaF/omni/commit/3b27dc0814f9087c4c7cfbc216f093056f0f0044) - **`custom`**: allow custom operations to add work directory binaries *(PR #788 by @XaF)*\n  - :arrow_lower_right: *addresses issue #701 opened by @XaF*\n- [`e52c652`](https://github.com/XaF/omni/commit/e52c652b78def22f382e3f4d2b862b8c481fa186) - **cache**: move from JSON files to an SQLite database *(PR #795 by @XaF)*\n- [`095d2b3`](https://github.com/XaF/omni/commit/095d2b34e31b9695ec1c713801e88455a06b433d) - **`up`**: ✨ add a new `go-install` operation *(PR #797 by @XaF)*\n  - :arrow_lower_right: *addresses issue #714 opened by @XaF*\n- [`b4ef260`](https://github.com/XaF/omni/commit/b4ef2609815ffe6b131b59921df337f314b3b1c5) - **`up`**: ✨ add `cargo-install` operation *(PR #800 by @XaF)*\n  - :arrow_lower_right: *addresses issue #798 opened by @XaF*\n- [`abe4172`](https://github.com/XaF/omni/commit/abe41729a13b3f5cd19619ee48ebf9853c5c4d82) - **`argparser`**: support using `--arg=PLACEHOLDER` *(PR #801 by @XaF)*\n  - :arrow_lower_right: *addresses issue #794 opened by @XaF*\n- [`f01ec3e`](https://github.com/XaF/omni/commit/f01ec3efe1e610cbd4b91b0d219282a32ab943df) - **`help`**: ✨ add `--output` flag which can take `plain` or `json` *(PR #810 by @XaF)*\n  - :arrow_lower_right: *addresses issue #809 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`496df0e`](https://github.com/XaF/omni/commit/496df0e7c98490400f8d2fca478b0ca46c4fa732) - **self update**: trim homebrew prefix from binary *(PR #761 by @XaF)*\n- [`cd8969a`](https://github.com/XaF/omni/commit/cd8969aa71773bebdb051fe5c06283422692c13b) - **self update**: handle cases where sudo is required *(PR #765 by @XaF)*\n- [`9e5ee2c`](https://github.com/XaF/omni/commit/9e5ee2c8d3046ea6fbd5dc778708efd9b9010571) - skip cache migration if file is empty *(commit by @XaF)*\n- [`3cb0948`](https://github.com/XaF/omni/commit/3cb094873ae10ee672145c6613284ce02d45e5d2) - **cleanup**: correctly delete symlinks *(PR #790 by @tdeebswihart)*\n- [`344ae18`](https://github.com/XaF/omni/commit/344ae18ef35e6dde9f190a7982d1a79f5c323338) - **`cache`**: 🐛 cleanup old versions for uninstalled resources *(PR #811 by @XaF)*\n  - :arrow_lower_right: *fixes issue #755 opened by @XaF*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "095d2b3",
+            "link": "https://github.com/XaF/omni/commit/095d2b34e31b9695ec1c713801e88455a06b433d",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 797,
+            "summary": "add a new `go-install` operation",
+            "issues": [
+              714
+            ]
+          },
+          {
+            "commit": "b4ef260",
+            "link": "https://github.com/XaF/omni/commit/b4ef2609815ffe6b131b59921df337f314b3b1c5",
+            "scope": "`up`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 800,
+            "summary": "add `cargo-install` operation",
+            "issues": [
+              798,
+              794
+            ]
+          },
+          {
+            "commit": "f01ec3e",
+            "link": "https://github.com/XaF/omni/commit/f01ec3efe1e610cbd4b91b0d219282a32ab943df",
+            "scope": "`help`",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 810,
+            "summary": "add `--output` flag which can take `plain` or `json`",
+            "issues": [
+              809
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "344ae18",
+            "link": "https://github.com/XaF/omni/commit/344ae18ef35e6dde9f190a7982d1a79f5c323338",
+            "scope": "`cache`",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 811,
+            "summary": "cleanup old versions for uninstalled resources"
+          }
+        ]
+      }
     },
     "0.0.28": {
+      "published_at": "2024-11-06T22:20:16Z",
       "build": {
         "tag": "v0.0.28",
         "revision": "3be5327ae20220b3c4386c47db35a8ed067947e5"
@@ -780,10 +1437,10 @@
           "sha256": "1a108faf5f4ba8353c70bce7e7f2b9962013336d94b671a939cf774f52ca74e5",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.28/omni-0.0.28-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "### :bug: Bug Fixes\n- [`069d2de`](https://github.com/XaF/omni/commit/069d2de61cd225151724ba5f8a8ceb0a3216a29b) - **help**: show short arguments in usage *(PR #742 by @XaF)*\n- [`7b8d702`](https://github.com/XaF/omni/commit/7b8d702e0ae1475b5717adad36ea6ffd7ba9e2e8) - **python**: replace lzma with xz when using nix *(PR #743 by @tdeebswihart)*\n- [`b8b20d4`](https://github.com/XaF/omni/commit/b8b20d4512e7e6ce6942a1ee9008be486b9fb305) - **github releases**: remove uninstalled github releases from cache *(PR #754 by @XaF)*\n  - :arrow_lower_right: *fixes issue #753 opened by @XaF*\n- [`ca1c9d6`](https://github.com/XaF/omni/commit/ca1c9d62a1042f6949adcbf59cf5ffaa786ae31f) - **env**: path environment variables work for packages *(PR #759 by @XaF)*\n"
+      ]
     },
     "0.0.27": {
+      "published_at": "2024-10-28T14:34:24Z",
       "build": {
         "tag": "v0.0.27",
         "revision": "9c053444418cdc5c5ff3bd93a2ddd792b3d21ea8"
@@ -814,9 +1471,36 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.27/omni-0.0.27-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :boom: BREAKING CHANGES\n- due to [`2d5d264`](https://github.com/XaF/omni/commit/2d5d26453bd06049cd83559e5580920991188e89) - add `--upgrade` parameter *(PR #723 by @XaF)*:\n\n  This changes the default behavior which would now be  \n  the equivalent of setting `up_command`/`upgrade` to `true`. The default  \n  behavior was changed to speed up the operations.  \n  Closes https://github.com/XaF/omni/issues/705\n\n\n### :sparkles: New Features\n- [`2d5d264`](https://github.com/XaF/omni/commit/2d5d26453bd06049cd83559e5580920991188e89) - **up**: add `--upgrade` parameter *(PR #723 by @XaF)*\n  - :arrow_lower_right: *addresses issue #705 opened by @XaF*\n- [`042c128`](https://github.com/XaF/omni/commit/042c12867b9128d2cb25d12e241b1192d80237d8) - **argparser**: ✨ omni can now parse arguments for custom commands *(PR #735 by @XaF)*\n  - :arrow_lower_right: *addresses issue #734 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`782dccf`](https://github.com/XaF/omni/commit/782dccf81978d473fa0477bedbcd1d79ba12d201) - **go**: 🐛 go dynenv now sets GOBIN env var *(PR #709 by @XaF)*\n  - :arrow_lower_right: *fixes issue #708 opened by @XaF*\n- [`71e4012`](https://github.com/XaF/omni/commit/71e40124082c786eb79390c24d530009de37b77a) - minor UX fixes *(commit by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "042c128",
+            "link": "https://github.com/XaF/omni/commit/042c12867b9128d2cb25d12e241b1192d80237d8",
+            "scope": "argparser",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 735,
+            "summary": "omni can now parse arguments for custom commands",
+            "issues": [
+              734
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "782dccf",
+            "link": "https://github.com/XaF/omni/commit/782dccf81978d473fa0477bedbcd1d79ba12d201",
+            "scope": "go",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 709,
+            "summary": "go dynenv now sets GOBIN env var"
+          }
+        ]
+      }
     },
     "0.0.26": {
+      "published_at": "2024-09-10T18:58:59Z",
       "build": {
         "tag": "v0.0.26",
         "revision": "01f3e750269083438fca2bd7e7509738e48fe3d9"
@@ -847,9 +1531,63 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.26/omni-0.0.26-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`dbb7273`](https://github.com/XaF/omni/commit/dbb72736a84ec89411375567eb72aeb264310a5e) - **nodejs**: ✨ handle engine versions and package installs *(PR #617 by @XaF)*\n  - :arrow_lower_right: *addresses issue #293 opened by @XaF*\n  - :arrow_lower_right: *addresses issue #294 opened by @XaF*\n- [`4666c72`](https://github.com/XaF/omni/commit/4666c72796081ddcb15726acefd1242a6fc48d44) - **up**: ✨ synchronize 'omni up' operations *(PR #687 by @XaF)*\n  - :arrow_lower_right: *addresses issue #686 opened by @XaF*\n- [`2377aef`](https://github.com/XaF/omni/commit/2377aefa01ff28e4256e809957d78a66162db74d) - **github release**: ✨ configurable github auth token *(PR #688 by @XaF)*\n  - :arrow_lower_right: *addresses issue #512 opened by @XaF*\n  - :arrow_lower_right: *addresses issue #670 opened by @XaF*\n- [`28ed85f`](https://github.com/XaF/omni/commit/28ed85fd8072f861c6195f64da8505dceb5a9295) - **github release**: ✨ suppport extended architectures with rosetta *(PR #691 by @XaF)*\n  - :arrow_lower_right: *addresses issue #647 opened by @XaF*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "dbb7273",
+            "link": "https://github.com/XaF/omni/commit/dbb72736a84ec89411375567eb72aeb264310a5e",
+            "scope": "nodejs",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 617,
+            "summary": "handle engine versions and package installs",
+            "issues": [
+              293,
+              294
+            ]
+          },
+          {
+            "commit": "4666c72",
+            "link": "https://github.com/XaF/omni/commit/4666c72796081ddcb15726acefd1242a6fc48d44",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 687,
+            "summary": "synchronize 'omni up' operations",
+            "issues": [
+              686
+            ]
+          },
+          {
+            "commit": "2377aef",
+            "link": "https://github.com/XaF/omni/commit/2377aefa01ff28e4256e809957d78a66162db74d",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 688,
+            "summary": "configurable github auth token",
+            "issues": [
+              512,
+              670
+            ]
+          },
+          {
+            "commit": "28ed85f",
+            "link": "https://github.com/XaF/omni/commit/28ed85fd8072f861c6195f64da8505dceb5a9295",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 691,
+            "summary": "suppport extended architectures with rosetta",
+            "issues": [
+              647
+            ]
+          }
+        ]
+      }
     },
     "0.0.25": {
+      "published_at": "2024-07-01T21:35:50Z",
       "build": {
         "tag": "v0.0.25",
         "revision": "28c7157d4dc3702794f3bd66f10749bacd797281"
@@ -880,9 +1618,85 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.25/omni-0.0.25-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`0d709dd`](https://github.com/XaF/omni/commit/0d709dd655ecf623f9348aaad924d5019dbd574a) - **env**: add OMNI_NONINTERACTIVE env var *(PR #542 by @XaF)*\n- [`99b2a9f`](https://github.com/XaF/omni/commit/99b2a9f4a238ce7cf93d24e7f3d6db994ef74d69) - **github release**: ✨ allow for custom asset name matching *(PR #541 by @XaF)*\n  - :arrow_lower_right: *addresses issue #479 opened by @XaF*\n- [`8393518`](https://github.com/XaF/omni/commit/83935189e89657169694cef106515948405b90dd) - **repo_path_format**: ✨ can be configured per organization *(PR #568 by @XaF)*\n  - :arrow_lower_right: *addresses issue #561 opened by @XaF*\n- [`7d6e602`](https://github.com/XaF/omni/commit/7d6e602b3e15a9111207cccea985e6a8c0c51d36) - **node**: ✨ support reading version from .nvmrc *(PR #570 by @XaF)*\n  - :arrow_lower_right: *addresses issue #507 opened by @XaF*\n- [`734a39b`](https://github.com/XaF/omni/commit/734a39b5cee563b3f336073ef8bb0c04eca47ba7) - **askpass**: show command requiring authentication *(PR #580 by @XaF)*\n  - :arrow_lower_right: *addresses issue #579 opened by @XaF*\n- [`e9d1bc1`](https://github.com/XaF/omni/commit/e9d1bc1c6483628cdd1b18a7d318d20c055007eb) - **askpass**: add `enable_gui` configuration *(PR #582 by @XaF)*\n  - :arrow_lower_right: *addresses issue #581 opened by @XaF*\n- [`22bd272`](https://github.com/XaF/omni/commit/22bd2723d6fff449126739dbbb4f8938b19039d6) - **up**: save last `up` head commit *(PR #585 by @XaF)*\n  - :arrow_lower_right: *addresses issue #575 opened by @XaF*\n- [`b99c7d1`](https://github.com/XaF/omni/commit/b99c7d1ae76bb8cb8b7185d85fb29f37da531631) - Add `--local` global flag *(PR #601 by @XaF)*\n  - :arrow_lower_right: *addresses issue #577 opened by @XaF*\n- [`b2a1874`](https://github.com/XaF/omni/commit/b2a18744a0170f37fc646f5bead325259f9990f3) - **github release**: support checksum validation *(PR #603 by @XaF)*\n  - :arrow_lower_right: *addresses issue #539 opened by @XaF*\n- [`87d2840`](https://github.com/XaF/omni/commit/87d2840915a7002c864f371f5423ba8b10c53e64) - **homebrew**: ✨ update taps using git *(PR #612 by @XaF)*\n  - :arrow_lower_right: *addresses issue #611 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`bd6f144`](https://github.com/XaF/omni/commit/bd6f144c53307a2f5636c95c005b5f8e9321753c) - **up**: 🐛 auto-bootstrap disabled on non-interactive shells *(PR #543 by @XaF)*\n- [`606a1e1`](https://github.com/XaF/omni/commit/606a1e17a1842538e4e5a5b0c9c04bddd14bd673) - 🐛 `env` config parameter of type `path` now resolves properly *(PR #565 by @XaF)*\n  - :arrow_lower_right: *fixes issue #564 opened by @florzanetta*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "99b2a9f",
+            "link": "https://github.com/XaF/omni/commit/99b2a9f4a238ce7cf93d24e7f3d6db994ef74d69",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 541,
+            "summary": "allow for custom asset name matching",
+            "issues": [
+              479
+            ]
+          },
+          {
+            "commit": "8393518",
+            "link": "https://github.com/XaF/omni/commit/83935189e89657169694cef106515948405b90dd",
+            "scope": "repo_path_format",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 568,
+            "summary": "can be configured per organization",
+            "issues": [
+              561
+            ]
+          },
+          {
+            "commit": "7d6e602",
+            "link": "https://github.com/XaF/omni/commit/7d6e602b3e15a9111207cccea985e6a8c0c51d36",
+            "scope": "node",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 570,
+            "summary": "support reading version from .nvmrc",
+            "issues": [
+              507,
+              579,
+              581,
+              575,
+              577,
+              539
+            ]
+          },
+          {
+            "commit": "87d2840",
+            "link": "https://github.com/XaF/omni/commit/87d2840915a7002c864f371f5423ba8b10c53e64",
+            "scope": "homebrew",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 612,
+            "summary": "update taps using git",
+            "issues": [
+              611
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "bd6f144",
+            "link": "https://github.com/XaF/omni/commit/bd6f144c53307a2f5636c95c005b5f8e9321753c",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 543,
+            "summary": "auto-bootstrap disabled on non-interactive shells"
+          },
+          {
+            "commit": "606a1e1",
+            "link": "https://github.com/XaF/omni/commit/606a1e17a1842538e4e5a5b0c9c04bddd14bd673",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 565,
+            "summary": "`env` config parameter of type `path` now resolves properly"
+          }
+        ]
+      }
     },
     "0.0.24": {
+      "published_at": "2024-04-29T00:54:55Z",
       "build": {
         "tag": "v0.0.24",
         "revision": "aa75ea83fae42664c4085b9d3ffd11daf8145288"
@@ -913,9 +1727,277 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.24/omni-0.0.24-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`a6db9bf`](https://github.com/XaF/omni/commit/a6db9bf213f8ecc2dd124a443242e7069157c665) - **shims**: ✨ add a shims directory with all dynamic binaries *(PR #490 by @XaF)*\n  - :arrow_lower_right: *addresses issue #492 opened by @XaF*\n- [`dc398c6`](https://github.com/XaF/omni/commit/dc398c6646217127a304dd567c25e99c1b7cb049) - **config trust**: ✨ command to manage workdir trust *(PR #497 by @XaF)*\n  - :arrow_lower_right: *addresses issue #496 opened by @XaF*\n- [`10b2946`](https://github.com/XaF/omni/commit/10b2946930db50fa53f3cbdacb09829cab6ed026) - **hook init**: ✨ handle shims *(PR #501 by @XaF)*\n  - :arrow_lower_right: *addresses issue #498 opened by @XaF*\n- [`9c75208`](https://github.com/XaF/omni/commit/9c7520862a8f1c7db8db1277c0a6d41379f37bc7) - **github release**: ✨ add more compact configuration handling *(PR #502 by @XaF)*\n- [`98b9e75`](https://github.com/XaF/omni/commit/98b9e75bf9410ad57458bb05f63436cf5c1a4f58) - **github release**: ✨ try refreshing releases cache if none match *(PR #504 by @XaF)*\n  - :arrow_lower_right: *addresses issue #486 opened by @XaF*\n- [`00052d3`](https://github.com/XaF/omni/commit/00052d36eabc9e36c7889fdf8634de1384997eb4) - **asdf**: ✨ add suppport for arbitrary asdf tools *(PR #508 by @XaF)*\n  - :arrow_lower_right: *addresses issue #494 opened by @XaF*\n- [`7be960f`](https://github.com/XaF/omni/commit/7be960fab22522574788f2ac9aba27d11278d6d8) - **template**: ✨ add `env` map in the context *(PR #509 by @XaF)*\n  - :arrow_lower_right: *addresses issue #493 opened by @XaF*\n- [`9318053`](https://github.com/XaF/omni/commit/93180533b54d7dacc9f64fd68d46fca85fbeb7b1) - **github release**: ✨ read github auth token from `gh` *(PR #513 by @XaF)*\n  - :arrow_lower_right: *addresses issue #478 opened by @XaF*\n- [`cac2b2d`](https://github.com/XaF/omni/commit/cac2b2d4839195b71ce1fd7e3f9ae2ce9024409b) - **nix**: ✨ handle flakes *(PR #517 by @XaF)*\n  - :arrow_lower_right: *addresses issue #466 opened by @XaF*\n- [`7f7e833`](https://github.com/XaF/omni/commit/7f7e8338df076579651234ee87c758731f299734) - **homebrew**: ✨ auto-extract taps from formulas *(PR #518 by @XaF)*\n  - :arrow_lower_right: *addresses issue #516 opened by @XaF*\n- [`e89b240`](https://github.com/XaF/omni/commit/e89b24037ba59fa82a0092d9c46dc7cf1de3d790) - **update**: ✨ ask before updating on command not found *(PR #522 by @XaF)*\n  - :arrow_lower_right: *addresses issue #482 opened by @badideasforsale*\n- [`5d0d5c9`](https://github.com/XaF/omni/commit/5d0d5c9d9d91713cd3d6be12ebd6ed5a2d2398d9) - **cleanup**: ✨ add delay before removing unused resources *(PR #523 by @XaF)*\n  - :arrow_lower_right: *addresses issue #435 opened by @XaF*\n- [`83453e5`](https://github.com/XaF/omni/commit/83453e570b97365eccd65418def1715623d2e843) - **version**: ✨ improve version matching *(PR #524 by @XaF)*\n- [`f404a1e`](https://github.com/XaF/omni/commit/f404a1e7733c56e8ab49bdbab6f965fdafa87a91) - **asdf**: ✨ improve resiliency of asdf operations *(PR #525 by @XaF)*\n  - :arrow_lower_right: *addresses issue #262 opened by @XaF*\n  - :arrow_lower_right: *addresses issue #441 opened by @XaF*\n- [`eb27de6`](https://github.com/XaF/omni/commit/eb27de649cf18d0c70d5ca3811fc244168bde5e1) - **github release**: ✨ fallback to installed version if download error *(PR #528 by @XaF)*\n  - :arrow_lower_right: *addresses issue #526 opened by @XaF*\n- [`6d386fe`](https://github.com/XaF/omni/commit/6d386fe6739a9cddb3a1920005cdf30b23f1e9bb) - **up**: ✨ add `--fail-on-upgrade` option *(PR #529 by @XaF)*\n  - :arrow_lower_right: *addresses issue #488 opened by @XaF*\n- [`12920ec`](https://github.com/XaF/omni/commit/12920ec11977d6d1b281ab1e8fd78615bb2d5a5c) - **homebrew**: ✨ do not default to failing on upgrade error *(PR #530 by @XaF)*\n  - :arrow_lower_right: *addresses issue #527 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`2bb54f1`](https://github.com/XaF/omni/commit/2bb54f1032e269bae406ac0024d4bd0021aac5b3) - **github-release**: 🐛 handle GitHub request errors better *(PR #500 by @XaF)*\n- [`b0fcf63`](https://github.com/XaF/omni/commit/b0fcf633f23a682f8e7b73b7dec5bc692b90fd26) - **nodejs**: 🐛 .node-version file was not used for 'auto' *(PR #503 by @XaF)*\n- [`c25e725`](https://github.com/XaF/omni/commit/c25e725bcb3dd257cb860ca50c880f47f6146b02) - **self update**: 🐛 check version after successful update *(PR #506 by @XaF)*\n- [`fa33378`](https://github.com/XaF/omni/commit/fa333787857141347455fb4842064488676dcde5) - **self update**: 🐛 force-refresh tap before upgrading omni *(PR #505 by @XaF)*\n  - :arrow_lower_right: *fixes issue #495 opened by @XaF*\n- [`252c8fc`](https://github.com/XaF/omni/commit/252c8fc64fd0723b050e7b5cccafa7876bb738cf) - **asdf**: 🐛 post install and detect func use the real tool name *(PR #510 by @XaF)*\n- [`c183edd`](https://github.com/XaF/omni/commit/c183edd6a1f73d0b9b777f1eb675582fbf148ad9) - **dynenv**: 🐛 feature name use real asdf tool name *(commit by @XaF)*\n- [`ec6054d`](https://github.com/XaF/omni/commit/ec6054d773fb8f3fc0a103e8757deb6bc13c45b6) - **up auto**: 🐛 ignore vendor directories *(PR #511 by @XaF)*\n  - :arrow_lower_right: *fixes issue #425 opened by @XaF*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "a6db9bf",
+            "link": "https://github.com/XaF/omni/commit/a6db9bf213f8ecc2dd124a443242e7069157c665",
+            "scope": "shims",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 490,
+            "summary": "add a shims directory with all dynamic binaries",
+            "issues": [
+              492
+            ]
+          },
+          {
+            "commit": "dc398c6",
+            "link": "https://github.com/XaF/omni/commit/dc398c6646217127a304dd567c25e99c1b7cb049",
+            "scope": "config trust",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 497,
+            "summary": "command to manage workdir trust",
+            "issues": [
+              496
+            ]
+          },
+          {
+            "commit": "10b2946",
+            "link": "https://github.com/XaF/omni/commit/10b2946930db50fa53f3cbdacb09829cab6ed026",
+            "scope": "hook init",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 501,
+            "summary": "handle shims",
+            "issues": [
+              498
+            ]
+          },
+          {
+            "commit": "9c75208",
+            "link": "https://github.com/XaF/omni/commit/9c7520862a8f1c7db8db1277c0a6d41379f37bc7",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 502,
+            "summary": "add more compact configuration handling"
+          },
+          {
+            "commit": "98b9e75",
+            "link": "https://github.com/XaF/omni/commit/98b9e75bf9410ad57458bb05f63436cf5c1a4f58",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 504,
+            "summary": "try refreshing releases cache if none match",
+            "issues": [
+              486
+            ]
+          },
+          {
+            "commit": "00052d3",
+            "link": "https://github.com/XaF/omni/commit/00052d36eabc9e36c7889fdf8634de1384997eb4",
+            "scope": "asdf",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 508,
+            "summary": "add suppport for arbitrary asdf tools",
+            "issues": [
+              494
+            ]
+          },
+          {
+            "commit": "7be960f",
+            "link": "https://github.com/XaF/omni/commit/7be960fab22522574788f2ac9aba27d11278d6d8",
+            "scope": "template",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 509,
+            "summary": "add `env` map in the context",
+            "issues": [
+              493
+            ]
+          },
+          {
+            "commit": "9318053",
+            "link": "https://github.com/XaF/omni/commit/93180533b54d7dacc9f64fd68d46fca85fbeb7b1",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 513,
+            "summary": "read github auth token from `gh`",
+            "issues": [
+              478
+            ]
+          },
+          {
+            "commit": "cac2b2d",
+            "link": "https://github.com/XaF/omni/commit/cac2b2d4839195b71ce1fd7e3f9ae2ce9024409b",
+            "scope": "nix",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 517,
+            "summary": "handle flakes",
+            "issues": [
+              466
+            ]
+          },
+          {
+            "commit": "7f7e833",
+            "link": "https://github.com/XaF/omni/commit/7f7e8338df076579651234ee87c758731f299734",
+            "scope": "homebrew",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 518,
+            "summary": "auto-extract taps from formulas",
+            "issues": [
+              516
+            ]
+          },
+          {
+            "commit": "e89b240",
+            "link": "https://github.com/XaF/omni/commit/e89b24037ba59fa82a0092d9c46dc7cf1de3d790",
+            "scope": "update",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 522,
+            "summary": "ask before updating on command not found",
+            "issues": [
+              482
+            ]
+          },
+          {
+            "commit": "5d0d5c9",
+            "link": "https://github.com/XaF/omni/commit/5d0d5c9d9d91713cd3d6be12ebd6ed5a2d2398d9",
+            "scope": "cleanup",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 523,
+            "summary": "add delay before removing unused resources",
+            "issues": [
+              435
+            ]
+          },
+          {
+            "commit": "83453e5",
+            "link": "https://github.com/XaF/omni/commit/83453e570b97365eccd65418def1715623d2e843",
+            "scope": "version",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 524,
+            "summary": "improve version matching"
+          },
+          {
+            "commit": "f404a1e",
+            "link": "https://github.com/XaF/omni/commit/f404a1e7733c56e8ab49bdbab6f965fdafa87a91",
+            "scope": "asdf",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 525,
+            "summary": "improve resiliency of asdf operations",
+            "issues": [
+              262,
+              441
+            ]
+          },
+          {
+            "commit": "eb27de6",
+            "link": "https://github.com/XaF/omni/commit/eb27de649cf18d0c70d5ca3811fc244168bde5e1",
+            "scope": "github release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 528,
+            "summary": "fallback to installed version if download error",
+            "issues": [
+              526
+            ]
+          },
+          {
+            "commit": "6d386fe",
+            "link": "https://github.com/XaF/omni/commit/6d386fe6739a9cddb3a1920005cdf30b23f1e9bb",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 529,
+            "summary": "add `--fail-on-upgrade` option",
+            "issues": [
+              488
+            ]
+          },
+          {
+            "commit": "12920ec",
+            "link": "https://github.com/XaF/omni/commit/12920ec11977d6d1b281ab1e8fd78615bb2d5a5c",
+            "scope": "homebrew",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 530,
+            "summary": "do not default to failing on upgrade error",
+            "issues": [
+              527
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "2bb54f1",
+            "link": "https://github.com/XaF/omni/commit/2bb54f1032e269bae406ac0024d4bd0021aac5b3",
+            "scope": "github-release",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 500,
+            "summary": "handle GitHub request errors better"
+          },
+          {
+            "commit": "b0fcf63",
+            "link": "https://github.com/XaF/omni/commit/b0fcf633f23a682f8e7b73b7dec5bc692b90fd26",
+            "scope": "nodejs",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 503,
+            "summary": ".node-version file was not used for 'auto'"
+          },
+          {
+            "commit": "c25e725",
+            "link": "https://github.com/XaF/omni/commit/c25e725bcb3dd257cb860ca50c880f47f6146b02",
+            "scope": "self update",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 506,
+            "summary": "check version after successful update"
+          },
+          {
+            "commit": "fa33378",
+            "link": "https://github.com/XaF/omni/commit/fa333787857141347455fb4842064488676dcde5",
+            "scope": "self update",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 505,
+            "summary": "force-refresh tap before upgrading omni"
+          },
+          {
+            "commit": "252c8fc",
+            "link": "https://github.com/XaF/omni/commit/252c8fc64fd0723b050e7b5cccafa7876bb738cf",
+            "scope": "asdf",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 510,
+            "summary": "post install and detect func use the real tool name"
+          },
+          {
+            "commit": "c183edd",
+            "link": "https://github.com/XaF/omni/commit/c183edd6a1f73d0b9b777f1eb675582fbf148ad9",
+            "scope": "dynenv",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "feature name use real asdf tool name"
+          },
+          {
+            "commit": "ec6054d",
+            "link": "https://github.com/XaF/omni/commit/ec6054d773fb8f3fc0a103e8757deb6bc13c45b6",
+            "scope": "up auto",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 511,
+            "summary": "ignore vendor directories"
+          }
+        ]
+      }
     },
     "0.0.23": {
+      "published_at": "2024-04-04T03:04:56Z",
       "build": {
         "tag": "v0.0.23",
         "revision": "3318e2fc22fd3a3da510399a12f838667856fff3"
@@ -946,9 +2028,33 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.23/omni-0.0.23-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`4a6ff4d`](https://github.com/XaF/omni/commit/4a6ff4d0973e6113f98a13c39100d5a9e8060efb) - **github-release**: ✨ support binary downloading *(PR #480 by @XaF)*\n\n### :bug: Bug Fixes\n- [`18d836c`](https://github.com/XaF/omni/commit/18d836c7444267d11bac32e06ed15f07ac6284ff) - **cleanup**: 🐛 data path cleanup won't delete auto versions *(PR #481 by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "4a6ff4d",
+            "link": "https://github.com/XaF/omni/commit/4a6ff4d0973e6113f98a13c39100d5a9e8060efb",
+            "scope": "github-release",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 480,
+            "summary": "support binary downloading"
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "18d836c",
+            "link": "https://github.com/XaF/omni/commit/18d836c7444267d11bac32e06ed15f07ac6284ff",
+            "scope": "cleanup",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 481,
+            "summary": "data path cleanup won't delete auto versions"
+          }
+        ]
+      }
     },
     "0.0.22": {
+      "published_at": "2024-04-03T18:35:05Z",
       "build": {
         "tag": "v0.0.22",
         "revision": "e4aa638cc8ee388e529079bc6649ae6548b7c79e"
@@ -979,9 +2085,213 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.22/omni-0.0.22-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`21192a7`](https://github.com/XaF/omni/commit/21192a701594658dc2cd2d2505592d95d9d1d24c) - add `prompts` and templating for config and clone suggestions *(PR #418 by @XaF)*\n  - :arrow_lower_right: *addresses issue #162 opened by @XaF*\n- [`da8401b`](https://github.com/XaF/omni/commit/da8401b74bc32e0757befc5d5514f31360940fc6) - **homebrew**: detecting cask bin directories *(PR #420 by @XaF)*\n  - :arrow_lower_right: *addresses issue #417 opened by @XaF*\n- [`e853315`](https://github.com/XaF/omni/commit/e853315dc82ee9aaa38fdb0d6e995bdbc08f5240) - **nix**: ✨ add nix up operation *(PR #428 by @XaF)*\n  - :arrow_lower_right: *addresses issue #414 opened by @XaF*\n- [`5dbd038`](https://github.com/XaF/omni/commit/5dbd03899aadec01a9e2830dc389a13969aba7f7) - **up**: ✨ add dependencies handling and 'or' and 'and' operations *(PR #429 by @XaF)*\n  - :arrow_lower_right: *addresses issue #336 opened by @eggiepiggie*\n- [`d00c5d7`](https://github.com/XaF/omni/commit/d00c5d739c81f03e4ff777ef89152351d62e2474) - **cd**: ✨ special path '...' now represents the root of current work directory *(PR #433 by @XaF)*\n  - :arrow_lower_right: *addresses issue #424 opened by @XaF*\n- [`7d0c120`](https://github.com/XaF/omni/commit/7d0c120d303e7fb83fad658671c06c5f679c472d) - **config**: ✨ Add system-level configuration files *(PR #438 by @XaF)*\n  - :arrow_lower_right: *addresses issue #212 opened by @XaF*\n- [`a0ba917`](https://github.com/XaF/omni/commit/a0ba9171e34ac42d67906cdbfd888a0b48c9ac54) - **homebrew**: ✨ handle proper cleanup *(PR #442 by @XaF)*\n  - :arrow_lower_right: *addresses issue #434 opened by @XaF*\n- [`9cb961d`](https://github.com/XaF/omni/commit/9cb961d3633fb77cc65d9d6e99ea94e5f3aeae4b) - **sudo**: ✨ handle password requests during `omni up` *(PR #456 by @XaF)*\n  - :arrow_lower_right: *addresses issue #160 opened by @XaF*\n  - :arrow_lower_right: *addresses issue #372 opened by @XaF*\n- [`eafd444`](https://github.com/XaF/omni/commit/eafd4443d80f18080df782bcb82a1382ff84bb50) - **up**: ✨ add the `any` operation and `preferred_tools` config *(PR #465 by @XaF)*\n  - :arrow_lower_right: *addresses issue #464 opened by @XaF*\n- [`ad03c50`](https://github.com/XaF/omni/commit/ad03c506205ffa6a427113abd90fdadf0d287377) - **git**: ✨ handle askpass for git updates *(PR #468 by @XaF)*\n  - :arrow_lower_right: *addresses issue #160 opened by @XaF*\n- [`ed0fa36`](https://github.com/XaF/omni/commit/ed0fa3620fa48997b457419fccbaaa5883ae92cb) - **askpass**: ✨ add configuration for the askpass handling *(PR #476 by @XaF)*\n- [`bcba386`](https://github.com/XaF/omni/commit/bcba38691180858a0f9ea5413ab92ad3ff35d403) - **up**: ✨ new `github-release` operation *(PR #477 by @XaF)*\n  - :arrow_lower_right: *addresses issue #447 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`152fe71`](https://github.com/XaF/omni/commit/152fe719c46852c5b5ecfb74cd1336f24d0756eb) - **bootstrap**: 🐛 flush config *(PR #371 by @XaF)*\n  - :arrow_lower_right: *fixes issue #363 opened by @XaF*\n- [`b20dfe7`](https://github.com/XaF/omni/commit/b20dfe758f7cacde2d191f169c4a590c549f7fcf) - **cd**: 🐛 fast search now works without org set *(PR #379 by @XaF)*\n- [`cb1982a`](https://github.com/XaF/omni/commit/cb1982ae86583063f9ade1af447bdf64286764d5) - **help**: 🐛 colors are now stripped when disabled *(PR #380 by @XaF)*\n- [`cb9a86c`](https://github.com/XaF/omni/commit/cb9a86ce9a092a7bd49c427889c8a199ef7a7b88) - **cd**: autocompletion for / and ~/ paths *(PR #419 by @XaF)*\n  - :arrow_lower_right: *fixes issue #416 opened by @XaF*\n- [`86fa6db`](https://github.com/XaF/omni/commit/86fa6db6a8907f647ee0f1dc06cf57d5ccd27d78) - **up hash**: 🐛 detect when `env` parameter has changed *(PR #440 by @XaF)*\n  - :arrow_lower_right: *fixes issue #397 opened by @XaF*\n- [`9d9da0f`](https://github.com/XaF/omni/commit/9d9da0f56efa7776ac3d8a05e9b95e3ad98db910) - 🐛 Add truncate policy when opening files *(PR #448 by @XaF)*\n- [`87243a6`](https://github.com/XaF/omni/commit/87243a653a8359df09bc0a068df21bdc5a90e920) - **asdf**: 🐛 add missing dependency for Python and clear env vars *(PR #450 by @XaF)*\n- [`e5904a2`](https://github.com/XaF/omni/commit/e5904a2b1bc19e4a2d2122768174b7cf647b534b) - **up env cache**: 🐛 add default deserialization *(PR #449 by @XaF)*\n- [`e19c469`](https://github.com/XaF/omni/commit/e19c46962edf1bd43754d56da5a379e7aa1bd1bc) - **help**: 🐛 handle lower terminal width properly *(PR #463 by @XaF)*\n  - :arrow_lower_right: *fixes issue #462 opened by @XaF*\n- [`c28fc3d`](https://github.com/XaF/omni/commit/c28fc3d00bb2d99b12ecbcea007cc4e1df2a2148) - **spinners**: 🐛 new lines are now ensured properly after a spinner *(PR #473 by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "e853315",
+            "link": "https://github.com/XaF/omni/commit/e853315dc82ee9aaa38fdb0d6e995bdbc08f5240",
+            "scope": "nix",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 428,
+            "summary": "add nix up operation",
+            "issues": [
+              414
+            ]
+          },
+          {
+            "commit": "5dbd038",
+            "link": "https://github.com/XaF/omni/commit/5dbd03899aadec01a9e2830dc389a13969aba7f7",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 429,
+            "summary": "add dependencies handling and 'or' and 'and' operations",
+            "issues": [
+              336
+            ]
+          },
+          {
+            "commit": "d00c5d7",
+            "link": "https://github.com/XaF/omni/commit/d00c5d739c81f03e4ff777ef89152351d62e2474",
+            "scope": "cd",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 433,
+            "summary": "special path '...' now represents the root of current work directory",
+            "issues": [
+              424
+            ]
+          },
+          {
+            "commit": "7d0c120",
+            "link": "https://github.com/XaF/omni/commit/7d0c120d303e7fb83fad658671c06c5f679c472d",
+            "scope": "config",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 438,
+            "summary": "Add system-level configuration files",
+            "issues": [
+              212
+            ]
+          },
+          {
+            "commit": "a0ba917",
+            "link": "https://github.com/XaF/omni/commit/a0ba9171e34ac42d67906cdbfd888a0b48c9ac54",
+            "scope": "homebrew",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 442,
+            "summary": "handle proper cleanup",
+            "issues": [
+              434
+            ]
+          },
+          {
+            "commit": "9cb961d",
+            "link": "https://github.com/XaF/omni/commit/9cb961d3633fb77cc65d9d6e99ea94e5f3aeae4b",
+            "scope": "sudo",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 456,
+            "summary": "handle password requests during `omni up`",
+            "issues": [
+              160,
+              372
+            ]
+          },
+          {
+            "commit": "eafd444",
+            "link": "https://github.com/XaF/omni/commit/eafd4443d80f18080df782bcb82a1382ff84bb50",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 465,
+            "summary": "add the `any` operation and `preferred_tools` config",
+            "issues": [
+              464
+            ]
+          },
+          {
+            "commit": "ad03c50",
+            "link": "https://github.com/XaF/omni/commit/ad03c506205ffa6a427113abd90fdadf0d287377",
+            "scope": "git",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 468,
+            "summary": "handle askpass for git updates",
+            "issues": [
+              160
+            ]
+          },
+          {
+            "commit": "ed0fa36",
+            "link": "https://github.com/XaF/omni/commit/ed0fa3620fa48997b457419fccbaaa5883ae92cb",
+            "scope": "askpass",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 476,
+            "summary": "add configuration for the askpass handling"
+          },
+          {
+            "commit": "bcba386",
+            "link": "https://github.com/XaF/omni/commit/bcba38691180858a0f9ea5413ab92ad3ff35d403",
+            "scope": "up",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 477,
+            "summary": "new `github-release` operation",
+            "issues": [
+              447
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "152fe71",
+            "link": "https://github.com/XaF/omni/commit/152fe719c46852c5b5ecfb74cd1336f24d0756eb",
+            "scope": "bootstrap",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 371,
+            "summary": "flush config"
+          },
+          {
+            "commit": "b20dfe7",
+            "link": "https://github.com/XaF/omni/commit/b20dfe758f7cacde2d191f169c4a590c549f7fcf",
+            "scope": "cd",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 379,
+            "summary": "fast search now works without org set"
+          },
+          {
+            "commit": "cb1982a",
+            "link": "https://github.com/XaF/omni/commit/cb1982ae86583063f9ade1af447bdf64286764d5",
+            "scope": "help",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 380,
+            "summary": "colors are now stripped when disabled"
+          },
+          {
+            "commit": "86fa6db",
+            "link": "https://github.com/XaF/omni/commit/86fa6db6a8907f647ee0f1dc06cf57d5ccd27d78",
+            "scope": "up hash",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 440,
+            "summary": "detect when `env` parameter has changed"
+          },
+          {
+            "commit": "9d9da0f",
+            "link": "https://github.com/XaF/omni/commit/9d9da0f56efa7776ac3d8a05e9b95e3ad98db910",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 448,
+            "summary": "Add truncate policy when opening files"
+          },
+          {
+            "commit": "87243a6",
+            "link": "https://github.com/XaF/omni/commit/87243a653a8359df09bc0a068df21bdc5a90e920",
+            "scope": "asdf",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 450,
+            "summary": "add missing dependency for Python and clear env vars"
+          },
+          {
+            "commit": "e5904a2",
+            "link": "https://github.com/XaF/omni/commit/e5904a2b1bc19e4a2d2122768174b7cf647b534b",
+            "scope": "up env cache",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 449,
+            "summary": "add default deserialization"
+          },
+          {
+            "commit": "e19c469",
+            "link": "https://github.com/XaF/omni/commit/e19c46962edf1bd43754d56da5a379e7aa1bd1bc",
+            "scope": "help",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 463,
+            "summary": "handle lower terminal width properly"
+          },
+          {
+            "commit": "c28fc3d",
+            "link": "https://github.com/XaF/omni/commit/c28fc3d00bb2d99b12ecbcea007cc4e1df2a2148",
+            "scope": "spinners",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 473,
+            "summary": "new lines are now ensured properly after a spinner"
+          }
+        ]
+      }
     },
     "0.0.21": {
+      "published_at": "2024-01-24T21:16:18Z",
       "build": {
         "tag": "v0.0.21",
         "revision": "87af45ae22de6e4e2d2b62bdf8e12fcf6baf779a"
@@ -1012,9 +2322,22 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.21/omni-0.0.21-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`0a5e422`](https://github.com/XaF/omni/commit/0a5e422a510922e4f3c2a660f87de6f7e6540814) - **config value**: 🐛 missing check made the tool panic *(PR #362 by @XaF)*\n  - :arrow_lower_right: *fixes issue #360 opened by @tdeebswihart*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "0a5e422",
+            "link": "https://github.com/XaF/omni/commit/0a5e422a510922e4f3c2a660f87de6f7e6540814",
+            "scope": "config value",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 362,
+            "summary": "missing check made the tool panic"
+          }
+        ]
+      }
     },
     "0.0.20": {
+      "published_at": "2024-01-16T22:01:11Z",
       "build": {
         "tag": "v0.0.20",
         "revision": "910cc6db554b69a9ba617cec7abfc8baaffa9812"
@@ -1045,9 +2368,110 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.20/omni-0.0.20-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`2b618d0`](https://github.com/XaF/omni/commit/2b618d037f5a963a72584bb6caade0e28e429240) - **cd**: ✨ fast repository lookup *(PR #341 by @XaF)*\n- [`dd756c6`](https://github.com/XaF/omni/commit/dd756c6250daa2e36e693cbf0eeddbb35eb64b1b) - **autocompletion**: ✨ consider parent commands *(PR #348 by @XaF)*\n  - :arrow_lower_right: *addresses issue #342 opened by @XaF*\n- [`affef8d`](https://github.com/XaF/omni/commit/affef8ddd097b9bc1f71b072979a45147aa7dfd7) - **dynenv**: ✨ show message when 'omni up' should be run *(PR #350 by @XaF)*\n  - :arrow_lower_right: *addresses issue #346 opened by @XaF*\n- [`45ecbca`](https://github.com/XaF/omni/commit/45ecbca3f7eefc55d525c9218e15707e5f5c0a02) - **clone**: ✨ Add configuration option for `auto_up` *(PR #354 by @XaF)*\n  - :arrow_lower_right: *addresses issue #200 opened by @XaF*\n- [`fb8e056`](https://github.com/XaF/omni/commit/fb8e0567e611a88db18396fe48c347aa0fbac12b) - **bootstrap**: ✨ Do not ask to order orgs if only one *(PR #355 by @XaF)*\n  - :arrow_lower_right: *addresses issue #290 opened by @XaF*\n- [`0dc5ce1`](https://github.com/XaF/omni/commit/0dc5ce17339996486526ce6d5b77ba5c819e3210) - **env**: ✨ better handling of `up` environment variables *(PR #359 by @XaF)*\n  - :arrow_lower_right: *addresses issue #358 opened by @njo*\n\n### :bug: Bug Fixes\n- [`df940b0`](https://github.com/XaF/omni/commit/df940b06148d72c61851913292a72cc980b30478) - **homebrew**: 🐛 Enable cache write *(PR #332 by @XaF)*\n- [`5a6b07d`](https://github.com/XaF/omni/commit/5a6b07d2eb6905e0f157b3387c5500538a3a0f5f) - **go dynenv**: 🐛 do not set GOPATH to GOROOT *(PR #333 by @XaF)*\n  - :arrow_lower_right: *fixes issue #331 opened by @XaF*\n- [`7124181`](https://github.com/XaF/omni/commit/7124181984ae560f3f2487143458fb0c336a1d26) - 🐛 serialize python's pip information *(commit by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "2b618d0",
+            "link": "https://github.com/XaF/omni/commit/2b618d037f5a963a72584bb6caade0e28e429240",
+            "scope": "cd",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 341,
+            "summary": "fast repository lookup"
+          },
+          {
+            "commit": "dd756c6",
+            "link": "https://github.com/XaF/omni/commit/dd756c6250daa2e36e693cbf0eeddbb35eb64b1b",
+            "scope": "autocompletion",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 348,
+            "summary": "consider parent commands",
+            "issues": [
+              342
+            ]
+          },
+          {
+            "commit": "affef8d",
+            "link": "https://github.com/XaF/omni/commit/affef8ddd097b9bc1f71b072979a45147aa7dfd7",
+            "scope": "dynenv",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 350,
+            "summary": "show message when 'omni up' should be run",
+            "issues": [
+              346
+            ]
+          },
+          {
+            "commit": "45ecbca",
+            "link": "https://github.com/XaF/omni/commit/45ecbca3f7eefc55d525c9218e15707e5f5c0a02",
+            "scope": "clone",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 354,
+            "summary": "Add configuration option for `auto_up`",
+            "issues": [
+              200
+            ]
+          },
+          {
+            "commit": "fb8e056",
+            "link": "https://github.com/XaF/omni/commit/fb8e0567e611a88db18396fe48c347aa0fbac12b",
+            "scope": "bootstrap",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 355,
+            "summary": "Do not ask to order orgs if only one",
+            "issues": [
+              290
+            ]
+          },
+          {
+            "commit": "0dc5ce1",
+            "link": "https://github.com/XaF/omni/commit/0dc5ce17339996486526ce6d5b77ba5c819e3210",
+            "scope": "env",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 359,
+            "summary": "better handling of `up` environment variables",
+            "issues": [
+              358
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "df940b0",
+            "link": "https://github.com/XaF/omni/commit/df940b06148d72c61851913292a72cc980b30478",
+            "scope": "homebrew",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 332,
+            "summary": "Enable cache write"
+          },
+          {
+            "commit": "5a6b07d",
+            "link": "https://github.com/XaF/omni/commit/5a6b07d2eb6905e0f157b3387c5500538a3a0f5f",
+            "scope": "go dynenv",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 333,
+            "summary": "do not set GOPATH to GOROOT"
+          },
+          {
+            "commit": "7124181",
+            "link": "https://github.com/XaF/omni/commit/7124181984ae560f3f2487143458fb0c336a1d26",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "serialize python's pip information"
+          }
+        ]
+      }
     },
     "0.0.19": {
+      "published_at": "2024-01-02T20:50:27Z",
       "build": {
         "tag": "v0.0.19",
         "revision": "68d0a2336a5dd90ba71e65cd0d6092de4cea03ba"
@@ -1078,9 +2502,31 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.19/omni-0.0.19-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :bug: Bug Fixes\n- [`aeb8516`](https://github.com/XaF/omni/commit/aeb851629dd798130b93cd157e300fd9b92be234) - **go dynenv**: 🐛 consider empty GOPATH the same as unset GOPATH *(PR #326 by @XaF)*\n- [`ac26d2b`](https://github.com/XaF/omni/commit/ac26d2b94b2744cc4be9fe21c9fad960b9282f8f) - **dynenv**: 🐛 unset properly list environment variables *(PR #325 by @XaF)*\n"
+      "notes": {
+        "fixes": [
+          {
+            "commit": "aeb8516",
+            "link": "https://github.com/XaF/omni/commit/aeb851629dd798130b93cd157e300fd9b92be234",
+            "scope": "go dynenv",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 326,
+            "summary": "consider empty GOPATH the same as unset GOPATH"
+          },
+          {
+            "commit": "ac26d2b",
+            "link": "https://github.com/XaF/omni/commit/ac26d2b94b2744cc4be9fe21c9fad960b9282f8f",
+            "scope": "dynenv",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 325,
+            "summary": "unset properly list environment variables"
+          }
+        ]
+      }
     },
     "0.0.18": {
+      "published_at": "2024-01-02T04:02:39Z",
       "build": {
         "tag": "v0.0.18",
         "revision": "0db76fecf499ee7860cf586a316f7c0c9a319bfe"
@@ -1111,9 +2557,228 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.18/omni-0.0.18-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :boom: BREAKING CHANGES\n- due to [`f9a6b2d`](https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b) - 🐛 require explicit `cask` mention *(PR #260 by @XaF)*:\n\n  casks that did not have the `cask` explicit mention in  \n  `up:` operations will stop working. Simple fix is to prefix them by  \n  `cask:` if the cask name is provided inline (e.g. `- 1password-cli`  \n  should become `- cask: 1password-cli`.\n\n\n### :sparkles: New Features\n- [`04a4e4e`](https://github.com/XaF/omni/commit/04a4e4e5752fce0eaf5d2bb0c079d9b928c8c95c) - **homebrew operation**: ✨ cache upgraded formula and cask for speed *(PR #257 by @XaF)*\n  - :arrow_lower_right: *addresses issue #229 opened by @XaF*\n- [`50b7df3`](https://github.com/XaF/omni/commit/50b7df30e6e064c7f676c3b0f5e983f06e276033) - **homebrew operation**: ✨ update PATH with installed formulae *(PR #259 by @XaF)*\n  - :arrow_lower_right: *addresses issue #256 opened by @XaF*\n- [`ad88fc5`](https://github.com/XaF/omni/commit/ad88fc522de726a3e014a86361540225da034055) - **python**: ✨🐍 add venv support *(PR #277 by @XaF)*\n  - :arrow_lower_right: *addresses issue #268 opened by @XaF*\n- [`c155ffb`](https://github.com/XaF/omni/commit/c155ffb128b3eb3bc8765c8799392f47505fb71a) - **config commands**: ✨ add support for `dir` parameter *(PR #280 by @XaF)*\n  - :arrow_lower_right: *addresses issue #245 opened by @XaF*\n- [`8283422`](https://github.com/XaF/omni/commit/8283422257fc4a19b492167edb0882adbfb54477) - **up tools**: ✨ better cleanup for data paths *(PR #282 by @XaF)*\n  - :arrow_lower_right: *addresses issue #281 opened by @XaF*\n- [`a3bca18`](https://github.com/XaF/omni/commit/a3bca185ce7ca4fe5a03a4549e1e3481e57a6619) - **up golang**: ✨ Add GOPATH isolation for gcalls to go install *(PR #283 by @XaF)*\n- [`edbc74f`](https://github.com/XaF/omni/commit/edbc74fbe1679cd182399e7ef7fd686cc6f0a133) - **python operation**: ✨ Add support for pip install *(PR #285 by @XaF)*\n  - :arrow_lower_right: *addresses issue #279 opened by @XaF*\n- [`c8900d7`](https://github.com/XaF/omni/commit/c8900d730549f5e2de53e21c2d0df0aa7624eb06) - **golang operation**: ✨ improve golang isolation to maintain shared… *(PR #287 by @XaF)*\n- [`f39ad1c`](https://github.com/XaF/omni/commit/f39ad1c07eaf04ace8195438d4d6b80bd26baac7) - **packages**: ✨ use a separate cache of dependencies *(PR #288 by @XaF)*\n  - :arrow_lower_right: *addresses issue #278 opened by @XaF*\n- [`a712e69`](https://github.com/XaF/omni/commit/a712e690678cf92783e53f658c305d0cebd1ece4) - **config commands**: ✨ trust the global-scoped configuration commands *(PR #300 by @XaF)*\n  - :arrow_lower_right: *addresses issue #246 opened by @XaF*\n- [`39af29e`](https://github.com/XaF/omni/commit/39af29ed442408bd6216808d6230aabcfb0d76a6) - **status**: ✨ now takes arguments *(PR #306 by @XaF)*\n  - :arrow_lower_right: *addresses issue #180 opened by @XaF*\n- [`5cb0e1e`](https://github.com/XaF/omni/commit/5cb0e1e1ec20e63d666de3212d86814890958844) - **commands**: ✨ Add support for shadow aliases *(PR #323 by @XaF)*\n  - :arrow_lower_right: *addresses issue #45 opened by @tminusplus*\n  - :arrow_lower_right: *addresses issue #228 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`f9a6b2d`](https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b) - **homebrew operation**: 🐛 require explicit `cask` mention *(PR #260 by @XaF)*\n- [`1005a4d`](https://github.com/XaF/omni/commit/1005a4df2df65a92d564f02b2f28951a2dcb3013) - **homebrew operation**: 🐛 make sure to clean up the install cache *(PR #266 by @XaF)*\n  - :arrow_lower_right: *fixes issue #265 opened by @XaF*\n- [`cc54234`](https://github.com/XaF/omni/commit/cc54234638f478eb5bf9bae110db5e5499a2dc70) - **omni up**: 🐛 return code should be 1 on error *(PR #267 by @XaF)*\n- [`84816e7`](https://github.com/XaF/omni/commit/84816e70536932e74212726764ffa8cb5512bedd) - **shell integration**: 🐛 arg parsing for fish auto-complete *(PR #269 by @tminusplus)*\n  - :arrow_lower_right: *fixes issue #128 opened by @XaF*\n- [`ed2f29d`](https://github.com/XaF/omni/commit/ed2f29da0c3a36e52698dcf25c2886a1fc8afaff) - **self update**: 🐛 show error message when failing to update *(PR #284 by @XaF)*\n- [`dc9155e`](https://github.com/XaF/omni/commit/dc9155e5a2b3f566773909e6f4b9967365d51c00) - **updater**: 🐛 pre-authentication configuration check was inverted *(commit by @XaF)*\n- [`78c425a`](https://github.com/XaF/omni/commit/78c425a8af9d1cceda57e3d511ff8ddaf5fdd2bd) - **help**: 🐛 folded help was duplicating auto-generated commands *(PR #324 by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "04a4e4e",
+            "link": "https://github.com/XaF/omni/commit/04a4e4e5752fce0eaf5d2bb0c079d9b928c8c95c",
+            "scope": "homebrew operation",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 257,
+            "summary": "cache upgraded formula and cask for speed",
+            "issues": [
+              229
+            ]
+          },
+          {
+            "commit": "50b7df3",
+            "link": "https://github.com/XaF/omni/commit/50b7df30e6e064c7f676c3b0f5e983f06e276033",
+            "scope": "homebrew operation",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 259,
+            "summary": "update PATH with installed formulae",
+            "issues": [
+              256
+            ]
+          },
+          {
+            "commit": "ad88fc5",
+            "link": "https://github.com/XaF/omni/commit/ad88fc522de726a3e014a86361540225da034055",
+            "scope": "python",
+            "author": "XaF",
+            "emoji": "✨🐍",
+            "pr": 277,
+            "summary": "add venv support",
+            "issues": [
+              268
+            ]
+          },
+          {
+            "commit": "c155ffb",
+            "link": "https://github.com/XaF/omni/commit/c155ffb128b3eb3bc8765c8799392f47505fb71a",
+            "scope": "config commands",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 280,
+            "summary": "add support for `dir` parameter",
+            "issues": [
+              245
+            ]
+          },
+          {
+            "commit": "8283422",
+            "link": "https://github.com/XaF/omni/commit/8283422257fc4a19b492167edb0882adbfb54477",
+            "scope": "up tools",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 282,
+            "summary": "better cleanup for data paths",
+            "issues": [
+              281
+            ]
+          },
+          {
+            "commit": "a3bca18",
+            "link": "https://github.com/XaF/omni/commit/a3bca185ce7ca4fe5a03a4549e1e3481e57a6619",
+            "scope": "up golang",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 283,
+            "summary": "Add GOPATH isolation for gcalls to go install"
+          },
+          {
+            "commit": "edbc74f",
+            "link": "https://github.com/XaF/omni/commit/edbc74fbe1679cd182399e7ef7fd686cc6f0a133",
+            "scope": "python operation",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 285,
+            "summary": "Add support for pip install",
+            "issues": [
+              279
+            ]
+          },
+          {
+            "commit": "c8900d7",
+            "link": "https://github.com/XaF/omni/commit/c8900d730549f5e2de53e21c2d0df0aa7624eb06",
+            "scope": "golang operation",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 287,
+            "summary": "improve golang isolation to maintain shared…"
+          },
+          {
+            "commit": "f39ad1c",
+            "link": "https://github.com/XaF/omni/commit/f39ad1c07eaf04ace8195438d4d6b80bd26baac7",
+            "scope": "packages",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 288,
+            "summary": "use a separate cache of dependencies",
+            "issues": [
+              278
+            ]
+          },
+          {
+            "commit": "a712e69",
+            "link": "https://github.com/XaF/omni/commit/a712e690678cf92783e53f658c305d0cebd1ece4",
+            "scope": "config commands",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 300,
+            "summary": "trust the global-scoped configuration commands",
+            "issues": [
+              246
+            ]
+          },
+          {
+            "commit": "39af29e",
+            "link": "https://github.com/XaF/omni/commit/39af29ed442408bd6216808d6230aabcfb0d76a6",
+            "scope": "status",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 306,
+            "summary": "now takes arguments",
+            "issues": [
+              180
+            ]
+          },
+          {
+            "commit": "5cb0e1e",
+            "link": "https://github.com/XaF/omni/commit/5cb0e1e1ec20e63d666de3212d86814890958844",
+            "scope": "commands",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 323,
+            "summary": "Add support for shadow aliases",
+            "issues": [
+              45,
+              228
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "f9a6b2d",
+            "link": "https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b",
+            "scope": "homebrew operation",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 260,
+            "summary": "require explicit `cask` mention"
+          },
+          {
+            "commit": "1005a4d",
+            "link": "https://github.com/XaF/omni/commit/1005a4df2df65a92d564f02b2f28951a2dcb3013",
+            "scope": "homebrew operation",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 266,
+            "summary": "make sure to clean up the install cache"
+          },
+          {
+            "commit": "cc54234",
+            "link": "https://github.com/XaF/omni/commit/cc54234638f478eb5bf9bae110db5e5499a2dc70",
+            "scope": "omni up",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 267,
+            "summary": "return code should be 1 on error"
+          },
+          {
+            "commit": "84816e7",
+            "link": "https://github.com/XaF/omni/commit/84816e70536932e74212726764ffa8cb5512bedd",
+            "scope": "shell integration",
+            "author": "tminusplus",
+            "emoji": "🐛",
+            "pr": 269,
+            "summary": "arg parsing for fish auto-complete"
+          },
+          {
+            "commit": "ed2f29d",
+            "link": "https://github.com/XaF/omni/commit/ed2f29da0c3a36e52698dcf25c2886a1fc8afaff",
+            "scope": "self update",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 284,
+            "summary": "show error message when failing to update"
+          },
+          {
+            "commit": "dc9155e",
+            "link": "https://github.com/XaF/omni/commit/dc9155e5a2b3f566773909e6f4b9967365d51c00",
+            "scope": "updater",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "pre-authentication configuration check was inverted"
+          },
+          {
+            "commit": "78c425a",
+            "link": "https://github.com/XaF/omni/commit/78c425a8af9d1cceda57e3d511ff8ddaf5fdd2bd",
+            "scope": "help",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 324,
+            "summary": "folded help was duplicating auto-generated commands"
+          }
+        ],
+        "breaking": [
+          {
+            "commit": "f9a6b2d",
+            "link": "https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 260,
+            "summary": "require explicit `cask` mention",
+            "cause": "casks that did not have the `cask` explicit mention in `up:` operations will stop working. Simple fix is to prefix them by `cask:` if the cask name is provided inline (e.g. `- 1password-cli` should become `- cask: 1password-cli`."
+          }
+        ]
+      }
     },
     "0.0.17": {
+      "published_at": "2023-12-04T16:29:31Z",
       "build": {
         "tag": "v0.0.17",
         "revision": "2dd01c54859de7947591ac4e877f09155942a6c3"
@@ -1144,9 +2809,121 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.17/omni-0.0.17-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`bb2f845`](https://github.com/XaF/omni/commit/bb2f8459594d1d09a8c3860c196b483b77cffe83) - ✨ zsh hook now auto-loads compinit if needed *(commit by @XaF)*\n- [`d655486`](https://github.com/XaF/omni/commit/d655486f9f5a88d574442de8a06c0b4ac89c3079) - ✨ add shell integration during bootstrap *(PR #221 by @XaF)*\n  - :arrow_lower_right: *addresses issue #210 opened by @XaF*\n- [`499bb23`](https://github.com/XaF/omni/commit/499bb23441da5e9bca177ad258b1e508ad5b2ed9) - ✨ packages support for `scope` command *(PR #233 by @XaF)*\n  - :arrow_lower_right: *addresses issue #232 opened by @XaF*\n- [`e204e21`](https://github.com/XaF/omni/commit/e204e21f2011cdf2de63e2383ddf48e0f03d20c4) - ✨ Add configuration of the shell aliases for the init hook *(PR #234 by @XaF)*\n  - :arrow_lower_right: *addresses issue #195 opened by @XaF*\n- [`c62fe06`](https://github.com/XaF/omni/commit/c62fe067bad61e0b0150222086042dfda371e70b) - ✨ machine id will try and fallback to use hostname *(PR #237 by @XaF)*\n- [`c64a2a2`](https://github.com/XaF/omni/commit/c64a2a24b81e7f5f307eff83abd63bc88ef5a341) - ✨ save log files when subprocesses fail *(PR #243 by @XaF)*\n- [`105e802`](https://github.com/XaF/omni/commit/105e802d4cfed7e0b2636e0c047530e6bed7b256) - **updates**: ✨ add support for background updates *(PR #244 by @XaF)*\n  - :arrow_lower_right: *addresses issue #170 opened by @XaF*\n- [`af2a940`](https://github.com/XaF/omni/commit/af2a940449e1f57e59eae6dd8d130a0a0b5c09b1) - **path commands**: ✨ Add support for metadata files *(PR #253 by @XaF)*\n  - :arrow_lower_right: *addresses issue #27 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`ff26fc6`](https://github.com/XaF/omni/commit/ff26fc6cb791b551fa09bd1d60537c27657e179a) - 🐛 remove debug message appearing on update *(commit by @XaF)*\n- [`22d7aa9`](https://github.com/XaF/omni/commit/22d7aa9707cd7ac99e3a829545fca42cfc0dc10f) - 🐛 uncategorized commands are showing up properly again *(commit by @XaF)*\n- [`7d62fb1`](https://github.com/XaF/omni/commit/7d62fb1024dc72cc4b423be1021278191667099b) - **path commands**: 🐛 make the exec path accurate *(PR #252 by @XaF)*\n  - :arrow_lower_right: *fixes issue #161 opened by @XaF*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "bb2f845",
+            "link": "https://github.com/XaF/omni/commit/bb2f8459594d1d09a8c3860c196b483b77cffe83",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 0,
+            "summary": "zsh hook now auto-loads compinit if needed"
+          },
+          {
+            "commit": "d655486",
+            "link": "https://github.com/XaF/omni/commit/d655486f9f5a88d574442de8a06c0b4ac89c3079",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 221,
+            "summary": "add shell integration during bootstrap",
+            "issues": [
+              210
+            ]
+          },
+          {
+            "commit": "499bb23",
+            "link": "https://github.com/XaF/omni/commit/499bb23441da5e9bca177ad258b1e508ad5b2ed9",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 233,
+            "summary": "packages support for `scope` command",
+            "issues": [
+              232
+            ]
+          },
+          {
+            "commit": "e204e21",
+            "link": "https://github.com/XaF/omni/commit/e204e21f2011cdf2de63e2383ddf48e0f03d20c4",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 234,
+            "summary": "Add configuration of the shell aliases for the init hook",
+            "issues": [
+              195
+            ]
+          },
+          {
+            "commit": "c62fe06",
+            "link": "https://github.com/XaF/omni/commit/c62fe067bad61e0b0150222086042dfda371e70b",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 237,
+            "summary": "machine id will try and fallback to use hostname"
+          },
+          {
+            "commit": "c64a2a2",
+            "link": "https://github.com/XaF/omni/commit/c64a2a24b81e7f5f307eff83abd63bc88ef5a341",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 243,
+            "summary": "save log files when subprocesses fail"
+          },
+          {
+            "commit": "105e802",
+            "link": "https://github.com/XaF/omni/commit/105e802d4cfed7e0b2636e0c047530e6bed7b256",
+            "scope": "updates",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 244,
+            "summary": "add support for background updates",
+            "issues": [
+              170
+            ]
+          },
+          {
+            "commit": "af2a940",
+            "link": "https://github.com/XaF/omni/commit/af2a940449e1f57e59eae6dd8d130a0a0b5c09b1",
+            "scope": "path commands",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 253,
+            "summary": "Add support for metadata files",
+            "issues": [
+              27
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "ff26fc6",
+            "link": "https://github.com/XaF/omni/commit/ff26fc6cb791b551fa09bd1d60537c27657e179a",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "remove debug message appearing on update"
+          },
+          {
+            "commit": "22d7aa9",
+            "link": "https://github.com/XaF/omni/commit/22d7aa9707cd7ac99e3a829545fca42cfc0dc10f",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "uncategorized commands are showing up properly again"
+          },
+          {
+            "commit": "7d62fb1",
+            "link": "https://github.com/XaF/omni/commit/7d62fb1024dc72cc4b423be1021278191667099b",
+            "scope": "path commands",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 252,
+            "summary": "make the exec path accurate"
+          }
+        ]
+      }
     },
     "0.0.16": {
+      "published_at": "2023-11-07T11:54:50Z",
       "build": {
         "tag": "v0.0.16",
         "revision": "8092864fd75d69d728799d148c4f5ab8b29da346"
@@ -1177,9 +2954,130 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.16/omni-0.0.16-x86_64-linux.tar.gz"
         }
       ],
-      "notes": "### :sparkles: New Features\n- [`919e217`](https://github.com/XaF/omni/commit/919e217f399abf322e2a5ee2721fd3d1072e5501) - ✨ check trust of directories before running commands *(commit by @XaF)*\n- [`e71efb5`](https://github.com/XaF/omni/commit/e71efb5153eec0d13b7d36fd8fc5458c7c024248) - ✨ Add support for 'packages' *(PR #176 by @XaF)*\n  - :arrow_lower_right: *addresses issue #16 opened by @XaF*\n- [`74463b9`](https://github.com/XaF/omni/commit/74463b96c9d741f81061183044bce13912349c14) - ✨ `omni help` now folds subcommands *(PR #182 by @XaF)*\n  - :arrow_lower_right: *addresses issue #20 opened by @XaF*\n- [`d90f4c3`](https://github.com/XaF/omni/commit/d90f4c3462becbdf7ab8d2b9fbd3adf42306b2d7) - ✨ Add proper help for hook commands *(PR #188 by @XaF)*\n  - :arrow_lower_right: *addresses issue #140 opened by @XaF*\n- [`162f86a`](https://github.com/XaF/omni/commit/162f86aae6324a78f6aa7c4b0929de5e2ccb2299) - **help**: ✨ add `--unfold` flag to show all commands *(PR #194 by @XaF)*\n- [`4e616f4`](https://github.com/XaF/omni/commit/4e616f473f6483585d12a9c01f6bfe24b512a57e) - ✨ add new `config path switch` command *(PR #199 by @XaF)*\n  - :arrow_lower_right: *addresses issue #196 opened by @XaF*\n- [`143aaec`](https://github.com/XaF/omni/commit/143aaec776079661003eadebc660afc7a4fe7ec8) - ✨ add `--exists` flag to check if command exists *(PR #207 by @XaF)*\n  - :arrow_lower_right: *addresses issue #206 opened by @XaF*\n- [`4acbf7a`](https://github.com/XaF/omni/commit/4acbf7a46d62c3973499e16affe72ce8474979d3) - ✨ Add `config bootstrap` command *(PR #209 by @XaF)*\n  - :arrow_lower_right: *addresses issue #178 opened by @XaF*\n\n### :bug: Bug Fixes\n- [`000d5c5`](https://github.com/XaF/omni/commit/000d5c5c054840b6a7525ebb0d741de6636b4605) - 🐛 release version parser to show better error messages *(commit by @XaF)*\n- [`9f9ef93`](https://github.com/XaF/omni/commit/9f9ef9361d03b0fded347e90bb90d063c2d42fe4) - 🐛 self update now replaces  current process *(PR #143 by @XaF)*\n  - :arrow_lower_right: *fixes issue #142 opened by @XaF*\n- [`0bdf3d5`](https://github.com/XaF/omni/commit/0bdf3d56e88ddc0cfcfb27c4fc13ab2e286cb618) - prevent crash if machine uid is not available *(commit by @XaF)*\n- [`02e8dbc`](https://github.com/XaF/omni/commit/02e8dbc5bb7535298d5a6ed52012acc74a9b79ee) - 🐛 do not ask for trust if there is no up configuration *(commit by @XaF)*\n- [`5533431`](https://github.com/XaF/omni/commit/5533431aa047ff3ab7c65b503ffadb31ba8f8d0b) - 🐛 remove message when skipping package *(commit by @XaF)*\n"
+      "notes": {
+        "features": [
+          {
+            "commit": "919e217",
+            "link": "https://github.com/XaF/omni/commit/919e217f399abf322e2a5ee2721fd3d1072e5501",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 0,
+            "summary": "check trust of directories before running commands"
+          },
+          {
+            "commit": "e71efb5",
+            "link": "https://github.com/XaF/omni/commit/e71efb5153eec0d13b7d36fd8fc5458c7c024248",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 176,
+            "summary": "Add support for 'packages'",
+            "issues": [
+              16
+            ]
+          },
+          {
+            "commit": "74463b9",
+            "link": "https://github.com/XaF/omni/commit/74463b96c9d741f81061183044bce13912349c14",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 182,
+            "summary": "`omni help` now folds subcommands",
+            "issues": [
+              20
+            ]
+          },
+          {
+            "commit": "d90f4c3",
+            "link": "https://github.com/XaF/omni/commit/d90f4c3462becbdf7ab8d2b9fbd3adf42306b2d7",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 188,
+            "summary": "Add proper help for hook commands",
+            "issues": [
+              140
+            ]
+          },
+          {
+            "commit": "162f86a",
+            "link": "https://github.com/XaF/omni/commit/162f86aae6324a78f6aa7c4b0929de5e2ccb2299",
+            "scope": "help",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 194,
+            "summary": "add `--unfold` flag to show all commands"
+          },
+          {
+            "commit": "4e616f4",
+            "link": "https://github.com/XaF/omni/commit/4e616f473f6483585d12a9c01f6bfe24b512a57e",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 199,
+            "summary": "add new `config path switch` command",
+            "issues": [
+              196
+            ]
+          },
+          {
+            "commit": "143aaec",
+            "link": "https://github.com/XaF/omni/commit/143aaec776079661003eadebc660afc7a4fe7ec8",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 207,
+            "summary": "add `--exists` flag to check if command exists",
+            "issues": [
+              206
+            ]
+          },
+          {
+            "commit": "4acbf7a",
+            "link": "https://github.com/XaF/omni/commit/4acbf7a46d62c3973499e16affe72ce8474979d3",
+            "author": "XaF",
+            "emoji": "✨",
+            "pr": 209,
+            "summary": "Add `config bootstrap` command",
+            "issues": [
+              178
+            ]
+          }
+        ],
+        "fixes": [
+          {
+            "commit": "000d5c5",
+            "link": "https://github.com/XaF/omni/commit/000d5c5c054840b6a7525ebb0d741de6636b4605",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "release version parser to show better error messages"
+          },
+          {
+            "commit": "9f9ef93",
+            "link": "https://github.com/XaF/omni/commit/9f9ef9361d03b0fded347e90bb90d063c2d42fe4",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 143,
+            "summary": "self update now replaces  current process"
+          },
+          {
+            "commit": "02e8dbc",
+            "link": "https://github.com/XaF/omni/commit/02e8dbc5bb7535298d5a6ed52012acc74a9b79ee",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "do not ask for trust if there is no up configuration"
+          },
+          {
+            "commit": "5533431",
+            "link": "https://github.com/XaF/omni/commit/5533431aa047ff3ab7c65b503ffadb31ba8f8d0b",
+            "author": "XaF",
+            "emoji": "🐛",
+            "pr": 0,
+            "summary": "remove message when skipping package"
+          }
+        ]
+      }
     },
     "0.0.15": {
+      "published_at": "2023-09-21T19:05:08Z",
       "build": {
         "tag": "v0.0.15",
         "revision": "6238a19cee93a808b0d4908a30a8dab2c808c347"
@@ -1209,10 +3107,10 @@
           "sha256": "904d59c998af5f16f738c30c7c5d47ea04c109682b5a952ccba548001a46089a",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.15/omni-0.0.15-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- build(linux): 👷 move to `musl` for the linux binaries (#138) (Raphaël Beamonte)\r\n- feat: ✨ add `terraform` as a tool to be upped (Raphaël Beamonte)\r\n- fix: 🐛 cache path should only be read from global configuration (Raphaël Beamonte)\r\n- fix: 🐛 cache migration to directory works with unexisting entries (Raphaël Beamonte)\r\n- feat: ✨ Add `suggest_config` and `suggest_clone` fingerprints (#137) (Raphaël Beamonte)\r\n- fix: 🐛 environment variables were not saved in omni up (Raphaël Beamonte)\r\n- 💅 Adding progress message when detecting versions (Raphaël Beamonte)\r\n- ✨ Split the cache into multiple files (#133) (Raphaël Beamonte)\r\n- ✨ Add caching for asdf updates and plugin versions (#130) (Raphaël Beamonte)\r\n- 🐛 Check the version when using 'latest' (Raphaël Beamonte)\r\n- ✨ Add support for omni aliases in the shell integrations (#126) (Raphaël Beamonte)\r\n- 🐛 fix: version prefix now checks that the first char is a dot (Raphaël Beamonte)\r\n- ✨ Use nodejs-extended semver for version parsing (Raphaël Beamonte)\r\n- ✨ Add support for package.json files as NodeJS version file (Raphaël Beamonte)\r\n- 🔥 Remove 'npm' as an alias of 'node' (Raphaël Beamonte)\r\n- ✨ Support version files with alternate names for golang and nodejs (Raphaël Beamonte)\r\n- 🐛 Fix custom up configuration parsing (Raphaël Beamonte)\r\n- ✨ 'auto' version now supports 'go.mod' for Golang (Raphaël Beamonte)\r\n- ✨ Add support for detection of the tool versions (Raphaël Beamonte)\r\n- ✨ Add support for per-dir dynenv (Raphaël Beamonte)"
+      ]
     },
     "0.0.14": {
+      "published_at": "2023-08-08T22:01:50Z",
       "build": {
         "tag": "v0.0.14",
         "revision": "ec566149dec8035f72cf3dcadaefd45e96f42fb7"
@@ -1242,10 +3140,10 @@
           "sha256": "9aa3006abffc0819c7f1c93cd0d2974298d2aa6e2d546fdb80057265a3b52118",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.14/omni-0.0.14-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 🐛 path commands were not processed in alphabetical order (Raphaël Beamonte)\n- 🐛 Dedup aliases for path commands (Raphaël Beamonte)\n- 📦 (deps): Bump clap from 4.3.19 to 4.3.21 (#87) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.182 to 1.0.183 (#85) (dependabot[bot])\n- 📦 (deps): Bump tar from 0.4.39 to 0.4.40 (#83) (dependabot[bot])\n- 📦 (deps): Bump machine-uid from 0.5.0 to 0.5.1 (#84) (dependabot[bot])\n- 📦 (deps): Bump openssl from 0.10.55 to 0.10.56 (#82) (dependabot[bot])\n- 📦 (deps): Bump regex from 1.9.1 to 1.9.3 (#81) (dependabot[bot])\n- 📦 (deps): Bump tempfile from 3.7.0 to 3.7.1 (#80) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.181 to 1.0.182 (#79) (dependabot[bot])\n- 📝 Fix missing end of sentence (Raphaël Beamonte)\n- ✨ Add support for `omni cd --locate` (Raphaël Beamonte)\n- 📦 (deps): Bump serde from 1.0.180 to 1.0.181 (#76) (dependabot[bot])\n- ✨ Add support to use omni in regular directories (Raphaël Beamonte)\n- 🐛 .down() bash instead of mistaken .up() (#72) (Terry)\n- 📦 (deps): Bump time from 0.3.24 to 0.3.25 (#74) (dependabot[bot])\n- 📦 (deps): Bump indicatif from 0.17.5 to 0.17.6 (#75) (dependabot[bot])\n- 📝 Small tutorial typo corrections (#70) (Terry)\n- 📦 (deps): Bump serde from 1.0.179 to 1.0.180 (#69) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.177 to 1.0.179 (#68) (dependabot[bot])\n- 📦 (deps): Bump time from 0.3.23 to 0.3.24 (#67) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.176 to 1.0.177 (#65) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.175 to 1.0.176 (#64) (dependabot[bot])\n- 📦 (deps): Bump serde_json from 1.0.103 to 1.0.104 (#62) (dependabot[bot])\n- 📦 (deps): Bump libz-sys from 1.1.11 to 1.1.12 (#63) (dependabot[bot])\n- 📦 (deps): Bump libz-sys from 1.1.10 to 1.1.11 (#61) (dependabot[bot])"
+      ]
     },
     "0.0.13": {
+      "published_at": "2023-07-25T05:08:32Z",
       "build": {
         "tag": "v0.0.13",
         "revision": "1006206c53c94f688aa190cf6bc420d50e40dcd1"
@@ -1275,10 +3173,10 @@
           "sha256": "881cc9026ecda2acd158b1e4021ab72b7cc94eb69d4f3bfe281f0ba3ee7e9d00",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.13/omni-0.0.13-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 📝 Add clarification for new tidy documentation (Raphaël Beamonte)\n- 🐛 Add missing autocompletions for `omni up` (Raphaël Beamonte)\n- ✨ Add support for `omni tidy --up-all` (Raphaël Beamonte)\n- 📝 Add missing documentation for new bootstrap (Raphaël Beamonte)\n- 🐛 Flush the saved configuration when the repository is updated (Raphaël Beamonte)\n- 💅 Making message nicer by removing precision (Raphaël Beamonte)\n- ✨ Replace calling `--update-user-config` by `--bootstrap` after clone (Raphaël Beamonte)\n- 📦 (deps): update cargo dependencies (Raphaël Beamonte)\n- ✨ Add support for `suggest_clone` (Raphaël Beamonte)\n- 📦 (deps): Bump clap from 4.3.17 to 4.3.19 (#59) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.173 to 1.0.174 (#60) (dependabot[bot])\n- 📦 (deps): Bump libz-sys from 1.1.9 to 1.1.10 (#58) (dependabot[bot])\n- 📦 (deps): Bump serde_yaml from 0.9.24 to 0.9.25 (#57) (dependabot[bot])\n- 📦 (deps): Bump tempfile from 3.6.0 to 3.7.0 (#56) (dependabot[bot])\n- 📦 (deps): Bump clap from 4.3.16 to 4.3.17 (#55) (dependabot[bot])\n- 📦 (deps): Bump serde from 1.0.171 to 1.0.173 (#54) (dependabot[bot])\n- 📦 (deps): Bump clap from 4.3.15 to 4.3.16 (#53) (dependabot[bot])\n- 😅 Remove forgotten debug message (Raphaël Beamonte)\n- 📦 (deps): Bump clap from 4.3.12 to 4.3.15 (#50) (dependabot[bot])\n- 📦 (deps): Bump serde_yaml from 0.9.23 to 0.9.24 (#51) (dependabot[bot])\n- 📦 (deps): Bump uuid from 1.4.0 to 1.4.1 (#52) (dependabot[bot])\n- 🔩 Use DisplayHelp error from clap (Raphaël Beamonte)\n- 🔥 Remove commented code (Raphaël Beamonte)\n- 🆙 Update Cargo.lock dependencies versions (Raphaël Beamonte)\n- ✨ Add support for `--help` for builtin commands (Raphaël Beamonte)\n- 📦 (deps): Bump semver from 1.0.17 to 1.0.18 (#47) (dependabot[bot])\n- 📦 (deps): Bump serde_yaml from 0.9.22 to 0.9.23 (#49) (dependabot[bot])\n- 📦 (deps): Bump serde_json from 1.0.102 to 1.0.103 (#48) (dependabot[bot])\n- 📝 Add missing step in up configuration tutorial (Raphaël Beamonte)\n- 📦 (deps): Bump tar from 0.4.38 to 0.4.39 (#44) (dependabot[bot])\n- 🐛 Fix `tidy` was not editing the correct files (Raphaël Beamonte)\n- ✨ self updater can now update the user configuration (Raphaël Beamonte)\n- 👷 (deps): Bump actions/upload-pages-artifact from 1 to 2 (#43) (dependabot[bot])\n- 📝 Rephrase documentation for some up operations (Raphaël Beamonte)\n- 👷 Fix website workflow for pages environment (Raphaël Beamonte)"
+      ]
     },
     "0.0.12": {
+      "published_at": "2023-07-12T02:57:49Z",
       "build": {
         "tag": "v0.0.12",
         "revision": "3a4a89063bf180faf82395f53c816abb0dcd7e18"
@@ -1308,10 +3206,10 @@
           "sha256": "ec0601edac3555200a25b852fb956c83a6090ee12e679772e5dcdfc6adb7e7f5",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.12/omni-0.0.12-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 📝 Fix misleading documentation (Raphaël Beamonte)\n- ✨ Add `bash` operation for `up` command (Raphaël Beamonte)\n- 👷 Add npm configuration for dependabot (website) (Raphaël Beamonte)\n- Bump semver from 5.7.1 to 5.7.2 in /website (#42) (dependabot[bot])\n- 👷 Try to allow website builds for contributors pull requests (Raphaël Beamonte)\n- 📦 (deps): Bump serde_json from 1.0.100 to 1.0.102 (#41) (dependabot[bot])\n- 🐛 Fix worktree configuration transformation (Raphaël Beamonte)\n- 📝 Add new installation method to intro list (Raphaël Beamonte)\n- 📝 Add `cargo install` installation method in documentation (Raphaël Beamonte)\n- 👷 Sort version better when generating release notes (Raphaël Beamonte)"
+      ]
     },
     "0.0.11": {
+      "published_at": "2023-07-10T05:43:44Z",
       "build": {
         "tag": "v0.0.11",
         "revision": "b20450dd3325f0916c85891664dc03f4f8e739f9"
@@ -1341,10 +3239,10 @@
           "sha256": "724dc5d1e19d13081406c1f50092fd6c894d545ae7a113b21db9d92aed97faeb",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.11/omni-0.0.11-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 👷 workflow: website: fix typo (Raphaël Beamonte)\r\n- 👷 Do not run tests for website workflow updates (Raphaël Beamonte)\r\n- 👷 Update workflow versions for website update (Raphaël Beamonte)\r\n- 🧱 Fix build.rs version loading for crate (Raphaël Beamonte)\r\n- 👷 workflows: use paths and paths-ignore filters (Raphaël Beamonte)\r\n- 👷 release: change 'cargo publish' to be --verbose (Raphaël Beamonte)"
+      ]
     },
     "0.0.10": {
+      "published_at": "2023-07-10T05:09:46Z",
       "build": {
         "tag": "v0.0.10",
         "revision": "d8c10050e11937f355016a5fb6bc0e4d74474391"
@@ -1374,10 +3272,10 @@
           "sha256": "dd6ac8aa397ba0e2d9b0e19a325a97c95877a3b2ac7fc99f4b58c91189471003",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.10/omni-0.0.10-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 👷 Fix version environment variable (Raphaël Beamonte)\r\n- 👷 Fix missing key for release workflow (Raphaël Beamonte)\r\n- 👷 Do not run tests just for release workflow updates (Raphaël Beamonte)\r\n- 👷 Use github action environment replacement (Raphaël Beamonte)\r\n- 👷 Make sure to have cargo colors when building releases (Raphaël Beamonte)\r\n- ✨📦 Add support for cargo package (Raphaël Beamonte)\r\n- 📝 Fix wrong path in documentation (Raphaël Beamonte)\r\n- 📝 Fix wrong badge URL (Raphaël Beamonte)\r\n- 📝 Cleanup README to target at website (Raphaël Beamonte)\r\n- 📝 website: Fix baseUrl (Raphaël Beamonte)\r\n- 📝 Add website and documentation (Raphaël Beamonte)\r\n- 📦 (deps): Bump regex from 1.9.0 to 1.9.1 (#40) (dependabot[bot])\r\n- 📦 (deps): Bump time from 0.3.22 to 0.3.23 (#38) (dependabot[bot])\r\n- 📦 (deps): Bump serde from 1.0.167 to 1.0.171 (#39) (dependabot[bot])\r\n- 📦 (deps): Bump blake3 from 1.4.0 to 1.4.1 (#37) (dependabot[bot])\r\n- 📦 (deps): Bump is-terminal from 0.4.8 to 0.4.9 (#36) (dependabot[bot])\r\n- 📦 (deps): Bump serde from 1.0.166 to 1.0.167 (#35) (dependabot[bot])\r\n- 🔒 Replace `atty` by `is-terminal` (Raphaël Beamonte)\r\n- 👷 Dependabot shouldn't be replacing emojis (Raphaël Beamonte)\r\n- 🐛 Only global omnipath is used for repo updates (Raphaël Beamonte)\r\n- 📦:arrow_up:  (deps): Bump regex from 1.8.4 to 1.9.0 (#34) (dependabot[bot])\r\n- 💅 Removing unsetting `OMNI_HELPERS_FILE` variable that is not set (Raphaël Beamonte)\r\n- 📦:arrow_up:  (deps): Bump serde_json from 1.0.99 to 1.0.100 (#33) (dependabot[bot])\r\n- 👷 Pass the release version as environment variable (Raphaël Beamonte)\r\n- 📦⬆️  (deps): Bump fs4 from 0.6.5 to 0.6.6 (#31) (dependabot[bot])\r\n- 📦⬆️  (deps): Bump serde from 1.0.164 to 1.0.166 (#32) (dependabot[bot])\r\n- 👷 Rename branch from rust to main (Raphaël Beamonte)\r\n- ✨ Provide makefile commands with the current working directory (Raphaël Beamonte)\r\n- ✨ Provide config commands with the current working directory (Raphaël Beamonte)\r\n- 🔥 Deprecate the configuration files without extensions (Raphaël Beamonte)\r\n- ✨ Support relative paths for the `worktree` configuration (Raphaël Beamonte)\r\n- ✨ Add `worktree` configuration parameter (Raphaël Beamonte)\r\n- 🐛 homebrew operation: do not consider tap when list (Raphaël Beamonte)\r\n- 🐛 Fix category ordering in global help (Raphaël Beamonte)\r\n- 🐛 Remove debug message (Raphaël Beamonte)\r\n- 🐛 status: do not always remove first line of yaml (Raphaël Beamonte)"
+      ]
     },
     "0.0.9": {
+      "published_at": "2023-06-30T05:35:53Z",
       "build": {
         "tag": "v0.0.9",
         "revision": "2447c04036e3ee4b58302139c881277e66c88d9e"
@@ -1407,10 +3305,10 @@
           "sha256": "f0a8944cb9c01c4d3d816f06044e82556e4ace090df0bbfb3636ea25aa64fe9c",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.9/omni-0.0.9-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 🐛 Fix duplicate `tool:version` after `omni up` (Raphaël Beamonte)\n- 👷 Make Dependabot automerge action only trigger on pull requests (Raphaël Beamonte)\n- ✨ Add self updater for omni (#26) (Raphaël Beamonte)\n- 📦:arrow_up:  (deps): Bump tokio from 1.29.0 to 1.29.1 (#25) (dependabot[bot])"
+      ]
     },
     "0.0.8": {
+      "published_at": "2023-06-29T05:54:58Z",
       "build": {
         "tag": "v0.0.8",
         "revision": "eb2f0639fe3651e8aaaaa4c056872226790f6cab"
@@ -1440,10 +3338,10 @@
           "sha256": "07ab1a2a7c59a035317e75fa1c10366f5864a1bc4eca12807d6fb3ec72b98921",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.8/omni-0.0.8-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 👷 Reenabling release process (Raphaël Beamonte)\n- 👷 Using --unshallow to get all past history (Raphaël Beamonte)\n- 👷 Using --force to fetch tags (Raphaël Beamonte)\n- 👷 Identifying how to read all tags (Raphaël Beamonte)\n- 👷 Try and fetch existing tags differently (Raphaël Beamonte)\n- ✨ tidy now supports `--search-path` parameter (Raphaël Beamonte)\n- 🐛 Add missing file for golang `version_file` handling (Raphaël Beamonte)\n- ✨ Add support for `version_file` for golang up step (Raphaël Beamonte)\n- 👷 Allow for auto-merge of Dependabot pull requests (Raphaël Beamonte)\n- 👷 Add prefix to Dependabot PRs (Raphaël Beamonte)\n- Bump tokio from 1.28.2 to 1.29.0 (#13) (dependabot[bot])\n- Bump uuid from 1.3.4 to 1.4.0 (#12) (dependabot[bot])\n- 👷 Fetch all tags before trying to build changelog (Raphaël Beamonte)"
+      ]
     },
     "0.0.7": {
+      "published_at": "2023-06-28T00:02:25Z",
       "build": {
         "tag": "v0.0.7",
         "revision": "795901b8258b920fd75d3dd6f177f96ea4feeecd"
@@ -1473,10 +3371,10 @@
           "sha256": "a363788a4dcbcf0698a2f3105166c41a4b8bd950f1780355e5cacbf30605444a",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.7/omni-0.0.7-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 👷 Fix env var with changelog (Raphaël Beamonte)\r\n- 👷 Fix bad copy-paste (Raphaël Beamonte)\r\n- 🐛 Fix regression with the command matching (Raphaël Beamonte)\r\n- 👷 Change action to create GitHub release (Raphaël Beamonte)"
+      ]
     },
     "0.0.6": {
+      "published_at": "2023-06-27T23:28:32Z",
       "build": {
         "tag": "v0.0.6",
         "revision": "0567b7a15433575310ce3ae2e31fd32f0888995d"
@@ -1506,10 +3404,10 @@
           "sha256": "9e4dbbd0f7538f30037fc5871e0deb6b8d733ae1628a86bd15ef6851096cb82f",
           "url": "https://github.com/xaf/omni/releases/download/v0.0.6/omni-0.0.6-x86_64-linux.tar.gz"
         }
-      ],
-      "notes": "- 🗜  Add 'create-tag' config command to create new releases for omni (Raphaël Beamonte)\r\n- 🐛 Make sure the config file directory exists before trying to write it (Raphaël Beamonte)\r\n- 🧹 Cleanup some warnings (Raphaël Beamonte)\r\n- 📦 Remove rerun-if build constraints (Raphaël Beamonte)\r\n- 🐛 Improve command fuzzy matching (Raphaël Beamonte)"
+      ]
     },
     "0.0.5": {
+      "published_at": "2023-06-27T18:48:17Z",
       "build": {
         "tag": "v0.0.5",
         "revision": "6216c1df420ea9809690324e3bb21cd1c25546cb"
@@ -1542,6 +3440,7 @@
       ]
     },
     "0.0.4": {
+      "published_at": "2023-06-23T15:44:21Z",
       "build": {
         "tag": "v0.0.4",
         "revision": "5d669c310097db99ad1dae3b1a20419558d7da56"
@@ -1574,6 +3473,7 @@
       ]
     },
     "0.0.3": {
+      "published_at": "2023-06-23T00:59:52Z",
       "build": {
         "tag": "v0.0.3",
         "revision": "891bd6971a4d9e1bc4e1bf032667e31ded04342c"
@@ -1606,6 +3506,7 @@
       ]
     },
     "0.0.2": {
+      "published_at": "2023-06-23T00:42:16Z",
       "build": {
         "tag": "v0.0.2",
         "revision": "f9ebcd0331747532de126e3adf0a351ac09ba090"
@@ -1636,65 +3537,6 @@
           "url": "https://github.com/xaf/omni/releases/download/v0.0.2/omni-0.0.2-x86_64-linux.tar.gz"
         }
       ]
-    },
-    "0.0.1-rc6": {
-      "build": {
-        "tag": "v0.0.1-rc6",
-        "revision": "c96300cfe6daf684748346d353dface2c5cc18e2"
-      },
-      "binaries": [
-
-      ],
-      "notes": "## What's Changed\r\n* 🐛 Fix find command searching in all computer if TMPDIR unset\r\n* 🐛 Use tmpdir variable instead\r\n* 🗑️  Remove unused parameters\r\n* ✨ Add install support using pacman\r\n* ✨ omni organize now updates configuration paths if needed\r\n* 👷 Increasing timeout for macos builds\r\n* 🎨 omni organize will suggest updating OMNIDIR only if it was not auto-located\r\n* 🐟 Add shell integration for fish\r\n* 🐟 Add fish install hooks and tests\r\n* 📝 Improve README details about configuration by @oefd in https://github.com/XaF/omni/pull/1\r\n* 📝 Slight README adjustements\r\n* 📝 More readme details\r\n* ✨ Add support for 'org' configuration parameter\r\n\r\n## New Contributors\r\n* @oefd made their first contribution in https://github.com/XaF/omni/pull/1\r\n\r\n**Full Changelog**: https://github.com/XaF/omni/compare/v0.0.1-rc5...v0.0.1-rc6"
-    },
-    "0.0.1-rc5": {
-      "build": {
-        "tag": "v0.0.1-rc5",
-        "revision": "1f422560925dad7f489b68019740760ddd233a1e"
-      },
-      "binaries": [
-
-      ]
-    },
-    "0.0.1-rc4": {
-      "build": {
-        "tag": "v0.0.1-rc4",
-        "revision": "ff02e0299f84587a484cc2f5aa2e1e2041e2259b"
-      },
-      "binaries": [
-
-      ],
-      "notes": "**Full Changelog**: https://github.com/XaF/omni/compare/v0.0.1-rc3...v0.0.1-rc4"
-    },
-    "0.0.1-rc3": {
-      "build": {
-        "tag": "v0.0.1-rc3",
-        "revision": "7a2806f08588c755e38ad943b69331eae55d2b20"
-      },
-      "binaries": [
-
-      ],
-      "notes": "**Full Changelog**: https://github.com/XaF/omni/compare/v0.0.1-rc2...v0.0.1-rc3"
-    },
-    "0.0.1-rc2": {
-      "build": {
-        "tag": "v0.0.1-rc2",
-        "revision": "e3497243ff5913cbba446f12e37ee760ac1001ff"
-      },
-      "binaries": [
-
-      ],
-      "notes": "**Full Changelog**: https://github.com/XaF/omni/compare/v0.0.1-rc1...v0.0.1-rc2"
-    },
-    "0.0.1-rc1": {
-      "build": {
-        "tag": "v0.0.1-rc1",
-        "revision": "77c86045264584bbdf6f68913f48101a193ed2e1"
-      },
-      "binaries": [
-
-      ],
-      "notes": "Initial release of omni 🎉\r\n\r\n**Full Changelog**: https://github.com/XaF/omni/commits/v0.0.1-rc1"
     }
   }
 }

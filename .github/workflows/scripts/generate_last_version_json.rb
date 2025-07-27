@@ -65,6 +65,73 @@ def fetch(uri_str, allow_redirect = 5)
   end
 end
 
+def parse_release_notes(markdown)
+  return nil unless markdown && !markdown.strip.empty?
+
+  notes = {
+    features: [],
+    fixes: [],
+    breaking: [],
+  }
+
+  current_section = nil
+  breaking_cause = false
+  last_note = nil
+
+  markdown.each_line do |line|
+    line = line.rstrip
+
+    # Detect emoji-labeled sections
+    case line
+    when /^###\s+:sparkles:/
+      current_section = :features
+    when /^###\s+:bug:/
+      current_section = :fixes
+    when /^###\s+:boom:/i, /^###\s+💥/
+      current_section = :breaking
+    when /^###/
+      current_section = nil
+    else
+      next unless current_section
+
+      # If the line corresponds to a commit or pull request
+      if line =~ /^[-*]\s+(?:due to\s+)?(?:\[`(?<commit>[a-f0-9]+)`\]\((?<link>[^)]+)\)\s+-\s+)?(?:\*\*(?<scope>[^*]+)\*\*:\s+)?(?<emoji>[\p{So}\p{Sk}]+)\s+(?<summary>.+?)(?:\*?\((?:PR #(?<pr>\d+)|commit)\s+by\s+@(?<author>.+?)\)\*?)?:?$/iu
+        entry = {
+          commit: Regexp.last_match[:commit],
+          link: Regexp.last_match[:link],
+          scope: Regexp.last_match[:scope],
+          author: Regexp.last_match[:author],
+          emoji: Regexp.last_match[:emoji],
+          pr: Regexp.last_match[:pr].to_i,
+          summary: Regexp.last_match[:summary].strip,
+        }
+        entry.reject! { |k, v| v.nil? || (v.respond_to?(:empty?) && v.empty?) }
+        notes[current_section] << entry
+
+        # Prepare to read a breaking change cause
+        breaking_cause = current_section == :breaking
+
+        # Prepare to read an issue addressed by this change
+        last_note = notes[current_section][-1]
+
+      # If the line corresponds to an issue that was addressed
+      elsif last_note && line =~ /^  -\s+:arrow_lower_right:\s+\*addresses issue #(?<issue>\d+) opened by @(?<author>.+)\*$/iu
+        last_note[:issues] ||= []
+        last_note[:issues] << Regexp.last_match[:issue].to_i
+
+      # If the line corresponds to a breaking change cause
+      elsif breaking_cause && current_section == :breaking && line.start_with?("  ")
+        last_note[:cause] ||= ""
+        last_note[:cause] += " " unless last_note[:cause].empty?
+        last_note[:cause] += line.strip
+      end
+    end
+  end
+
+  notes.reject! { |_k, v| v.nil? || (v.respond_to?(:empty?) && v.empty?) }
+  notes.empty? ? nil : notes
+end
+
 # Initialize the versions data
 versions_data = {}
 
@@ -85,6 +152,7 @@ from_scratch = true if !from_scratch && versions_data.empty?
 # Go through the releases
 current_page = 0
 might_have_more = true
+new_versions_data = {}
 while might_have_more
   current_page += 1
   response = fetch("https://api.github.com/repos/#{owner}/#{repo}/releases?per_page=100&page=#{current_page}")
@@ -120,7 +188,7 @@ while might_have_more
   bin_regex = Regexp.compile(/(?<asset>omni-(?<version>.*)-(?<arch>[^-]*)-(?<os>[^-]*))\.(?<type>sha256|tar.gz)/)
 
   # For each version, let's generate the data we need
-  releases.each_with_object(versions_data) do |json, h|
+  releases.each_with_object(new_versions_data) do |json, h|
     # Skip draft releases
     next if json['draft']
 
@@ -185,6 +253,7 @@ while might_have_more
 
     # Prepare the result
     version_data = {
+      "published_at" => json['published_at'],
       "build" => {
         "tag" => tag,
         "revision" => revision,
@@ -192,7 +261,10 @@ while might_have_more
       "binaries" => binaries.values,
     }
 
-    version_data['notes'] = json['body'] if json['body'] && !json['body'].empty?
+    if json['body'] && !json['body'].empty?
+      notes = parse_release_notes(json['body'])
+      version_data['notes'] = notes if notes
+    end
 
     # Store the version data
     h['versions'] ||= []
@@ -200,6 +272,41 @@ while might_have_more
 
     h['data'] ||= {}
     h['data'][version] = version_data
+  end
+end
+
+# Merge new data with existing data, if needed
+if from_scratch
+  versions_data = new_versions_data
+elsif new_versions_data.any?
+  # The new versions data should be added as a prefix to the
+  # existing versions data; i.e. if existing is 3, 2, 1 and
+  # new is 5, 4, it should become 5, 4, 3, 2, 1
+  versions_data['versions'] ||= []
+  versions_data['versions'].unshift(*new_versions_data['versions'])
+  versions_data['versions'].uniq!
+
+  versions_data['data'] ||= {}
+  versions_data['data'].merge!(new_versions_data['data'])
+end
+
+# Write to legacy file if specified
+# This is for compatibility with older versions of the script
+if legacy_file
+  begin
+    # The legacy data contains only the latest version
+    latest_version = versions_data['versions'].first
+    legacy_data = {
+      "version" => latest_version,
+    }
+    legacy_data.merge!(versions_data['data'][latest_version])
+    File.open(legacy_file, 'w') do |file|
+      file.write(JSON.pretty_generate(legacy_data))
+    end
+    STDERR.puts "Legacy data written to #{legacy_file}"
+  rescue => e
+    STDERR.puts "Error writing legacy file: #{e.message}"
+    exit(1)
   end
 end
 
@@ -211,28 +318,10 @@ if target_file
     end
     STDERR.puts "Data written to #{target_file}"
   rescue => e
-    STDERR.puts "Error writing to file: #{e.message}"
+    STDERR.puts "Error writing file: #{e.message}"
     exit(1)
   end
+else
+  # Print the result as JSON
+  puts JSON.pretty_generate(versions_data)
 end
-
-# Write to legacy file if specified
-# This is for compatibility with older versions of the script
-if legacy_file
-  begin
-    # The legacy data contains only the latest version
-    latest_version = versions_data['versions'].first
-    legacy_data = versions_data['data'][latest_version].dup
-    legacy_data['version'] = latest_version
-    File.open(legacy_file, 'w') do |file|
-      file.write(JSON.pretty_generate(legacy_data))
-    end
-    STDERR.puts "Legacy data written to #{legacy_file}"
-  rescue => e
-    STDERR.puts "Error writing legacy file: #{e.message}"
-    exit(1)
-  end
-end
-
-# Print the result as JSON
-puts JSON.pretty_generate(versions_data)
