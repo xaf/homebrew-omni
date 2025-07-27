@@ -1,5 +1,4 @@
 {
-  "version": "2025.6.1",
   "build": {
     "tag": "v2025.6.1",
     "revision": "4af6d000bdffaadddfd94d344a690ef9560b612a"
@@ -29,5 +28,7 @@
       "sha256": "0687d9da7f4df954062ea847e74a57b5e55a574e58dbe660f79572f08d91d36b",
       "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-x86_64-linux.tar.gz"
     }
-  ]
+  ],
+  "notes": "### :bug: Bug Fixes\n- [`c26811c`](https://github.com/xaf/omni/commit/c26811c7cba7d69781ca031cd63725a0125514f0) - **go/cargo-install**: 🐛 path for go-installed tools missed 'bin' *(commit by @xaf)*\n",
+  "version": "2025.6.1"
 }
