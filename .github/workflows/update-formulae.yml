@@ -27,15 +27,54 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      VERSIONS_FILE: Formula/resources/versions.json
+      LATEST_FILE: Formula/resources/omni.json
+
     steps:
-      - name: Checkout current commit
-        uses: actions/checkout@v3
+      - name: Create application token
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ secrets.OMNICLI_APP_ID }}
+          private-key: ${{ secrets.OMNICLI_PRIVATE_KEY }}
+
+      - name: Checkout commit
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Run update script
+        env:
+          # Pass the github token to handle all API requests
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OMNI_FILE=Formula/resources/omni.json
-          .github/workflows/scripts/generate_last_version_json.rb | tee "$OMNI_FILE"
-          OMNI_VERSION="$(cat "$OMNI_FILE" | jq --raw-output .version)"
+          .github/workflows/scripts/generate_last_version_json.rb \
+            --write "$VERSIONS_FILE" \
+            --legacy "$LATEST_FILE"
+
+      - name: Ensure symlinks exist for all versions
+        run: |
+          if [[ ! -f "$VERSIONS_FILE" ]]; then
+            echo "Versions file not found: $VERSIONS_FILE"
+            exit 1
+          fi
+
+          # Get all versions from the JSON file
+          versions=($(jq --raw-output '.versions[]' "$VERSIONS_FILE"))
+
+          # Ensure symlinks for all versions exist
+          cd Formula/
+          for version in "${versions[@]}"; do
+            if [[ ! -L "Formula/omni@${version}.rb" ]]; then
+              echo "Creating symlink for omni@${version}.rb"
+              ln -s "omni.rb" "omni@${version}.rb"
+            fi
+          done
+
+      - name: Extract latest omni version
+        run: |
+          OMNI_VERSION="$(cat "$VERSIONS_FILE" | jq --raw-output .versions[0])"
           if [[ -z "$OMNI_VERSION" ]]; then
             echo "Unable to find omni version from the JSON"
             exit 1
@@ -46,8 +85,8 @@ jobs:
           fi
           echo "OMNI_VERSION=v${OMNI_VERSION}" | tee -a "$GITHUB_ENV"
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v6
         with:
-          file_pattern: "Formula/resources/*.json"
+          file_pattern: "Formula/resources/*.json Formula/omni@*.rb"
           commit_message: 📦 Updating omni formula to ${{ env.OMNI_VERSION }}
 
