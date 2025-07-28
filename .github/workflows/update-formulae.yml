@@ -55,22 +55,8 @@ jobs:
 
       - name: Ensure symlinks exist for all versions
         run: |
-          if [[ ! -f "$VERSIONS_FILE" ]]; then
-            echo "Versions file not found: $VERSIONS_FILE"
-            exit 1
-          fi
-
-          # Get all versions from the JSON file
-          versions=($(jq --raw-output '.[]["version"]' "$VERSIONS_FILE"))
-
-          # Ensure symlinks for all versions exist
-          cd Formula/
-          for version in "${versions[@]}"; do
-            if [[ ! -L "Formula/omni@${version}.rb" ]]; then
-              echo "Creating symlink for omni@${version}.rb"
-              ln -s "omni.rb" "omni@${version}.rb"
-            fi
-          done
+          .github/workflows/scripts/symlinks.rb \
+            -f "$VERSIONS_FILE"
 
       - name: Extract latest omni version
         run: |
