@@ -32,14 +32,18 @@ formula_class = Class.new(Formula) do
   versions_data = File.open(@@versions_file) { |f| JSON.parse(f.read) }
 
   # Validate versions data
-  odie "versions list is not set" if versions_data["versions"].blank?
-  odie "versions data is not set" if versions_data["data"].blank?
+  odie "versions is not set" if versions_data.blank?
 
-  target_version = file_version || versions_data["versions"].first
-  odie "version #{target_version} not found in versions.json" unless versions_data["data"][target_version]
+  if file_version
+    json_data = versions_data.find { |v| v["version"] == file_version }
+    odie "version #{file_version} not found in versions.json" unless json_data
+  else
+    # If no version is specified, use the first version in the JSON file
+    json_data = versions_data.first
+  end
 
-  json_data = versions_data["data"][target_version]
-  version target_version
+  odie "version not specified in versions.json" unless json_data["version"]
+  version json_data["version"]
 
   # Check for --build-from-source and --HEAD in a case-insensitive way
   argv = ARGV.map(&:downcase)

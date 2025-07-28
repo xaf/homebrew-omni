@@ -8,7 +8,7 @@ require 'uri'
 owner = 'xaf'
 repo = 'omni'
 target_file = nil
-legacy_file = nil
+latest_file = nil
 from_scratch = false
 
 # Parse command line options
@@ -22,8 +22,8 @@ OptionParser.new do |option|
     target_file = f
   end
 
-  option.on('--legacy FILE', 'Write the output to a legacy file (for compatibility)') do |f|
-    legacy_file = f
+  option.on('--latest FILE', 'Write the output to a latest file (for compatibility)') do |f|
+    latest_file = f
   end
 
   option.on('--[no-]from-scratch', 'Fetch all releases from scratch (default: false)') do |fs|
@@ -133,12 +133,22 @@ def parse_release_notes(markdown)
 end
 
 # Initialize the versions data
-versions_data = {}
+versions_data = []
 
 # If we have a target file, let's read it to avoid fetching the same data again, unless we are fetching from scratch
 if target_file && !from_scratch
   begin
     versions_data = JSON.parse(File.read(target_file))
+    if versions_data.is_a?(Hash)
+      save = versions_data.dup || {}
+      versions_data = []
+      for v in save['versions']
+        new_val = {'version' => v}
+        new_val.merge!(save['data'][v])
+        versions_data.push(new_val)
+      end
+    end
+    versions_data = [] unless versions_data.is_a?(Array)
   rescue Errno::ENOENT
     STDERR.puts "Target file #{target_file} does not exist, will skip reading it."
   rescue JSON::ParserError
@@ -152,7 +162,8 @@ from_scratch = true if !from_scratch && versions_data.empty?
 # Go through the releases
 current_page = 0
 might_have_more = true
-new_versions_data = {}
+existing_versions = versions_data.map { |v| v['version'] }.compact.uniq
+new_versions_data = []
 while might_have_more
   current_page += 1
   response = fetch("https://api.github.com/repos/#{owner}/#{repo}/releases?per_page=100&page=#{current_page}")
@@ -174,8 +185,8 @@ while might_have_more
   might_have_more = releases.length == 100
 
   # Find the first release that already exists
-  if !from_scratch && versions_data['versions']
-    found = releases.find { |release| versions_data['versions'].include?(release['tag_name'].sub(/^v/, '')) }
+  if !from_scratch && existing_versions.any?
+    found = releases.find { |release| existing_versions.include?(release['tag_name'].sub(/^v/, '')) }
     if found
       might_have_more = false
       releases = releases.take_while { |release| release['tag_name'] != found['tag_name'] }
@@ -188,7 +199,7 @@ while might_have_more
   bin_regex = Regexp.compile(/(?<asset>omni-(?<version>.*)-(?<arch>[^-]*)-(?<os>[^-]*))\.(?<type>sha256|tar.gz)/)
 
   # For each version, let's generate the data we need
-  releases.each_with_object(new_versions_data) do |json, h|
+  releases.each_with_object(new_versions_data) do |json, a|
     # Skip draft releases
     next if json['draft']
 
@@ -202,7 +213,7 @@ while might_have_more
     version = version[1..-1] if version.start_with?('v')
 
     # Stop here if the version already exists in the data
-    if h['versions'] && h['versions'].include?(version)
+    if existing_versions.include?(version) || a.any? { |d| d['version'] == version }
       STDERR.puts "Version #{version} already exists, stopping."
       break
     end
@@ -253,6 +264,7 @@ while might_have_more
 
     # Prepare the result
     version_data = {
+      "version" => version,
       "published_at" => json['published_at'],
       "build" => {
         "tag" => tag,
@@ -267,11 +279,7 @@ while might_have_more
     end
 
     # Store the version data
-    h['versions'] ||= []
-    h['versions'] << version
-
-    h['data'] ||= {}
-    h['data'][version] = version_data
+    a << version_data
   end
 end
 
@@ -282,30 +290,21 @@ elsif new_versions_data.any?
   # The new versions data should be added as a prefix to the
   # existing versions data; i.e. if existing is 3, 2, 1 and
   # new is 5, 4, it should become 5, 4, 3, 2, 1
-  versions_data['versions'] ||= []
-  versions_data['versions'].unshift(*new_versions_data['versions'])
-  versions_data['versions'].uniq!
-
-  versions_data['data'] ||= {}
-  versions_data['data'].merge!(new_versions_data['data'])
+  versions_data ||= []
+  versions_data.unshift(*new_versions_data)
 end
 
-# Write to legacy file if specified
+# Write to latest file if specified
 # This is for compatibility with older versions of the script
-if legacy_file
+if latest_file
   begin
-    # The legacy data contains only the latest version
-    latest_version = versions_data['versions'].first
-    legacy_data = {
-      "version" => latest_version,
-    }
-    legacy_data.merge!(versions_data['data'][latest_version])
-    File.open(legacy_file, 'w') do |file|
-      file.write(JSON.pretty_generate(legacy_data))
+    # The latest data contains only the latest version
+    File.open(latest_file, 'w') do |file|
+      file.write(JSON.pretty_generate(versions_data.first))
     end
-    STDERR.puts "Legacy data written to #{legacy_file}"
+    STDERR.puts "Latest data written to #{latest_file}"
   rescue => e
-    STDERR.puts "Error writing legacy file: #{e.message}"
+    STDERR.puts "Error writing latest file: #{e.message}"
     exit(1)
   end
 end

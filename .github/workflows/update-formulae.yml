@@ -51,7 +51,7 @@ jobs:
         run: |
           .github/workflows/scripts/generate_last_version_json.rb \
             --write "$VERSIONS_FILE" \
-            --legacy "$LATEST_FILE"
+            --latest "$LATEST_FILE"
 
       - name: Ensure symlinks exist for all versions
         run: |
