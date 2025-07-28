@@ -1,0 +1,3504 @@
+[
+  {
+    "version": "2025.6.1",
+    "published_at": "2025-06-04T21:11:52Z",
+    "build": {
+      "tag": "v2025.6.1",
+      "revision": "4af6d000bdffaadddfd94d344a690ef9560b612a"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "5238924fe4d2c360a661ba7b54ab0cf1e1c6e32e85882e612772e31a24674091",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "2a18037003830feba74a43d7dde080c2514a8f2c121d12214e9f119e69691d4d",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "4efa3096b536badc3368eb0cc4b90649073cc5ca2a34213c9c67b0e59a7f4e24",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "0687d9da7f4df954062ea847e74a57b5e55a574e58dbe660f79572f08d91d36b",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.1/omni-2025.6.1-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "c26811c",
+          "link": "https://github.com/xaf/omni/commit/c26811c7cba7d69781ca031cd63725a0125514f0",
+          "scope": "go/cargo-install",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "path for go-installed tools missed 'bin'"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.6.0",
+    "published_at": "2025-06-04T18:34:52Z",
+    "build": {
+      "tag": "v2025.6.0",
+      "revision": "bee0ee7d2011a3c07f24ff82cd3eda6bf62b8db5"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "39789b04153f2588d6924c1425c98366ba9a879c08e3a6e5ece94db4fc309f12",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.0/omni-2025.6.0-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "7580100c7759effbb44c7d1927b2df84e9709a44eef0aeaf860220c3a2faddb7",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.0/omni-2025.6.0-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "8a4ddb061c0b2a339487b267fda19469f56d84d92637008148514f487423220a",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.0/omni-2025.6.0-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "3e8f19f70eed1a23167a4bb56e6d26f3edfaee2e390cbfaffa82ac489ce7e8a7",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.6.0/omni-2025.6.0-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "ca1f7e1",
+          "link": "https://github.com/xaf/omni/commit/ca1f7e1d1d359ab090b574a538c002bdd1c70dad",
+          "scope": "help",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1031,
+          "summary": "add global options"
+        },
+        {
+          "commit": "ffa82ff",
+          "link": "https://github.com/xaf/omni/commit/ffa82ff5295cc91531f51ee866ffa628d95fed46",
+          "scope": "`python`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1032,
+          "summary": "set `UV_PROJECT_ENVIRONMENT` in dynamic environment"
+        },
+        {
+          "commit": "c052424",
+          "link": "https://github.com/xaf/omni/commit/c052424a6fabfd18d21f91f5fce8fdcc23976e33",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1033,
+          "summary": "extend `dir` support",
+          "issues": [
+            882
+          ]
+        },
+        {
+          "commit": "524bf37",
+          "link": "https://github.com/xaf/omni/commit/524bf37c159bd60c8236f6278b76b2c0bf3faf79",
+          "scope": "security key",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1042,
+          "summary": "improve askpass handling for security keys"
+        },
+        {
+          "commit": "f38094e",
+          "link": "https://github.com/xaf/omni/commit/f38094e34083f150f59f11194476be6bec4704de",
+          "scope": "github-release",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1053,
+          "summary": "prioritize `gh` cli and reload env between releases",
+          "issues": [
+            1051
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "eebc2b5",
+          "link": "https://github.com/xaf/omni/commit/eebc2b548153802aadfbff63ea0ceec7452185cc",
+          "scope": "autocomplete",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "multi-word commands now autocomplete cleanly"
+        },
+        {
+          "commit": "568f04b",
+          "link": "https://github.com/xaf/omni/commit/568f04b2495be78ec555e8bcdf5095ba905f817d",
+          "scope": "pre-auth",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 1038,
+          "summary": "do not pre-auth when update is disabled"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.4.0",
+    "published_at": "2025-04-06T20:25:45Z",
+    "build": {
+      "tag": "v2025.4.0",
+      "revision": "9a8177a3c06c63017d19ba4938f1a0289aff259e"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "983111fb2be4a1a93666066a2732c11e22fd15e6b1d6d10e97274b2f25121d26",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.4.0/omni-2025.4.0-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "f359611e66487ef794772687a2b767be1a85869c1bcce4e2cce8808be8ea4aa5",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.4.0/omni-2025.4.0-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "ecf9f0252ca40b2b6661a9cd5fb49743344ab0a267712c29171cecc3911de9de",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.4.0/omni-2025.4.0-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "708954c8f8cce2406694e07fccbf0d4c91e4750d09104a00c571102645573030",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.4.0/omni-2025.4.0-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "403cf7f",
+          "link": "https://github.com/xaf/omni/commit/403cf7fcef8c7e9e248fa17febe8420a0c1e4c67",
+          "scope": "`python`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 1008,
+          "summary": "use `uv` for venv and deps management",
+          "issues": [
+            295,
+            841
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.2.1",
+    "published_at": "2025-02-24T22:12:50Z",
+    "build": {
+      "tag": "v2025.2.1",
+      "revision": "ca29e21ef1d2921dcfb5eddd5a7ce05b095585aa"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "b0e072c8448a1448b3044b840e0005bdc8aefe94eeae42c6d4a078e0d05140b1",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.1/omni-2025.2.1-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "c9013997ce57aedf1c981c3ab302def53ad9204441667ffdae60793588f63692",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.1/omni-2025.2.1-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "63cf607e5155b292845d73dc57752743390d23efbd41d3dea7b3ebb23630dd80",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.1/omni-2025.2.1-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "f97aefaf4144d66554a94d9f2aa358d3fab32e6f6f15f4228ebb93ad39f57e84",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.1/omni-2025.2.1-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "16a7259",
+          "link": "https://github.com/xaf/omni/commit/16a72592a1148c69ac789d419d624cae15fa833b",
+          "scope": "`ruby` and `rust`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 950,
+          "summary": "add install isolation",
+          "issues": [
+            289
+          ]
+        },
+        {
+          "commit": "a6389e9",
+          "link": "https://github.com/xaf/omni/commit/a6389e92dc63b5d859e00e750ef2a5bb330d9299",
+          "scope": "`help`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 955,
+          "summary": "show `-h`/`--help` flags for argparser-enabled commands",
+          "issues": [
+            937
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "c5da9d7",
+          "link": "https://github.com/xaf/omni/commit/c5da9d799f730d353c4862dc584e70265819730e",
+          "author": "Sushisource",
+          "emoji": "🐛",
+          "pr": 948,
+          "summary": "handle renames safely when not on same device"
+        },
+        {
+          "commit": "ced1788",
+          "link": "https://github.com/xaf/omni/commit/ced17883abb23d567981729f75c015d934a6afbb",
+          "scope": "`node`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 949,
+          "summary": "dynamic environment was not loaded properly"
+        },
+        {
+          "commit": "21c052c",
+          "link": "https://github.com/xaf/omni/commit/21c052cf43fd2a9ec68e540b45ea787221023250",
+          "scope": "`ruby`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 954,
+          "summary": "remove `rubygems_plugin.rb` file after mise install"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.2.0",
+    "published_at": "2025-02-06T18:48:25Z",
+    "build": {
+      "tag": "v2025.2.0",
+      "revision": "ca81b2887e1d7e0278356a82504ca477833e2261"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "bd9e231853ddf03954c24821832985953c9cef4eaa29351cf46ea0f5dab113d9",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.0/omni-2025.2.0-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "963bd70a25fa02de8d17707ebae72c91761ab48b7578f1a67f2de1567e4ff080",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.0/omni-2025.2.0-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "3d5cd21bafddb5aeb45a43eb35943762cf8edbc232de3649eb20c413d91fb499",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.0/omni-2025.2.0-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "8824f816683178c73a09bc6d947aea7c595c52f82577a8cfc852c019dfbcf7c2",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.2.0/omni-2025.2.0-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "296629f",
+          "link": "https://github.com/xaf/omni/commit/296629fd689f8241d62022a8b2a36f8100930ca0",
+          "scope": "`package`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 930,
+          "summary": "use `git rev-list` to check if packages are up to date",
+          "issues": [
+            918
+          ]
+        },
+        {
+          "commit": "fbff613",
+          "link": "https://github.com/xaf/omni/commit/fbff613ec8c04cff94b5b1efbd25d2d922464d10",
+          "scope": "`github release`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 931,
+          "summary": "support for per-os/per-arch asset matching",
+          "issues": [
+            780
+          ]
+        },
+        {
+          "commit": "d037dcc",
+          "link": "https://github.com/xaf/omni/commit/d037dcc3607324bc26320c9900651e8ba864db70",
+          "scope": "`github release`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 940,
+          "summary": "distinguish install configurations",
+          "issues": [
+            934
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.8",
+    "published_at": "2025-01-27T22:41:46Z",
+    "build": {
+      "tag": "v2025.1.8",
+      "revision": "c175e88a8a805511574d5b0c6d694c8d14be2946"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "2e021c432947658ea70bb5ef89a66988f2292557a0b33cf01e72db68966acfc9",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.8/omni-2025.1.8-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "72d78e05e5a22dba495805121c7ccc0bb2e8b31994c574e1beefaafa1debea23",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.8/omni-2025.1.8-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "441b51fa29768cfd9c83fe29eb66b353ae3a90db3df306a661fe33d5d0641af0",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.8/omni-2025.1.8-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "d7ff55a46b02b4b41cced84cdc97be3e880f6cafd1728fd229eb4e5fbe087acc",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.8/omni-2025.1.8-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "0b53608",
+          "link": "https://github.com/xaf/omni/commit/0b53608cdabe05b6da9d64b6355fbe1de599a972",
+          "scope": "`argparser`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 911,
+          "summary": "add auto-completion support",
+          "issues": [
+            854
+          ]
+        },
+        {
+          "commit": "564e790",
+          "link": "https://github.com/xaf/omni/commit/564e790487c0c01daa26667a114c4efde9bd095a",
+          "scope": "`up`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 912,
+          "summary": "show when the environment is already up to date"
+        },
+        {
+          "commit": "0140a82",
+          "link": "https://github.com/xaf/omni/commit/0140a82f246fc738622ae0d909a637911195d1d5",
+          "scope": "`packages`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 913,
+          "summary": "make git updates more aggressive",
+          "issues": [
+            908
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "7257d28",
+          "link": "https://github.com/xaf/omni/commit/7257d28a38c4a382bea4d7ec0e55c7383ab32815",
+          "scope": "`mise`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 910,
+          "summary": "replace `mise where` by `mise ls --installed`"
+        },
+        {
+          "commit": "7cf2e25",
+          "link": "https://github.com/xaf/omni/commit/7cf2e257486de4ddc95c26374a07e04c0a0d7427",
+          "scope": "`shell integration`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 914,
+          "summary": "fix the bash shell integration"
+        },
+        {
+          "commit": "551b532",
+          "link": "https://github.com/xaf/omni/commit/551b5321c6e888ba729653885bc59777db777eea",
+          "scope": "`colors`",
+          "author": "xaf",
+          "emoji": "🌈",
+          "pr": 0,
+          "summary": "enable colors will check that env vars have a value"
+        },
+        {
+          "commit": "207df0c",
+          "link": "https://github.com/xaf/omni/commit/207df0c9089cfe9cffc22040c71dab0d1b814806",
+          "scope": "`musl`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "do the glibc file check before musl"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.7",
+    "published_at": "2025-01-21T17:58:51Z",
+    "build": {
+      "tag": "v2025.1.7",
+      "revision": "21cc9cbc4674fd985b45ba4a82b43341aa71dcc8"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "454f149b7250f7a3238a8a0c646181276266c90f143efc3c880d48249302de4d",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.7/omni-2025.1.7-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "0c943f33979427942af0ae6c3928e796e7e5514dd4d8ef8c6993b09347a0b0a7",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.7/omni-2025.1.7-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "e7802e95e9046e03458bcf1310670cd85e850365b21cfe499064046b4e147e3b",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.7/omni-2025.1.7-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "c584608e81c8f45a2c6932bfd4db293ea4120d5cf782f7969f3d80b1522a2451",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.7/omni-2025.1.7-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "d82c345",
+          "link": "https://github.com/xaf/omni/commit/d82c345c5a606de1d2ea1be7af258c7c28a3d1ca",
+          "scope": "`github-release`",
+          "author": "xaf",
+          "emoji": "✨",
+          "pr": 900,
+          "summary": "support extracting `.tar.xz` archives"
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "96f0c38",
+          "link": "https://github.com/xaf/omni/commit/96f0c3837676965f8600803571c29c40d0de8028",
+          "scope": "`go-install`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 903,
+          "summary": "add `GOROOT` and `GOVERSION` env vars for bin"
+        },
+        {
+          "commit": "981b41e",
+          "link": "https://github.com/xaf/omni/commit/981b41e89fb92898dcc1eb6ba92b1b79de46e475",
+          "scope": "`github-release`",
+          "author": "xaf",
+          "emoji": "🐛",
+          "pr": 907,
+          "summary": "allow for downloads from private repos"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.6",
+    "published_at": "2025-01-17T00:05:17Z",
+    "build": {
+      "tag": "v2025.1.6",
+      "revision": "b495cd082352dfd2ac29cf98fb1a57b1b692bd74"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "4f1a2554316c0e7b54ae6c86f47d685539d9717ee42346247a0d73a842b756d6",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.6/omni-2025.1.6-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "f64a65ec6064cd0f305e9d8af48d1ec2c943b7e47838c053e722f3e282a286cf",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.6/omni-2025.1.6-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "70c9f6c6abb0b1a612c33cfda34953e6501bb3dc072b268898887cc399cbac0d",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.6/omni-2025.1.6-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "81becc914c2af15c18560a478dd6a1cd3f98150fd71b8f843543da67b3110394",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.6/omni-2025.1.6-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "e14b995",
+          "link": "https://github.com/XaF/omni/commit/e14b995d8a58caa117b3471b9b31a66c9913b10c",
+          "scope": "`github-release`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "revert malus for `dist` and `musl`"
+        },
+        {
+          "commit": "cacf98b",
+          "link": "https://github.com/XaF/omni/commit/cacf98b686724d975cfef89234e851dbee752a63",
+          "scope": "`github-release`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 899,
+          "summary": "detect the lib version needed (musl/libc)"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.5",
+    "published_at": "2025-01-16T19:43:48Z",
+    "build": {
+      "tag": "v2025.1.5",
+      "revision": "bef13b40b316cd83097b6e11c7390fddd724f89f"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "f4f2495d2d0230b36c925d61c0a73edf5946f27e6a5e6d8e5b573c21c9c5ff08",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.5/omni-2025.1.5-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "187f0c564ce1fc33a88cbbf4512418134823d073563a0de0ed70ad491abc3bc6",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.5/omni-2025.1.5-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "545d821ac2bab488dbf3add9db1c60c7c1e7dba1379d57862cc1ec8fd8eaa8d0",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.5/omni-2025.1.5-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "b31ac4f0be2d691e20206bea1186ded76eb3977a58ebb1ec3ba9243265139228",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.5/omni-2025.1.5-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "dd0bd94",
+          "link": "https://github.com/XaF/omni/commit/dd0bd9429c743105fe1cecf42656358ff279f5a1",
+          "scope": "`github-release`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 894,
+          "summary": "prioritize non-dist releases",
+          "issues": [
+            892
+          ]
+        },
+        {
+          "commit": "24faed9",
+          "link": "https://github.com/XaF/omni/commit/24faed98d19a529196915b70ac51731c0eca8802",
+          "scope": "`github-release`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 895,
+          "summary": "Add flags to prefer-or-not `dist`/prefer-or-not `musl`"
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "9707ddf",
+          "link": "https://github.com/XaF/omni/commit/9707ddfd05da90151131d04c0181727dcad668ba",
+          "scope": "`shims`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 893,
+          "summary": "handle case insensitive file systems"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.4",
+    "published_at": "2025-01-16T00:05:38Z",
+    "build": {
+      "tag": "v2025.1.4",
+      "revision": "19e78499f3cb1ab0b2087c1758ab1c9cff06607d"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "f58d42093c1a979e5699abd45820ed74b49e969fc3df82bb3a3b9badc6cb58b0",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.4/omni-2025.1.4-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "0f7c09a4f1a8cc8af5e34d23d9ebb44b5898f81ef354de48801e3ed89814072d",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.4/omni-2025.1.4-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "6390fc289a88512ce9f2a5051b84b01e517f39df55f5718a81b4bbbab49e8c83",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.4/omni-2025.1.4-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "c36af155d2544bcb220536573c28bdafa82317d37a285b4951c857be35331e0d",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.4/omni-2025.1.4-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "196d6b4",
+          "link": "https://github.com/XaF/omni/commit/196d6b4762d87684ce6e39ab8bb4bb3be4d381b9",
+          "scope": "`config check`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "config-specified negative pattern"
+        },
+        {
+          "commit": "368f16a",
+          "link": "https://github.com/XaF/omni/commit/368f16a6c6987c44dc024250c89a4b6c17557e1d",
+          "scope": "`config check`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 890,
+          "summary": "pattern locality"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.3",
+    "published_at": "2025-01-14T00:40:34Z",
+    "build": {
+      "tag": "v2025.1.3",
+      "revision": "5c198863c6fe8ff89c6a509abe9c92ed1513d569"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "160a97ef7f7f80e97303e44dbff34b359f9202c15f3af1065812d5ee33bde448",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.3/omni-2025.1.3-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "fdd5d016eea3b07ba4642806a33b92dd8859beb1f14da9314fd63e9fcbddcd3f",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.3/omni-2025.1.3-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "3fdd549d6c2e9cb950349817dbeeb68d0756aec5f712e55280973aceb65833c5",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.3/omni-2025.1.3-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "72ec7cc66b2a16f152ef1d57f0eeedc427bb8e616c1c753d5ccb5ecb8731f6af",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.3/omni-2025.1.3-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "bca63a2",
+          "link": "https://github.com/XaF/omni/commit/bca63a27b11623bb5f865024ef4c247745b26d3d",
+          "scope": "`mise`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "install mise before resolving the fully qualified tool"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.2",
+    "published_at": "2025-01-13T23:17:14Z",
+    "build": {
+      "tag": "v2025.1.2",
+      "revision": "2e9ff551b8397d3eb2c982abd60e02e2886b5de9"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "e94272166259d6b3b84ff76a132eb02553333fbde5dedfd791abe9b53c1989ce",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.2/omni-2025.1.2-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "ced655a5381d616e773c18cb32f0f224af23f3e6800ad3244572b07e5faedee3",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.2/omni-2025.1.2-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "0082fc5345f2999c6b8871a26c610f36342f41b1f8fc05eb905f77552295a151",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.2/omni-2025.1.2-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "ed82284a970362ae11f54856cb42d7375bb6aabc97833314fb8d292443a678c3",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.2/omni-2025.1.2-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "9b7749b",
+          "link": "https://github.com/XaF/omni/commit/9b7749be1797631fa636c908bc1e9a18bdc10b8e",
+          "scope": "`node`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "remove `mise reshim` call from `npm`"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2025.1.1",
+    "published_at": "2025-01-13T22:23:56Z",
+    "build": {
+      "tag": "v2025.1.1",
+      "revision": "1b0d68893aeb86003fd25d15ce0741f4795c2ec8"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "d0db89c8ffa83150251be9a2309516c6abbd5249f2173d7791dc12e4b4dca5a0",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.1/omni-2025.1.1-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "897b23b1b4ef41499014cf3fa52024777a4991492564757b801a9bc18c5222bb",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.1/omni-2025.1.1-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "71952837c5f2d98679b98d2b83200d958576a9c302fd060abfff8056b6224de1",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.1/omni-2025.1.1-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "abb9e987065d13c6f5249440dc74f033f3cc18870cd34f348ebbcc9f98adc0b4",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.1/omni-2025.1.1-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "2025.1.0",
+    "published_at": "2025-01-13T22:02:36Z",
+    "build": {
+      "tag": "v2025.1.0",
+      "revision": "3a9531f3c91af07ec73e546bb62ffa6e7b23567d"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "a5bde6ff822837ddd8b21950614c36c7cc0187216e0335d3818e88cd44f98944",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.0/omni-2025.1.0-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "c2c138eee2807c4b05c4e2f16650500e49f83fb76b5a272a8c588fd39212aa96",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.0/omni-2025.1.0-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "1600f5b224e76f70cacd5a406031e5bbd1fea519cad5e64bb32b67637dc3109a",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.0/omni-2025.1.0-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "d1b6f3e3bc35b132f5d1d4c08ae11442a3a82e4e9d1bda951c45c2b684c1f6e3",
+        "url": "https://github.com/xaf/omni/releases/download/v2025.1.0/omni-2025.1.0-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "27e6c76",
+          "link": "https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "💥",
+          "pr": 832,
+          "summary": "replace `asdf` backend by `mise`",
+          "issues": [
+            695,
+            830
+          ]
+        },
+        {
+          "commit": "2a9f4c7",
+          "link": "https://github.com/XaF/omni/commit/2a9f4c7533cb471fb68f156bded3d824f897db16",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 840,
+          "summary": "handle the different `mise` backends"
+        },
+        {
+          "commit": "14b00f7",
+          "link": "https://github.com/XaF/omni/commit/14b00f7f2844e4c3cc4ec7f773ec12c79f795238",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 848,
+          "summary": "add supply-chain checks",
+          "issues": [
+            600
+          ]
+        },
+        {
+          "commit": "1dd0963",
+          "link": "https://github.com/XaF/omni/commit/1dd096362e6a058e38339f654e59b9bb13752780",
+          "scope": "`config check`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 860,
+          "summary": "add new command to check the configuration and command metadata",
+          "issues": [
+            812,
+            789
+          ]
+        },
+        {
+          "commit": "856052f",
+          "link": "https://github.com/XaF/omni/commit/856052fe96df38687d12120ba46d570fb53fcb1e",
+          "scope": "`github-releases`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 870,
+          "summary": "optimize version fetching"
+        },
+        {
+          "commit": "f7c8811",
+          "link": "https://github.com/XaF/omni/commit/f7c8811820c393e29265563462ff9a57e0665742",
+          "scope": "`config check`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 873,
+          "summary": "add configuration",
+          "issues": [
+            867
+          ]
+        },
+        {
+          "commit": "7c961d2",
+          "link": "https://github.com/XaF/omni/commit/7c961d2f1c073ff4cae68575bbfaab363a3cd267",
+          "scope": "`tags`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 878,
+          "summary": "commands can now be tagged",
+          "issues": [
+            858
+          ]
+        },
+        {
+          "commit": "1a2b219",
+          "link": "https://github.com/XaF/omni/commit/1a2b2193c208643f5b701b54a56210d54e249902",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 879,
+          "summary": "timeout and offer to kill running `up` if hanging",
+          "issues": [
+            877
+          ]
+        },
+        {
+          "commit": "784fc3b",
+          "link": "https://github.com/XaF/omni/commit/784fc3b89281d4577ebebf17c86ef43e04bda189",
+          "scope": "`helm`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 0,
+          "summary": "add support for local `helm` configuration"
+        },
+        {
+          "commit": "0b15fab",
+          "link": "https://github.com/XaF/omni/commit/0b15fab0cf73364e2ddd3b1a658e69a6e32c8a93",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 886,
+          "summary": "handle hanging process with mismatched init"
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "86f9043",
+          "link": "https://github.com/XaF/omni/commit/86f90433d9e753ba734cb456e790542fe8e733bf",
+          "scope": "`mise`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 851,
+          "summary": "add the `mise` binary in the `PATH` for `mise` commands"
+        },
+        {
+          "commit": "372a494",
+          "link": "https://github.com/XaF/omni/commit/372a4945ab98b7e9da03e5ec2ad8427e4ed09893",
+          "scope": "`data path`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "use the normalized name to load the data path"
+        }
+      ],
+      "breaking": [
+        {
+          "commit": "27e6c76",
+          "link": "https://github.com/XaF/omni/commit/27e6c76b9ab07198b2ba2f17b052671d75c33037",
+          "author": "XaF",
+          "emoji": "💥",
+          "pr": 832,
+          "summary": "replace `asdf` backend by `mise`",
+          "cause": "Even with a number of automations to handle the migration from `asdf` to `mise`, it is possible that at least one instance of `omni up` in any repository is required, and maybe even running `omni up` again in any repository where issues are encountered. Also, it is possible that some plugins were working right of the bat with `asdf` but might require specifying an `url:` when using with `mise`; urls for base plugins can be found in https://github.com/asdf-vm/asdf-plugins. Closes https://github.com/XaF/omni/issues/830 Closes https://github.com/XaF/omni/issues/695"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.35",
+    "published_at": "2025-01-08T20:46:56Z",
+    "build": {
+      "tag": "v0.0.35",
+      "revision": "daeace2eb264d3f8ff1f6b7331a37d52ce5bd2de"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "4e19e510680470ecc75bf81b1267b3b512f5e0ba8fa0c7724a06caff84d0d14d",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.35/omni-0.0.35-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "e7e11191820261b75e68b7fa939ee3f4c49ca2022f1d7d229d10a69645ec56ff",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.35/omni-0.0.35-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "85f2298becbedd7204666a4029a207d200f488cf86c8295e8b76cf66f0422f57",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.35/omni-0.0.35-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "dee6a30bbaf9924e9c0c614cb82967134bed47d13c53f3bb5bddf5b427a0405a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.35/omni-0.0.35-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.34",
+    "published_at": "2025-01-06T20:31:49Z",
+    "build": {
+      "tag": "v0.0.34",
+      "revision": "7ed1e50e3c5dc1c186f377d7c6bf3f6d03ca7535"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "ceae5e870568098280cf9e83dadeaf7bcfdecc0112ca2b35f65d254d4286957a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.34/omni-0.0.34-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "f9a40f06bd31fde65cc3fa7a5c55733e6b07b6fa3aabca5a5fc49de910c10874",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.34/omni-0.0.34-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "55f6f49f0de54191169f41601d38f338e263ce761f63e5b5cd2a9bc2cb7c2dde",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.34/omni-0.0.34-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "37ea5bae0d8b0244475465544b0e52ced4a667b38a23ed04442b67460e6da96d",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.34/omni-0.0.34-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.33",
+    "published_at": "2024-12-19T20:32:45Z",
+    "build": {
+      "tag": "v0.0.33",
+      "revision": "d855cbbc736006201b8a4302c3893eca6096c122"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "83c1da1a14590d42f7ddc4690dfeb2eaf3cb3dc001187df2a09a24e818f172bb",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.33/omni-0.0.33-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "50dc8d318bd520008d596cd8f530899d38d566f38783d43c847e2a2cb4868f92",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.33/omni-0.0.33-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "9f8c07f4e5d723aaa0dc6dc460b39c95336195f5e460b186d5aa99590150b20e",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.33/omni-0.0.33-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "10888d548855a4d1c7ef1563f60c38037ccbd1ea1e27e8ca6a07aea2f78bb6f0",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.33/omni-0.0.33-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "184ed55",
+          "link": "https://github.com/XaF/omni/commit/184ed55971e8f7b3a171d58d52fb4ce1eb963a6b",
+          "scope": "shims",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "add missing shims for `go-install` and `cargo-install`"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.32",
+    "published_at": "2024-12-19T18:23:24Z",
+    "build": {
+      "tag": "v0.0.32",
+      "revision": "a0865c4558f0d0e912f77014c692eff46ef1ae33"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "ceb8d307e38053f9ccbed3fbff932dfbfe4626e78ce5348c55245ad438c69935",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.32/omni-0.0.32-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "8e7400be08ee95578b9b6f21e221a7ddb4435cf8a957a50ea46d1ca4883ecefc",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.32/omni-0.0.32-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "6fab5617f953aacf91cb9306c441910a6a629e68051955696e544a82c33e9549",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.32/omni-0.0.32-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "523f09e36fd76a917d876b18e2651a94054485f26de55ab38c44cf638c79324a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.32/omni-0.0.32-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "ed6898e",
+          "link": "https://github.com/XaF/omni/commit/ed6898ec1e79815a8341fdcabe414e615dd15d2a",
+          "scope": "`asdf`",
+          "author": "XaF",
+          "emoji": "🧨",
+          "pr": 0,
+          "summary": "disable calls to `asdf update`"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.31",
+    "published_at": "2024-12-16T22:30:26Z",
+    "build": {
+      "tag": "v0.0.31",
+      "revision": "498d0334fe8eeb351750ca29c574aa645b1a0b2a"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "6b3d2730525980c84e36d22ee4f509b2524b05d1a89e4e88bc5f3680d74097d6",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.31/omni-0.0.31-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "5fdce864520d844886a15812dfcee91e41cf9a3648bc9e0f70d46950c0b113d8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.31/omni-0.0.31-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "362a448fd0962b1f883583fcb50eee8fbec52c939cedd86f685bad982eaf37d1",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.31/omni-0.0.31-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "2b9732622290cb1eb45609d05525df2ef8a30c432e04df284e10ad3da487d7f7",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.31/omni-0.0.31-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "9ff01f1",
+          "link": "https://github.com/XaF/omni/commit/9ff01f1105897bc5927542bdd64e58ce70b31c97",
+          "scope": "`go-install`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "go binary path lacked a `/go` particle"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.30",
+    "published_at": "2024-12-16T21:23:45Z",
+    "build": {
+      "tag": "v0.0.30",
+      "revision": "ed920192a17287de9011678b3ebab00e5290976d"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "501185a4d7333e1ec02d719c5a0258c77636bebbb7017e9e7b2bbd0baa3d1344",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.30/omni-0.0.30-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "d25217977880e53d2605e05a07b7108a55ea01ca5704163ba8715ad61fda07c7",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.30/omni-0.0.30-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "4394655f3ec893cf20791e75571763372fafef8e6da1e4918e3e58ec6534d28b",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.30/omni-0.0.30-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "a6e606b78519c76604bc0c0bf9abcb75308b55ea462787bbb82043cdec134c56",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.30/omni-0.0.30-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "912d09f",
+          "link": "https://github.com/XaF/omni/commit/912d09fa404daabfe0d9680c39ffcc8d07e7451c",
+          "scope": "`asdf`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "handle 'auto' versioning when committing dependencies"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.29",
+    "published_at": "2024-12-16T20:04:18Z",
+    "build": {
+      "tag": "v0.0.29",
+      "revision": "03b08af5e2b0e407420b944be195ea4544771397"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "96e4368d338d22ec5d0d777b1030a90c7ed527d6e5f5888be50893c6c98f70af",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.29/omni-0.0.29-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "ee9a1a6e41ad94838246e2ac180accbe47b2f3b6813a35d83b14f8acadbb1b0e",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.29/omni-0.0.29-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "822740235a32e94a35b6bc9a3458033b7b22c5c52e136a76229d53381653dbb7",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.29/omni-0.0.29-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "15d2ee49f041ef175442acdc3e531a04da856b2f263f5144882c31c0c6776bc8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.29/omni-0.0.29-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "095d2b3",
+          "link": "https://github.com/XaF/omni/commit/095d2b34e31b9695ec1c713801e88455a06b433d",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 797,
+          "summary": "add a new `go-install` operation",
+          "issues": [
+            714
+          ]
+        },
+        {
+          "commit": "b4ef260",
+          "link": "https://github.com/XaF/omni/commit/b4ef2609815ffe6b131b59921df337f314b3b1c5",
+          "scope": "`up`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 800,
+          "summary": "add `cargo-install` operation",
+          "issues": [
+            798,
+            794
+          ]
+        },
+        {
+          "commit": "f01ec3e",
+          "link": "https://github.com/XaF/omni/commit/f01ec3efe1e610cbd4b91b0d219282a32ab943df",
+          "scope": "`help`",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 810,
+          "summary": "add `--output` flag which can take `plain` or `json`",
+          "issues": [
+            809
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "344ae18",
+          "link": "https://github.com/XaF/omni/commit/344ae18ef35e6dde9f190a7982d1a79f5c323338",
+          "scope": "`cache`",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 811,
+          "summary": "cleanup old versions for uninstalled resources"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.28",
+    "published_at": "2024-11-06T22:20:16Z",
+    "build": {
+      "tag": "v0.0.28",
+      "revision": "3be5327ae20220b3c4386c47db35a8ed067947e5"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "cf4a663c457f18d3a43f714f137f61b63233b7d62e9e457946221987b1930df8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.28/omni-0.0.28-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "a247273abd0e936f701160bdc8f82ef007058c84a5eb202437b86a702167aa30",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.28/omni-0.0.28-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "2ca8db5bac814edffaf2c97bc95ab022ef0ad8cd9cdf077f7e638d90978cff84",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.28/omni-0.0.28-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "1a108faf5f4ba8353c70bce7e7f2b9962013336d94b671a939cf774f52ca74e5",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.28/omni-0.0.28-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.27",
+    "published_at": "2024-10-28T14:34:24Z",
+    "build": {
+      "tag": "v0.0.27",
+      "revision": "9c053444418cdc5c5ff3bd93a2ddd792b3d21ea8"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "0724141fd808e8a48f8590627f68cf4693e60ea46a8f9c7343bd1693ecc17461",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.27/omni-0.0.27-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "a924b4a7880a8e67f3a78702e8830078977fc103ddf3142c252605560d0df1eb",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.27/omni-0.0.27-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "5b0d8fc6e333cd58a178595bf97b177bed197d63da63d66ce21af02ceadc8213",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.27/omni-0.0.27-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "28b49d72f5900a5eb4ec7f8c47a8684031d7e3a03545fdf35cdfeb66f3c07b53",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.27/omni-0.0.27-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "042c128",
+          "link": "https://github.com/XaF/omni/commit/042c12867b9128d2cb25d12e241b1192d80237d8",
+          "scope": "argparser",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 735,
+          "summary": "omni can now parse arguments for custom commands",
+          "issues": [
+            734
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "782dccf",
+          "link": "https://github.com/XaF/omni/commit/782dccf81978d473fa0477bedbcd1d79ba12d201",
+          "scope": "go",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 709,
+          "summary": "go dynenv now sets GOBIN env var"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.26",
+    "published_at": "2024-09-10T18:58:59Z",
+    "build": {
+      "tag": "v0.0.26",
+      "revision": "01f3e750269083438fca2bd7e7509738e48fe3d9"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "c9123f782acdba3612ae4685dd8a1c01efca2320a46bf68b748283ffaf0595f2",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.26/omni-0.0.26-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "ee570696ca7da28e6977164bb51afd21cd0e2f949ca50affb0fa4a794d731ac4",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.26/omni-0.0.26-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "b55a5df76a10a63d43af99d1f18d7f5073b8aacf47a6d4668f42c3741d802860",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.26/omni-0.0.26-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "bdfa5aa74144d9eea3e178c94b2c75e0dd938e5c56f1a331670eab49c217be03",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.26/omni-0.0.26-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "dbb7273",
+          "link": "https://github.com/XaF/omni/commit/dbb72736a84ec89411375567eb72aeb264310a5e",
+          "scope": "nodejs",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 617,
+          "summary": "handle engine versions and package installs",
+          "issues": [
+            293,
+            294
+          ]
+        },
+        {
+          "commit": "4666c72",
+          "link": "https://github.com/XaF/omni/commit/4666c72796081ddcb15726acefd1242a6fc48d44",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 687,
+          "summary": "synchronize 'omni up' operations",
+          "issues": [
+            686
+          ]
+        },
+        {
+          "commit": "2377aef",
+          "link": "https://github.com/XaF/omni/commit/2377aefa01ff28e4256e809957d78a66162db74d",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 688,
+          "summary": "configurable github auth token",
+          "issues": [
+            512,
+            670
+          ]
+        },
+        {
+          "commit": "28ed85f",
+          "link": "https://github.com/XaF/omni/commit/28ed85fd8072f861c6195f64da8505dceb5a9295",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 691,
+          "summary": "suppport extended architectures with rosetta",
+          "issues": [
+            647
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.25",
+    "published_at": "2024-07-01T21:35:50Z",
+    "build": {
+      "tag": "v0.0.25",
+      "revision": "28c7157d4dc3702794f3bd66f10749bacd797281"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "d2d3d65f2b17512bce5121faafa26f12d27c88880639c3c47a62fbc0b2bc9fdd",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.25/omni-0.0.25-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "0db1274462eed01a262794423526ed22547a6798140560b160e14eb187082ed9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.25/omni-0.0.25-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "392d23dd845a79701344b286e397bbc46588c521d311ddcbfe7b5c7bb9e0ae4b",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.25/omni-0.0.25-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "ce1a75fc091cd6dacd954f52d86bd2f5e579b06dbd39d2f9512388a674135f71",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.25/omni-0.0.25-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "99b2a9f",
+          "link": "https://github.com/XaF/omni/commit/99b2a9f4a238ce7cf93d24e7f3d6db994ef74d69",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 541,
+          "summary": "allow for custom asset name matching",
+          "issues": [
+            479
+          ]
+        },
+        {
+          "commit": "8393518",
+          "link": "https://github.com/XaF/omni/commit/83935189e89657169694cef106515948405b90dd",
+          "scope": "repo_path_format",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 568,
+          "summary": "can be configured per organization",
+          "issues": [
+            561
+          ]
+        },
+        {
+          "commit": "7d6e602",
+          "link": "https://github.com/XaF/omni/commit/7d6e602b3e15a9111207cccea985e6a8c0c51d36",
+          "scope": "node",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 570,
+          "summary": "support reading version from .nvmrc",
+          "issues": [
+            507,
+            579,
+            581,
+            575,
+            577,
+            539
+          ]
+        },
+        {
+          "commit": "87d2840",
+          "link": "https://github.com/XaF/omni/commit/87d2840915a7002c864f371f5423ba8b10c53e64",
+          "scope": "homebrew",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 612,
+          "summary": "update taps using git",
+          "issues": [
+            611
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "bd6f144",
+          "link": "https://github.com/XaF/omni/commit/bd6f144c53307a2f5636c95c005b5f8e9321753c",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 543,
+          "summary": "auto-bootstrap disabled on non-interactive shells"
+        },
+        {
+          "commit": "606a1e1",
+          "link": "https://github.com/XaF/omni/commit/606a1e17a1842538e4e5a5b0c9c04bddd14bd673",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 565,
+          "summary": "`env` config parameter of type `path` now resolves properly"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.24",
+    "published_at": "2024-04-29T00:54:55Z",
+    "build": {
+      "tag": "v0.0.24",
+      "revision": "aa75ea83fae42664c4085b9d3ffd11daf8145288"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "19dcb9d0acd766bce8dcde88a814f7865283bc63d6ed6cd8117a15f7b0aaf3d8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.24/omni-0.0.24-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "bf29b9d06c44ec9b023e14358b2d7a094e391f5694d39efbcb6688d3db2df723",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.24/omni-0.0.24-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "382dbab670d8f72bbb899cc04181f02d3e1275f67d198b8034852a49a290ab1c",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.24/omni-0.0.24-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "9af07c46cc59cb714c5f8f1062eb1d330d2043b92560bda2b07e5c4db738b8d3",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.24/omni-0.0.24-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "a6db9bf",
+          "link": "https://github.com/XaF/omni/commit/a6db9bf213f8ecc2dd124a443242e7069157c665",
+          "scope": "shims",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 490,
+          "summary": "add a shims directory with all dynamic binaries",
+          "issues": [
+            492
+          ]
+        },
+        {
+          "commit": "dc398c6",
+          "link": "https://github.com/XaF/omni/commit/dc398c6646217127a304dd567c25e99c1b7cb049",
+          "scope": "config trust",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 497,
+          "summary": "command to manage workdir trust",
+          "issues": [
+            496
+          ]
+        },
+        {
+          "commit": "10b2946",
+          "link": "https://github.com/XaF/omni/commit/10b2946930db50fa53f3cbdacb09829cab6ed026",
+          "scope": "hook init",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 501,
+          "summary": "handle shims",
+          "issues": [
+            498
+          ]
+        },
+        {
+          "commit": "9c75208",
+          "link": "https://github.com/XaF/omni/commit/9c7520862a8f1c7db8db1277c0a6d41379f37bc7",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 502,
+          "summary": "add more compact configuration handling"
+        },
+        {
+          "commit": "98b9e75",
+          "link": "https://github.com/XaF/omni/commit/98b9e75bf9410ad57458bb05f63436cf5c1a4f58",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 504,
+          "summary": "try refreshing releases cache if none match",
+          "issues": [
+            486
+          ]
+        },
+        {
+          "commit": "00052d3",
+          "link": "https://github.com/XaF/omni/commit/00052d36eabc9e36c7889fdf8634de1384997eb4",
+          "scope": "asdf",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 508,
+          "summary": "add suppport for arbitrary asdf tools",
+          "issues": [
+            494
+          ]
+        },
+        {
+          "commit": "7be960f",
+          "link": "https://github.com/XaF/omni/commit/7be960fab22522574788f2ac9aba27d11278d6d8",
+          "scope": "template",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 509,
+          "summary": "add `env` map in the context",
+          "issues": [
+            493
+          ]
+        },
+        {
+          "commit": "9318053",
+          "link": "https://github.com/XaF/omni/commit/93180533b54d7dacc9f64fd68d46fca85fbeb7b1",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 513,
+          "summary": "read github auth token from `gh`",
+          "issues": [
+            478
+          ]
+        },
+        {
+          "commit": "cac2b2d",
+          "link": "https://github.com/XaF/omni/commit/cac2b2d4839195b71ce1fd7e3f9ae2ce9024409b",
+          "scope": "nix",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 517,
+          "summary": "handle flakes",
+          "issues": [
+            466
+          ]
+        },
+        {
+          "commit": "7f7e833",
+          "link": "https://github.com/XaF/omni/commit/7f7e8338df076579651234ee87c758731f299734",
+          "scope": "homebrew",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 518,
+          "summary": "auto-extract taps from formulas",
+          "issues": [
+            516
+          ]
+        },
+        {
+          "commit": "e89b240",
+          "link": "https://github.com/XaF/omni/commit/e89b24037ba59fa82a0092d9c46dc7cf1de3d790",
+          "scope": "update",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 522,
+          "summary": "ask before updating on command not found",
+          "issues": [
+            482
+          ]
+        },
+        {
+          "commit": "5d0d5c9",
+          "link": "https://github.com/XaF/omni/commit/5d0d5c9d9d91713cd3d6be12ebd6ed5a2d2398d9",
+          "scope": "cleanup",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 523,
+          "summary": "add delay before removing unused resources",
+          "issues": [
+            435
+          ]
+        },
+        {
+          "commit": "83453e5",
+          "link": "https://github.com/XaF/omni/commit/83453e570b97365eccd65418def1715623d2e843",
+          "scope": "version",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 524,
+          "summary": "improve version matching"
+        },
+        {
+          "commit": "f404a1e",
+          "link": "https://github.com/XaF/omni/commit/f404a1e7733c56e8ab49bdbab6f965fdafa87a91",
+          "scope": "asdf",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 525,
+          "summary": "improve resiliency of asdf operations",
+          "issues": [
+            262,
+            441
+          ]
+        },
+        {
+          "commit": "eb27de6",
+          "link": "https://github.com/XaF/omni/commit/eb27de649cf18d0c70d5ca3811fc244168bde5e1",
+          "scope": "github release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 528,
+          "summary": "fallback to installed version if download error",
+          "issues": [
+            526
+          ]
+        },
+        {
+          "commit": "6d386fe",
+          "link": "https://github.com/XaF/omni/commit/6d386fe6739a9cddb3a1920005cdf30b23f1e9bb",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 529,
+          "summary": "add `--fail-on-upgrade` option",
+          "issues": [
+            488
+          ]
+        },
+        {
+          "commit": "12920ec",
+          "link": "https://github.com/XaF/omni/commit/12920ec11977d6d1b281ab1e8fd78615bb2d5a5c",
+          "scope": "homebrew",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 530,
+          "summary": "do not default to failing on upgrade error",
+          "issues": [
+            527
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "2bb54f1",
+          "link": "https://github.com/XaF/omni/commit/2bb54f1032e269bae406ac0024d4bd0021aac5b3",
+          "scope": "github-release",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 500,
+          "summary": "handle GitHub request errors better"
+        },
+        {
+          "commit": "b0fcf63",
+          "link": "https://github.com/XaF/omni/commit/b0fcf633f23a682f8e7b73b7dec5bc692b90fd26",
+          "scope": "nodejs",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 503,
+          "summary": ".node-version file was not used for 'auto'"
+        },
+        {
+          "commit": "c25e725",
+          "link": "https://github.com/XaF/omni/commit/c25e725bcb3dd257cb860ca50c880f47f6146b02",
+          "scope": "self update",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 506,
+          "summary": "check version after successful update"
+        },
+        {
+          "commit": "fa33378",
+          "link": "https://github.com/XaF/omni/commit/fa333787857141347455fb4842064488676dcde5",
+          "scope": "self update",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 505,
+          "summary": "force-refresh tap before upgrading omni"
+        },
+        {
+          "commit": "252c8fc",
+          "link": "https://github.com/XaF/omni/commit/252c8fc64fd0723b050e7b5cccafa7876bb738cf",
+          "scope": "asdf",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 510,
+          "summary": "post install and detect func use the real tool name"
+        },
+        {
+          "commit": "c183edd",
+          "link": "https://github.com/XaF/omni/commit/c183edd6a1f73d0b9b777f1eb675582fbf148ad9",
+          "scope": "dynenv",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "feature name use real asdf tool name"
+        },
+        {
+          "commit": "ec6054d",
+          "link": "https://github.com/XaF/omni/commit/ec6054d773fb8f3fc0a103e8757deb6bc13c45b6",
+          "scope": "up auto",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 511,
+          "summary": "ignore vendor directories"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.23",
+    "published_at": "2024-04-04T03:04:56Z",
+    "build": {
+      "tag": "v0.0.23",
+      "revision": "3318e2fc22fd3a3da510399a12f838667856fff3"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "bbfbd184b1f3eebb7eedfad4fb91a325955ad77ed02790011689a990bfd8e104",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.23/omni-0.0.23-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "a0be67dc33cc6ca6d92975cec22f6827fd00184a5ce8b8cb388a4320e71fce01",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.23/omni-0.0.23-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "8a358730d71ee576e6e57c2ad5f13da962362b41760239dfb52a03d703ec4055",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.23/omni-0.0.23-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "3049448f705e35a9668bbb1ba64e516d1346ea011bdab189462bc44b30c71e0c",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.23/omni-0.0.23-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "4a6ff4d",
+          "link": "https://github.com/XaF/omni/commit/4a6ff4d0973e6113f98a13c39100d5a9e8060efb",
+          "scope": "github-release",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 480,
+          "summary": "support binary downloading"
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "18d836c",
+          "link": "https://github.com/XaF/omni/commit/18d836c7444267d11bac32e06ed15f07ac6284ff",
+          "scope": "cleanup",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 481,
+          "summary": "data path cleanup won't delete auto versions"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.22",
+    "published_at": "2024-04-03T18:35:05Z",
+    "build": {
+      "tag": "v0.0.22",
+      "revision": "e4aa638cc8ee388e529079bc6649ae6548b7c79e"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "47d92452fae22092422e7e1d8dbb26b7985997353426d01d5f00e17750ee24b8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.22/omni-0.0.22-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "cf3c6899ce0073f98d4fb4d7cf41cb8a2759fa8055816a2b6114d72ae9651f3a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.22/omni-0.0.22-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "6e368e4749d18287b08f4606845358d08657ebd3e11c925dc5e52cd7d2408a72",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.22/omni-0.0.22-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "4d0112f16b476a766b52362d24ca5d0f700d12575a2409d18a84ee6cf7a624dd",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.22/omni-0.0.22-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "e853315",
+          "link": "https://github.com/XaF/omni/commit/e853315dc82ee9aaa38fdb0d6e995bdbc08f5240",
+          "scope": "nix",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 428,
+          "summary": "add nix up operation",
+          "issues": [
+            414
+          ]
+        },
+        {
+          "commit": "5dbd038",
+          "link": "https://github.com/XaF/omni/commit/5dbd03899aadec01a9e2830dc389a13969aba7f7",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 429,
+          "summary": "add dependencies handling and 'or' and 'and' operations",
+          "issues": [
+            336
+          ]
+        },
+        {
+          "commit": "d00c5d7",
+          "link": "https://github.com/XaF/omni/commit/d00c5d739c81f03e4ff777ef89152351d62e2474",
+          "scope": "cd",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 433,
+          "summary": "special path '...' now represents the root of current work directory",
+          "issues": [
+            424
+          ]
+        },
+        {
+          "commit": "7d0c120",
+          "link": "https://github.com/XaF/omni/commit/7d0c120d303e7fb83fad658671c06c5f679c472d",
+          "scope": "config",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 438,
+          "summary": "Add system-level configuration files",
+          "issues": [
+            212
+          ]
+        },
+        {
+          "commit": "a0ba917",
+          "link": "https://github.com/XaF/omni/commit/a0ba9171e34ac42d67906cdbfd888a0b48c9ac54",
+          "scope": "homebrew",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 442,
+          "summary": "handle proper cleanup",
+          "issues": [
+            434
+          ]
+        },
+        {
+          "commit": "9cb961d",
+          "link": "https://github.com/XaF/omni/commit/9cb961d3633fb77cc65d9d6e99ea94e5f3aeae4b",
+          "scope": "sudo",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 456,
+          "summary": "handle password requests during `omni up`",
+          "issues": [
+            160,
+            372
+          ]
+        },
+        {
+          "commit": "eafd444",
+          "link": "https://github.com/XaF/omni/commit/eafd4443d80f18080df782bcb82a1382ff84bb50",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 465,
+          "summary": "add the `any` operation and `preferred_tools` config",
+          "issues": [
+            464
+          ]
+        },
+        {
+          "commit": "ad03c50",
+          "link": "https://github.com/XaF/omni/commit/ad03c506205ffa6a427113abd90fdadf0d287377",
+          "scope": "git",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 468,
+          "summary": "handle askpass for git updates",
+          "issues": [
+            160
+          ]
+        },
+        {
+          "commit": "ed0fa36",
+          "link": "https://github.com/XaF/omni/commit/ed0fa3620fa48997b457419fccbaaa5883ae92cb",
+          "scope": "askpass",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 476,
+          "summary": "add configuration for the askpass handling"
+        },
+        {
+          "commit": "bcba386",
+          "link": "https://github.com/XaF/omni/commit/bcba38691180858a0f9ea5413ab92ad3ff35d403",
+          "scope": "up",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 477,
+          "summary": "new `github-release` operation",
+          "issues": [
+            447
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "152fe71",
+          "link": "https://github.com/XaF/omni/commit/152fe719c46852c5b5ecfb74cd1336f24d0756eb",
+          "scope": "bootstrap",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 371,
+          "summary": "flush config"
+        },
+        {
+          "commit": "b20dfe7",
+          "link": "https://github.com/XaF/omni/commit/b20dfe758f7cacde2d191f169c4a590c549f7fcf",
+          "scope": "cd",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 379,
+          "summary": "fast search now works without org set"
+        },
+        {
+          "commit": "cb1982a",
+          "link": "https://github.com/XaF/omni/commit/cb1982ae86583063f9ade1af447bdf64286764d5",
+          "scope": "help",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 380,
+          "summary": "colors are now stripped when disabled"
+        },
+        {
+          "commit": "86fa6db",
+          "link": "https://github.com/XaF/omni/commit/86fa6db6a8907f647ee0f1dc06cf57d5ccd27d78",
+          "scope": "up hash",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 440,
+          "summary": "detect when `env` parameter has changed"
+        },
+        {
+          "commit": "9d9da0f",
+          "link": "https://github.com/XaF/omni/commit/9d9da0f56efa7776ac3d8a05e9b95e3ad98db910",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 448,
+          "summary": "Add truncate policy when opening files"
+        },
+        {
+          "commit": "87243a6",
+          "link": "https://github.com/XaF/omni/commit/87243a653a8359df09bc0a068df21bdc5a90e920",
+          "scope": "asdf",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 450,
+          "summary": "add missing dependency for Python and clear env vars"
+        },
+        {
+          "commit": "e5904a2",
+          "link": "https://github.com/XaF/omni/commit/e5904a2b1bc19e4a2d2122768174b7cf647b534b",
+          "scope": "up env cache",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 449,
+          "summary": "add default deserialization"
+        },
+        {
+          "commit": "e19c469",
+          "link": "https://github.com/XaF/omni/commit/e19c46962edf1bd43754d56da5a379e7aa1bd1bc",
+          "scope": "help",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 463,
+          "summary": "handle lower terminal width properly"
+        },
+        {
+          "commit": "c28fc3d",
+          "link": "https://github.com/XaF/omni/commit/c28fc3d00bb2d99b12ecbcea007cc4e1df2a2148",
+          "scope": "spinners",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 473,
+          "summary": "new lines are now ensured properly after a spinner"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.21",
+    "published_at": "2024-01-24T21:16:18Z",
+    "build": {
+      "tag": "v0.0.21",
+      "revision": "87af45ae22de6e4e2d2b62bdf8e12fcf6baf779a"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "3ac90f14030e1958d1cfe3134708c82422974ad62bbe303dbd50045cd7976530",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.21/omni-0.0.21-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "02e231f7096f8fa524b8b516b52eba0d0b9381d4e15b614e393828246ddc5579",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.21/omni-0.0.21-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "4e1973ddc5d3bfee8ac567610122252125d11f3d3b17c2af449602e16d60a5cb",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.21/omni-0.0.21-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "9724e71ab5003057177df139153f6bf6fb77880c62f3dc28557e1c98fb3a46b6",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.21/omni-0.0.21-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "0a5e422",
+          "link": "https://github.com/XaF/omni/commit/0a5e422a510922e4f3c2a660f87de6f7e6540814",
+          "scope": "config value",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 362,
+          "summary": "missing check made the tool panic"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.20",
+    "published_at": "2024-01-16T22:01:11Z",
+    "build": {
+      "tag": "v0.0.20",
+      "revision": "910cc6db554b69a9ba617cec7abfc8baaffa9812"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "cdb8d7bac0c15b7b0d0f6bdb0a5b02458ba28f13e14e293d8330825ba14ce163",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.20/omni-0.0.20-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "71209daa8515719f904324175108dd067709964cf130d0ebfbe14e06d375d949",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.20/omni-0.0.20-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "fa9885f18bc1fb6c349cc0d861f283322cc46b38f8185df80908e5c468b22c9b",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.20/omni-0.0.20-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "59885ffc5142576faee81de127150ec4f1d9ebedfb0c9dd53c5702a9c06588ca",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.20/omni-0.0.20-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "2b618d0",
+          "link": "https://github.com/XaF/omni/commit/2b618d037f5a963a72584bb6caade0e28e429240",
+          "scope": "cd",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 341,
+          "summary": "fast repository lookup"
+        },
+        {
+          "commit": "dd756c6",
+          "link": "https://github.com/XaF/omni/commit/dd756c6250daa2e36e693cbf0eeddbb35eb64b1b",
+          "scope": "autocompletion",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 348,
+          "summary": "consider parent commands",
+          "issues": [
+            342
+          ]
+        },
+        {
+          "commit": "affef8d",
+          "link": "https://github.com/XaF/omni/commit/affef8ddd097b9bc1f71b072979a45147aa7dfd7",
+          "scope": "dynenv",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 350,
+          "summary": "show message when 'omni up' should be run",
+          "issues": [
+            346
+          ]
+        },
+        {
+          "commit": "45ecbca",
+          "link": "https://github.com/XaF/omni/commit/45ecbca3f7eefc55d525c9218e15707e5f5c0a02",
+          "scope": "clone",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 354,
+          "summary": "Add configuration option for `auto_up`",
+          "issues": [
+            200
+          ]
+        },
+        {
+          "commit": "fb8e056",
+          "link": "https://github.com/XaF/omni/commit/fb8e0567e611a88db18396fe48c347aa0fbac12b",
+          "scope": "bootstrap",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 355,
+          "summary": "Do not ask to order orgs if only one",
+          "issues": [
+            290
+          ]
+        },
+        {
+          "commit": "0dc5ce1",
+          "link": "https://github.com/XaF/omni/commit/0dc5ce17339996486526ce6d5b77ba5c819e3210",
+          "scope": "env",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 359,
+          "summary": "better handling of `up` environment variables",
+          "issues": [
+            358
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "df940b0",
+          "link": "https://github.com/XaF/omni/commit/df940b06148d72c61851913292a72cc980b30478",
+          "scope": "homebrew",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 332,
+          "summary": "Enable cache write"
+        },
+        {
+          "commit": "5a6b07d",
+          "link": "https://github.com/XaF/omni/commit/5a6b07d2eb6905e0f157b3387c5500538a3a0f5f",
+          "scope": "go dynenv",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 333,
+          "summary": "do not set GOPATH to GOROOT"
+        },
+        {
+          "commit": "7124181",
+          "link": "https://github.com/XaF/omni/commit/7124181984ae560f3f2487143458fb0c336a1d26",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "serialize python's pip information"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.19",
+    "published_at": "2024-01-02T20:50:27Z",
+    "build": {
+      "tag": "v0.0.19",
+      "revision": "68d0a2336a5dd90ba71e65cd0d6092de4cea03ba"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "a5acb610d6f2de38d5dfbde7b58b20d4a3994e2552dc76538d5637c66944fe52",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.19/omni-0.0.19-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "adbfc685ec62f833f1a00818f5e56fbea0ec07b3f760af83a7d7d8163840b083",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.19/omni-0.0.19-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "2f623a8a4b01f073198987f060b6be210cbe53ef109e3cfc6953f124f5913c84",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.19/omni-0.0.19-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "050377f16eea21a30c97ac15f8e192e4f6942ffc16fa971711e670a41ec90714",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.19/omni-0.0.19-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "fixes": [
+        {
+          "commit": "aeb8516",
+          "link": "https://github.com/XaF/omni/commit/aeb851629dd798130b93cd157e300fd9b92be234",
+          "scope": "go dynenv",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 326,
+          "summary": "consider empty GOPATH the same as unset GOPATH"
+        },
+        {
+          "commit": "ac26d2b",
+          "link": "https://github.com/XaF/omni/commit/ac26d2b94b2744cc4be9fe21c9fad960b9282f8f",
+          "scope": "dynenv",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 325,
+          "summary": "unset properly list environment variables"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.18",
+    "published_at": "2024-01-02T04:02:39Z",
+    "build": {
+      "tag": "v0.0.18",
+      "revision": "0db76fecf499ee7860cf586a316f7c0c9a319bfe"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "5fd0fc61d626e41e5756d8f4c0835dee3c734e751eded4eef5909ddcc2eaece3",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.18/omni-0.0.18-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "27b315ec1eb53891a73d89c65cb8991fc90393f4660828eacc30c7da1c017937",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.18/omni-0.0.18-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "b0f1970f41fc7ec31d85b0eac6e3cdc28c62ebb58a0868add5c0798e16bc5c7b",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.18/omni-0.0.18-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "dc8ba50ee3561fec4eecf613b0c713dd28c39c1c01eef6a1ca6beb4274a70feb",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.18/omni-0.0.18-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "04a4e4e",
+          "link": "https://github.com/XaF/omni/commit/04a4e4e5752fce0eaf5d2bb0c079d9b928c8c95c",
+          "scope": "homebrew operation",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 257,
+          "summary": "cache upgraded formula and cask for speed",
+          "issues": [
+            229
+          ]
+        },
+        {
+          "commit": "50b7df3",
+          "link": "https://github.com/XaF/omni/commit/50b7df30e6e064c7f676c3b0f5e983f06e276033",
+          "scope": "homebrew operation",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 259,
+          "summary": "update PATH with installed formulae",
+          "issues": [
+            256
+          ]
+        },
+        {
+          "commit": "ad88fc5",
+          "link": "https://github.com/XaF/omni/commit/ad88fc522de726a3e014a86361540225da034055",
+          "scope": "python",
+          "author": "XaF",
+          "emoji": "✨🐍",
+          "pr": 277,
+          "summary": "add venv support",
+          "issues": [
+            268
+          ]
+        },
+        {
+          "commit": "c155ffb",
+          "link": "https://github.com/XaF/omni/commit/c155ffb128b3eb3bc8765c8799392f47505fb71a",
+          "scope": "config commands",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 280,
+          "summary": "add support for `dir` parameter",
+          "issues": [
+            245
+          ]
+        },
+        {
+          "commit": "8283422",
+          "link": "https://github.com/XaF/omni/commit/8283422257fc4a19b492167edb0882adbfb54477",
+          "scope": "up tools",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 282,
+          "summary": "better cleanup for data paths",
+          "issues": [
+            281
+          ]
+        },
+        {
+          "commit": "a3bca18",
+          "link": "https://github.com/XaF/omni/commit/a3bca185ce7ca4fe5a03a4549e1e3481e57a6619",
+          "scope": "up golang",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 283,
+          "summary": "Add GOPATH isolation for gcalls to go install"
+        },
+        {
+          "commit": "edbc74f",
+          "link": "https://github.com/XaF/omni/commit/edbc74fbe1679cd182399e7ef7fd686cc6f0a133",
+          "scope": "python operation",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 285,
+          "summary": "Add support for pip install",
+          "issues": [
+            279
+          ]
+        },
+        {
+          "commit": "c8900d7",
+          "link": "https://github.com/XaF/omni/commit/c8900d730549f5e2de53e21c2d0df0aa7624eb06",
+          "scope": "golang operation",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 287,
+          "summary": "improve golang isolation to maintain shared…"
+        },
+        {
+          "commit": "f39ad1c",
+          "link": "https://github.com/XaF/omni/commit/f39ad1c07eaf04ace8195438d4d6b80bd26baac7",
+          "scope": "packages",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 288,
+          "summary": "use a separate cache of dependencies",
+          "issues": [
+            278
+          ]
+        },
+        {
+          "commit": "a712e69",
+          "link": "https://github.com/XaF/omni/commit/a712e690678cf92783e53f658c305d0cebd1ece4",
+          "scope": "config commands",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 300,
+          "summary": "trust the global-scoped configuration commands",
+          "issues": [
+            246
+          ]
+        },
+        {
+          "commit": "39af29e",
+          "link": "https://github.com/XaF/omni/commit/39af29ed442408bd6216808d6230aabcfb0d76a6",
+          "scope": "status",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 306,
+          "summary": "now takes arguments",
+          "issues": [
+            180
+          ]
+        },
+        {
+          "commit": "5cb0e1e",
+          "link": "https://github.com/XaF/omni/commit/5cb0e1e1ec20e63d666de3212d86814890958844",
+          "scope": "commands",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 323,
+          "summary": "Add support for shadow aliases",
+          "issues": [
+            45,
+            228
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "f9a6b2d",
+          "link": "https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b",
+          "scope": "homebrew operation",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 260,
+          "summary": "require explicit `cask` mention"
+        },
+        {
+          "commit": "1005a4d",
+          "link": "https://github.com/XaF/omni/commit/1005a4df2df65a92d564f02b2f28951a2dcb3013",
+          "scope": "homebrew operation",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 266,
+          "summary": "make sure to clean up the install cache"
+        },
+        {
+          "commit": "cc54234",
+          "link": "https://github.com/XaF/omni/commit/cc54234638f478eb5bf9bae110db5e5499a2dc70",
+          "scope": "omni up",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 267,
+          "summary": "return code should be 1 on error"
+        },
+        {
+          "commit": "84816e7",
+          "link": "https://github.com/XaF/omni/commit/84816e70536932e74212726764ffa8cb5512bedd",
+          "scope": "shell integration",
+          "author": "tminusplus",
+          "emoji": "🐛",
+          "pr": 269,
+          "summary": "arg parsing for fish auto-complete"
+        },
+        {
+          "commit": "ed2f29d",
+          "link": "https://github.com/XaF/omni/commit/ed2f29da0c3a36e52698dcf25c2886a1fc8afaff",
+          "scope": "self update",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 284,
+          "summary": "show error message when failing to update"
+        },
+        {
+          "commit": "dc9155e",
+          "link": "https://github.com/XaF/omni/commit/dc9155e5a2b3f566773909e6f4b9967365d51c00",
+          "scope": "updater",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "pre-authentication configuration check was inverted"
+        },
+        {
+          "commit": "78c425a",
+          "link": "https://github.com/XaF/omni/commit/78c425a8af9d1cceda57e3d511ff8ddaf5fdd2bd",
+          "scope": "help",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 324,
+          "summary": "folded help was duplicating auto-generated commands"
+        }
+      ],
+      "breaking": [
+        {
+          "commit": "f9a6b2d",
+          "link": "https://github.com/XaF/omni/commit/f9a6b2d1ec6fdfc641057617dedd6a4014b2614b",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 260,
+          "summary": "require explicit `cask` mention",
+          "cause": "casks that did not have the `cask` explicit mention in `up:` operations will stop working. Simple fix is to prefix them by `cask:` if the cask name is provided inline (e.g. `- 1password-cli` should become `- cask: 1password-cli`."
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.17",
+    "published_at": "2023-12-04T16:29:31Z",
+    "build": {
+      "tag": "v0.0.17",
+      "revision": "2dd01c54859de7947591ac4e877f09155942a6c3"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "c438eecbb9ea85f05230537db0b71be10ed8a88508d1618520f2ee5e54ba7855",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.17/omni-0.0.17-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "9616bb49a8923cc3afd6ca92e5f9446473c3a42fdfec10fe71c045223b858ebe",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.17/omni-0.0.17-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "089e4a28aedd5494eaae44b08852232a1811a71ff8050b11b033566abdfd616a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.17/omni-0.0.17-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "50ee22060e31062fa035cdc2a0644dd1ff7583fafdae77967aae6a6e25d60921",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.17/omni-0.0.17-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "bb2f845",
+          "link": "https://github.com/XaF/omni/commit/bb2f8459594d1d09a8c3860c196b483b77cffe83",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 0,
+          "summary": "zsh hook now auto-loads compinit if needed"
+        },
+        {
+          "commit": "d655486",
+          "link": "https://github.com/XaF/omni/commit/d655486f9f5a88d574442de8a06c0b4ac89c3079",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 221,
+          "summary": "add shell integration during bootstrap",
+          "issues": [
+            210
+          ]
+        },
+        {
+          "commit": "499bb23",
+          "link": "https://github.com/XaF/omni/commit/499bb23441da5e9bca177ad258b1e508ad5b2ed9",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 233,
+          "summary": "packages support for `scope` command",
+          "issues": [
+            232
+          ]
+        },
+        {
+          "commit": "e204e21",
+          "link": "https://github.com/XaF/omni/commit/e204e21f2011cdf2de63e2383ddf48e0f03d20c4",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 234,
+          "summary": "Add configuration of the shell aliases for the init hook",
+          "issues": [
+            195
+          ]
+        },
+        {
+          "commit": "c62fe06",
+          "link": "https://github.com/XaF/omni/commit/c62fe067bad61e0b0150222086042dfda371e70b",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 237,
+          "summary": "machine id will try and fallback to use hostname"
+        },
+        {
+          "commit": "c64a2a2",
+          "link": "https://github.com/XaF/omni/commit/c64a2a24b81e7f5f307eff83abd63bc88ef5a341",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 243,
+          "summary": "save log files when subprocesses fail"
+        },
+        {
+          "commit": "105e802",
+          "link": "https://github.com/XaF/omni/commit/105e802d4cfed7e0b2636e0c047530e6bed7b256",
+          "scope": "updates",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 244,
+          "summary": "add support for background updates",
+          "issues": [
+            170
+          ]
+        },
+        {
+          "commit": "af2a940",
+          "link": "https://github.com/XaF/omni/commit/af2a940449e1f57e59eae6dd8d130a0a0b5c09b1",
+          "scope": "path commands",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 253,
+          "summary": "Add support for metadata files",
+          "issues": [
+            27
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "ff26fc6",
+          "link": "https://github.com/XaF/omni/commit/ff26fc6cb791b551fa09bd1d60537c27657e179a",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "remove debug message appearing on update"
+        },
+        {
+          "commit": "22d7aa9",
+          "link": "https://github.com/XaF/omni/commit/22d7aa9707cd7ac99e3a829545fca42cfc0dc10f",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "uncategorized commands are showing up properly again"
+        },
+        {
+          "commit": "7d62fb1",
+          "link": "https://github.com/XaF/omni/commit/7d62fb1024dc72cc4b423be1021278191667099b",
+          "scope": "path commands",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 252,
+          "summary": "make the exec path accurate"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.16",
+    "published_at": "2023-11-07T11:54:50Z",
+    "build": {
+      "tag": "v0.0.16",
+      "revision": "8092864fd75d69d728799d148c4f5ab8b29da346"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "cc1cf28490f3f11620049369d3d4ab3efaa2e958b26781e1a54f88af762ad722",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.16/omni-0.0.16-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "3ad7cb1cbfe2d110c05f9d9d29ca805cbf91621b618b9ec69c57bc2abb3e80e1",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.16/omni-0.0.16-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "8a59c55420f9f48d095289fb17632d4326318ac6ed7fdcbfec932d33022aa586",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.16/omni-0.0.16-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "6932e063a57fb212a041ca267d8c54826efe824e4b941816526ae3feee9c49b2",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.16/omni-0.0.16-x86_64-linux.tar.gz"
+      }
+    ],
+    "notes": {
+      "features": [
+        {
+          "commit": "919e217",
+          "link": "https://github.com/XaF/omni/commit/919e217f399abf322e2a5ee2721fd3d1072e5501",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 0,
+          "summary": "check trust of directories before running commands"
+        },
+        {
+          "commit": "e71efb5",
+          "link": "https://github.com/XaF/omni/commit/e71efb5153eec0d13b7d36fd8fc5458c7c024248",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 176,
+          "summary": "Add support for 'packages'",
+          "issues": [
+            16
+          ]
+        },
+        {
+          "commit": "74463b9",
+          "link": "https://github.com/XaF/omni/commit/74463b96c9d741f81061183044bce13912349c14",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 182,
+          "summary": "`omni help` now folds subcommands",
+          "issues": [
+            20
+          ]
+        },
+        {
+          "commit": "d90f4c3",
+          "link": "https://github.com/XaF/omni/commit/d90f4c3462becbdf7ab8d2b9fbd3adf42306b2d7",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 188,
+          "summary": "Add proper help for hook commands",
+          "issues": [
+            140
+          ]
+        },
+        {
+          "commit": "162f86a",
+          "link": "https://github.com/XaF/omni/commit/162f86aae6324a78f6aa7c4b0929de5e2ccb2299",
+          "scope": "help",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 194,
+          "summary": "add `--unfold` flag to show all commands"
+        },
+        {
+          "commit": "4e616f4",
+          "link": "https://github.com/XaF/omni/commit/4e616f473f6483585d12a9c01f6bfe24b512a57e",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 199,
+          "summary": "add new `config path switch` command",
+          "issues": [
+            196
+          ]
+        },
+        {
+          "commit": "143aaec",
+          "link": "https://github.com/XaF/omni/commit/143aaec776079661003eadebc660afc7a4fe7ec8",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 207,
+          "summary": "add `--exists` flag to check if command exists",
+          "issues": [
+            206
+          ]
+        },
+        {
+          "commit": "4acbf7a",
+          "link": "https://github.com/XaF/omni/commit/4acbf7a46d62c3973499e16affe72ce8474979d3",
+          "author": "XaF",
+          "emoji": "✨",
+          "pr": 209,
+          "summary": "Add `config bootstrap` command",
+          "issues": [
+            178
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "commit": "000d5c5",
+          "link": "https://github.com/XaF/omni/commit/000d5c5c054840b6a7525ebb0d741de6636b4605",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "release version parser to show better error messages"
+        },
+        {
+          "commit": "9f9ef93",
+          "link": "https://github.com/XaF/omni/commit/9f9ef9361d03b0fded347e90bb90d063c2d42fe4",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 143,
+          "summary": "self update now replaces  current process"
+        },
+        {
+          "commit": "02e8dbc",
+          "link": "https://github.com/XaF/omni/commit/02e8dbc5bb7535298d5a6ed52012acc74a9b79ee",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "do not ask for trust if there is no up configuration"
+        },
+        {
+          "commit": "5533431",
+          "link": "https://github.com/XaF/omni/commit/5533431aa047ff3ab7c65b503ffadb31ba8f8d0b",
+          "author": "XaF",
+          "emoji": "🐛",
+          "pr": 0,
+          "summary": "remove message when skipping package"
+        }
+      ]
+    }
+  },
+  {
+    "version": "0.0.15",
+    "published_at": "2023-09-21T19:05:08Z",
+    "build": {
+      "tag": "v0.0.15",
+      "revision": "6238a19cee93a808b0d4908a30a8dab2c808c347"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "79ad5b169d7003de7ece278f6f8c132f51ddbcdf6b0786bdae700e947afaa57a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.15/omni-0.0.15-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "ec5ff9cc3a19b6fba05f7e86a42d20e2eb5c5d592e2693c4fe4b67320575169a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.15/omni-0.0.15-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "fba6ce661a40f31d9b37bb9a264328e207c43d4035afaa32c71e1defe6322e9d",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.15/omni-0.0.15-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "904d59c998af5f16f738c30c7c5d47ea04c109682b5a952ccba548001a46089a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.15/omni-0.0.15-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.14",
+    "published_at": "2023-08-08T22:01:50Z",
+    "build": {
+      "tag": "v0.0.14",
+      "revision": "ec566149dec8035f72cf3dcadaefd45e96f42fb7"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "69e916b39bd7cf7591ca40b575c406b2f04b5e58d6ba79ba4caf9954c764cdc9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.14/omni-0.0.14-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "0151cd6641725fa88fa23ef0f75d461af2571ddf63d2b9ebd26ff0fe5f1986ca",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.14/omni-0.0.14-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "6ac484c3399b788ede6149b3073085e4f816b9bf37b9e91da6dc50d555fe3fac",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.14/omni-0.0.14-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "9aa3006abffc0819c7f1c93cd0d2974298d2aa6e2d546fdb80057265a3b52118",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.14/omni-0.0.14-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.13",
+    "published_at": "2023-07-25T05:08:32Z",
+    "build": {
+      "tag": "v0.0.13",
+      "revision": "1006206c53c94f688aa190cf6bc420d50e40dcd1"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "8085adbe4f2c61c94649a2a5d9dd3d058b0e5bae0880658d7e67b3c004a600b8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.13/omni-0.0.13-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "fa416545b2623c7fc3c27bca8b3445c277ac5952d8980379f05470b2bc6ddd92",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.13/omni-0.0.13-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "ac58b3ab73e7b75cf04be2d5ae6e482388dfe32965bc35c875b00cba2190551e",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.13/omni-0.0.13-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "881cc9026ecda2acd158b1e4021ab72b7cc94eb69d4f3bfe281f0ba3ee7e9d00",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.13/omni-0.0.13-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.12",
+    "published_at": "2023-07-12T02:57:49Z",
+    "build": {
+      "tag": "v0.0.12",
+      "revision": "3a4a89063bf180faf82395f53c816abb0dcd7e18"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "8148c1ea38373e8cb448c51297c3804dc85ca8c631edf816e56a8816f09d308c",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.12/omni-0.0.12-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "0ce5b9c1a9c69152797e5290de47e0c7af03049eb9f5cc7afef92a3b95e6db25",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.12/omni-0.0.12-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "1d062d8378945bd428f5e18cf70748da1ef0f4bfc6cb2910679f1f53c5fdeeb9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.12/omni-0.0.12-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "ec0601edac3555200a25b852fb956c83a6090ee12e679772e5dcdfc6adb7e7f5",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.12/omni-0.0.12-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.11",
+    "published_at": "2023-07-10T05:43:44Z",
+    "build": {
+      "tag": "v0.0.11",
+      "revision": "b20450dd3325f0916c85891664dc03f4f8e739f9"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "b5f9a90532d42feba8d947d9e4e2105f082f3713b49c4baa49c5438c8168f5f9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.11/omni-0.0.11-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "eb5b217a9107c48d3840f4e99a3496375f8df2f3d0a7efcf74be3286ae25dc72",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.11/omni-0.0.11-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "c44e489e40540fad359a5e2eff831dc321c0670f2823d139356ebbfa8caf2229",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.11/omni-0.0.11-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "724dc5d1e19d13081406c1f50092fd6c894d545ae7a113b21db9d92aed97faeb",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.11/omni-0.0.11-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.9",
+    "published_at": "2023-06-30T05:35:53Z",
+    "build": {
+      "tag": "v0.0.9",
+      "revision": "2447c04036e3ee4b58302139c881277e66c88d9e"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "028b9af754daa862060d42f7fa8fda0eb711942e993c7f27fba21931ba271ae6",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.9/omni-0.0.9-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "ae8f6650b2e686fd1935c691ae7ab4358f5bcc671524d2bd1a0b033d294fce84",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.9/omni-0.0.9-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "9455d724332f982ba1e1d0e3a2e72593404c93f54fa703ba2e22a548593171ef",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.9/omni-0.0.9-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "f0a8944cb9c01c4d3d816f06044e82556e4ace090df0bbfb3636ea25aa64fe9c",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.9/omni-0.0.9-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.8",
+    "published_at": "2023-06-29T05:54:58Z",
+    "build": {
+      "tag": "v0.0.8",
+      "revision": "eb2f0639fe3651e8aaaaa4c056872226790f6cab"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "f9f6bbd7b4cba56cb620bb79b61f7c9466e5ee7b4f206482acb217d3dd093ea1",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.8/omni-0.0.8-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "6b8b05732bec884bd0992590702a65787c16f5ab6d5d28e38ce391ef558c8aa9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.8/omni-0.0.8-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "bcd590d5a15df82f5fac1af9c993a5861696497f3d62ef181b3be484ac2911de",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.8/omni-0.0.8-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "07ab1a2a7c59a035317e75fa1c10366f5864a1bc4eca12807d6fb3ec72b98921",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.8/omni-0.0.8-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.7",
+    "published_at": "2023-06-28T00:02:25Z",
+    "build": {
+      "tag": "v0.0.7",
+      "revision": "795901b8258b920fd75d3dd6f177f96ea4feeecd"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "72ea6eff9ee639fb58302e9fa616e7978a7fb30f4eeb90a574285302c6bada8e",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.7/omni-0.0.7-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "b55259c56ff08fcf72333d444b6c5c47a8b94591d233eeaeef26976baea6e867",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.7/omni-0.0.7-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "569db1eec11ffb4d4cc9587e389e405f2876e518779bc66fdeb7eb2dda160951",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.7/omni-0.0.7-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "a363788a4dcbcf0698a2f3105166c41a4b8bd950f1780355e5cacbf30605444a",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.7/omni-0.0.7-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.6",
+    "published_at": "2023-06-27T23:28:32Z",
+    "build": {
+      "tag": "v0.0.6",
+      "revision": "0567b7a15433575310ce3ae2e31fd32f0888995d"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "ed26d6d0d9c16808090e2720ed93ca32fb866802f19f03979b11110e5b29f4f0",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.6/omni-0.0.6-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "d153ee380c48d7348dc68f309a45b0cc94fa7e8e0947cee40f1a7332779172ff",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.6/omni-0.0.6-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "22f71c22ec38cecad8b430bea8f8e316d35ce30648a43e0540bffe8d2ed51039",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.6/omni-0.0.6-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "9e4dbbd0f7538f30037fc5871e0deb6b8d733ae1628a86bd15ef6851096cb82f",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.6/omni-0.0.6-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.5",
+    "published_at": "2023-06-27T18:48:17Z",
+    "build": {
+      "tag": "v0.0.5",
+      "revision": "6216c1df420ea9809690324e3bb21cd1c25546cb"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "9e27e5ade592c6090af7966f7c6e218ac22f3da14f00e57cbfc09249ccf3c562",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.5/omni-0.0.5-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "3f6e410087389124b9a9dae13fb619a93123e43814b41a95c5882c5b7169807f",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.5/omni-0.0.5-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "b45398720453467f353d9535d653f62b55641042f134327ae1658122565ffe63",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.5/omni-0.0.5-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "71e8ff2ad8b4c399b42f9e9d603409d30c3ab48bdc1760fe593396b1614e1b77",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.5/omni-0.0.5-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.4",
+    "published_at": "2023-06-23T15:44:21Z",
+    "build": {
+      "tag": "v0.0.4",
+      "revision": "5d669c310097db99ad1dae3b1a20419558d7da56"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "96fd716b48383c5e4986d2cacc4f127f93bd63ba60a1d75540e0d80b08890cdf",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.4/omni--arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "6244a6f1b71d93f0ace51f5c311b8d457896d7b2873aae5f27a962aada688c24",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.4/omni--arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "3112da5eafab0acf3cce105ed491f1e5776b9b170da233cae76c367e3e66cf2c",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.4/omni--x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "9536240aae8683f1c18503ec5f98adc0ff8a5ae68a9d50be995b6a35fa4629c8",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.4/omni--x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.3",
+    "published_at": "2023-06-23T00:59:52Z",
+    "build": {
+      "tag": "v0.0.3",
+      "revision": "891bd6971a4d9e1bc4e1bf032667e31ded04342c"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "2918e37b675ac1e0d835c21c2b604a7c012317bb1a0e5465f1f768819d5344f9",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.3/omni-0.0.3-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "07d6cfdf30bf154970b0246cb684badad3efbf8f3cc404ef65fadcea61b8db10",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.3/omni-0.0.3-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "ad8d31c56c5d4f2943b371e818acd2c30c0385c25cb242b3bb04b8b39de09e47",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.3/omni-0.0.3-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "5a1bc1df8fbed82b84fbcb893230f8a35b477f1a3c75c7f381a948614f84bafd",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.3/omni-0.0.3-x86_64-linux.tar.gz"
+      }
+    ]
+  },
+  {
+    "version": "0.0.2",
+    "published_at": "2023-06-23T00:42:16Z",
+    "build": {
+      "tag": "v0.0.2",
+      "revision": "f9ebcd0331747532de126e3adf0a351ac09ba090"
+    },
+    "binaries": [
+      {
+        "os": "darwin",
+        "arch": "arm64",
+        "sha256": "44e7e89f56ab5dcfd9c9abc50b7aa0e5d2216b765575efde4acc2fcd1cf01770",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.2/omni-0.0.2-arm64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "arm64",
+        "sha256": "5e5c1a2b8524710cd230eeb87c4e38175c2feb9ddc8a3b26aab1f89fc45141b3",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.2/omni-0.0.2-arm64-linux.tar.gz"
+      },
+      {
+        "os": "darwin",
+        "arch": "x86_64",
+        "sha256": "237f69fe3defbf01514d77fb73e59e0e0de5dbcd2d41b0dc2ef8840735a0f5f2",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.2/omni-0.0.2-x86_64-darwin.tar.gz"
+      },
+      {
+        "os": "linux",
+        "arch": "x86_64",
+        "sha256": "ad618f89a80185f1c7e4112c94c3f6a687b2294279f1de2388805924bc1cde21",
+        "url": "https://github.com/xaf/omni/releases/download/v0.0.2/omni-0.0.2-x86_64-linux.tar.gz"
+      }
+    ]
+  }
+]

@@ -5,24 +5,44 @@ require "json"
 OWNER = "xaf"
 REPO = "omni"
 
-class Omni < Formula
+# Handle both omni.rb and omni@<version>.rb filenames
+filename = File.basename(__FILE__, ".rb")
+file_version = nil
+if filename.match(/^omni@(.+)$/)
+  file_version = $1
+  version_suffix = $1.gsub(/[^a-zA-Z0-9]/, "")
+  formula_class_name = "OmniAT#{version_suffix}"
+else
+  formula_class_name = "Omni"
+end
+
+# Create the formula class dynamically
+formula_class = Class.new(Formula) do
   desc "Omnipotent dev tool"
   homepage "https://github.com/#{OWNER}/#{REPO}"
 
-  # Load the information from the JSON, so we can easily
-  # programmatically update the formula when a new version
-  # is released, vs. having to manually update the formula
-  @@json_file = File.expand_path(
+  # Load the versions information from the JSON file
+  @@versions_file = File.expand_path(
     File.join(
       File.dirname(__FILE__),
       "resources",
-      "omni.json",
+      "versions.json",
     ),
   )
-  json_data = File.open(@@json_file) { |f| JSON.parse(f.read) }
+  versions_data = File.open(@@versions_file) { |f| JSON.parse(f.read) }
 
-  # Load the version from the file
-  odie "version is not set" if json_data["version"].blank?
+  # Validate versions data
+  odie "versions is not set" if versions_data.blank?
+
+  if file_version
+    json_data = versions_data.find { |v| v["version"] == file_version }
+    odie "version #{file_version} not found in versions.json" unless json_data
+  else
+    # If no version is specified, use the first version in the JSON file
+    json_data = versions_data.first
+  end
+
+  odie "version not specified in versions.json" unless json_data["version"]
   version json_data["version"]
 
   # Check for --build-from-source and --HEAD in a case-insensitive way
@@ -58,26 +78,29 @@ class Omni < Formula
       odie "No build revision or URL/SHA256 available"
     end
 
-    head "https://github.com/#{OWNER}/#{REPO}.git",
-      :using => :git,
-      :branch => "main"
+    # If the formula is the generic one, then we set the head
+    unless file_version
+      head "https://github.com/#{OWNER}/#{REPO}.git",
+        :using => :git,
+        :branch => "main"
+    end
 
     depends_on "rust" => :build
   end
 
-  resource "omni-json" do
-    url "file://#{@@json_file}?#{Digest::SHA256.file(@@json_file).hexdigest}"
-    sha256 Digest::SHA256.file(@@json_file).hexdigest
+  resource "versions-json" do
+    url "file://#{@@versions_file}?#{Digest::SHA256.file(@@versions_file).hexdigest}"
+    sha256 Digest::SHA256.file(@@versions_file).hexdigest
   end
 
   def install
-    resource("omni-json").stage do
-      (prefix/".brew/resources").install "omni.json"
+    resource("versions-json").stage do
+      (prefix/".brew/resources").install "versions.json"
     end
 
     if @@requires_build
       # Try and get the version from git
-      build_version = if build.head?
+      build_version = file_version || if build.head?
         dev_version = `git describe --tags --broken --dirty --match v* 2>/dev/null`.strip
         dev_version = "0.0.0-g{}".format(
           `git describe --tags --always --broken --dirty --match v*`.strip) if dev_version.blank?
@@ -299,3 +322,6 @@ class Omni < Formula
     false
   end
 end
+
+# Set the class constant only if it doesn't exist
+Object.const_set(formula_class_name, formula_class) unless Object.const_defined?(formula_class_name)
