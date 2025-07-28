@@ -7,6 +7,7 @@ require 'uri'
 
 owner = 'xaf'
 repo = 'omni'
+crate_name = 'omnicli'
 target_file = nil
 latest_file = nil
 from_scratch = false
@@ -15,8 +16,8 @@ from_scratch = false
 OptionParser.new do |option|
   option.banner = "Usage: #{File.basename(__FILE__)} [options]"
 
-  option.on('-o', '--owner OWNER', 'GitHub repository owner (default: xaf)') { |o| owner = o }
-  option.on('-r', '--repo REPO', 'GitHub repository name (default: omni)') { |r| repo = r }
+  option.on('-o', '--owner OWNER', "GitHub repository owner (default: #{owner})") { |o| owner = o }
+  option.on('-r', '--repo REPO', "GitHub repository name (default: #{repo})") { |r| repo = r }
 
   option.on('--write FILE', 'Write all the releases to a file') do |f|
     target_file = f
@@ -159,6 +160,22 @@ end
 # Consider we are doing from scratch if we do not have data
 from_scratch = true if !from_scratch && versions_data.empty?
 
+# Check the yanked releases
+crate_versions = fetch("https://crates.io/api/v1/crates/#{crate_name}/versions")
+unless crate_versions.is_a?(Net::HTTPSuccess)
+  puts "Error downloading crate versions: #{crate_versions.code} #{crate_versions.message}"
+  exit(1)
+end
+crate_versions_json = JSON.parse(crate_versions.body)
+unless crate_versions_json.is_a?(Hash) && crate_versions_json['versions'].is_a?(Array)
+  puts "Error parsing JSON response from crates.io"
+  exit(1)
+end
+yanked_versions = crate_versions_json['versions'].select { |v| v['yanked'] }.map { |v| v['num'] }
+
+# Filter out yanked versions from the existing versions
+versions_data.reject! { |v| v['version'] && yanked_versions.include?(v['version']) }
+
 # Go through the releases
 current_page = 0
 might_have_more = true
@@ -216,6 +233,12 @@ while might_have_more
     if existing_versions.include?(version) || a.any? { |d| d['version'] == version }
       STDERR.puts "Version #{version} already exists, stopping."
       break
+    end
+
+    # Skip if the version is yanked
+    if yanked_versions.include?(version)
+      STDERR.puts "Version #{version} is yanked, skipping."
+      next
     end
 
     # Get the release files
