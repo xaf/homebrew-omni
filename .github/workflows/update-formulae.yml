@@ -61,7 +61,7 @@ jobs:
           fi
 
           # Get all versions from the JSON file
-          versions=($(jq --raw-output '.versions[]' "$VERSIONS_FILE"))
+          versions=($(jq --raw-output '.[]["version"]' "$VERSIONS_FILE"))
 
           # Ensure symlinks for all versions exist
           cd Formula/
@@ -74,7 +74,7 @@ jobs:
 
       - name: Extract latest omni version
         run: |
-          OMNI_VERSION="$(cat "$VERSIONS_FILE" | jq --raw-output .versions[0])"
+          OMNI_VERSION="$(cat "$VERSIONS_FILE" | jq --raw-output '.[0]["version"]')"
           if [[ -z "$OMNI_VERSION" ]]; then
             echo "Unable to find omni version from the JSON"
             exit 1
