@@ -18,11 +18,11 @@ OptionParser.new do |option|
   option.on('-o', '--owner OWNER', 'GitHub repository owner (default: xaf)') { |o| owner = o }
   option.on('-r', '--repo REPO', 'GitHub repository name (default: omni)') { |r| repo = r }
 
-  option.on('--write FILE', 'Write the output to a file') do |f|
+  option.on('--write FILE', 'Write all the releases to a file') do |f|
     target_file = f
   end
 
-  option.on('--latest FILE', 'Write the output to a latest file (for compatibility)') do |f|
+  option.on('--latest FILE', 'Write the latest release to a file (for compatibility)') do |f|
     latest_file = f
   end
 
@@ -293,6 +293,9 @@ elsif new_versions_data.any?
   versions_data ||= []
   versions_data.unshift(*new_versions_data)
 end
+
+# Error out if the versions data is empty
+die "No versions data found." if versions_data.nil? || versions_data.empty?
 
 # Write to latest file if specified
 # This is for compatibility with older versions of the script

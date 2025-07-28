@@ -28,7 +28,7 @@ jobs:
       contents: write
 
     env:
-      VERSIONS_FILE: Formula/resources/versions.json
+      VERSIONS_FILE: Formula/resources/omni_releases.json
       LATEST_FILE: Formula/resources/omni.json
 
     steps:
