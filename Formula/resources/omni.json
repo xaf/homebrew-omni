@@ -1,33 +1,33 @@
 {
-  "version": "2025.9.0",
+  "version": "2025.11.0",
   "build": {
-    "tag": "v2025.9.0",
-    "revision": "2f1906bfd5dc98b53f17f5f9d6e11a6a1fb32f00"
+    "tag": "v2025.11.0",
+    "revision": "ffd537aa74cbbc85aed76a4f140d5ea1e3c13f49"
   },
   "binaries": [
     {
       "os": "darwin",
       "arch": "arm64",
-      "sha256": "e2bd3168525cdac3d6da78565b3052cdd6822aa6c786249dd14dfaeb7b87d8c6",
-      "url": "https://github.com/xaf/omni/releases/download/v2025.9.0/omni-2025.9.0-arm64-darwin.tar.gz"
+      "sha256": "e901089457ccedb6e093a94bddeb04e1b4fc81f80e97520692f8c73e6fb7c9d4",
+      "url": "https://github.com/xaf/omni/releases/download/v2025.11.0/omni-2025.11.0-arm64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "arm64",
-      "sha256": "66836b7d88d003db71a25dbbd9c49a583c616fd7cc33fe931a4501a5a3b29a25",
-      "url": "https://github.com/xaf/omni/releases/download/v2025.9.0/omni-2025.9.0-arm64-linux.tar.gz"
+      "sha256": "dba7b9fa56c674cb1883b303dfec280d2c039388f58c8acb1d96a7d295629f29",
+      "url": "https://github.com/xaf/omni/releases/download/v2025.11.0/omni-2025.11.0-arm64-linux.tar.gz"
     },
     {
       "os": "darwin",
       "arch": "x86_64",
-      "sha256": "fc9ef1c75b98e39071d89fcff9330b771c62ea22e93e18ca8663787234846317",
-      "url": "https://github.com/xaf/omni/releases/download/v2025.9.0/omni-2025.9.0-x86_64-darwin.tar.gz"
+      "sha256": "a4788b27206acf9c8241b167eadb5c413191927df2bd96bc86cd8f71d114ff39",
+      "url": "https://github.com/xaf/omni/releases/download/v2025.11.0/omni-2025.11.0-x86_64-darwin.tar.gz"
     },
     {
       "os": "linux",
       "arch": "x86_64",
-      "sha256": "a379d0bbf93974dc05b48501c888bc5cccdc8d1b9cdc396b90c69fc0e1c95714",
-      "url": "https://github.com/xaf/omni/releases/download/v2025.9.0/omni-2025.9.0-x86_64-linux.tar.gz"
+      "sha256": "f929e093392f0fa61edf94ab9210fa0f75eff25ec65cf9ef0e4b3fe5741f1036",
+      "url": "https://github.com/xaf/omni/releases/download/v2025.11.0/omni-2025.11.0-x86_64-linux.tar.gz"
     }
   ]
 }
